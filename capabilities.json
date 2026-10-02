@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-02.1419",
-  "generated": "2026-10-02T14:19:03",
+  "version": "2026-10-03.0140",
+  "generated": "2026-10-03T01:40:01",
   "capabilities": [
     {
       "id": "a_mir",
@@ -372,7 +372,23 @@
         "audio"
       ],
       "limits": "L'ascolto non cattura ciò che colpisce: non torna indietro nulla."
+    },
+    {
+      "id": "x_munari",
+      "cluster": "METODO",
+      "name": "Scelta della mossa creativa (Munari–Rodari)",
+      "status": "probabile",
+      "desc": "Un meta-controller deterministico sceglie tra sette modalità (sfrutta, risolvi, esplora, rompi, scopri, trasferisci, prova) e guida fino a un esperimento minimo, poi registra esito, anomalie e memoria.",
+      "evidence": "munari (APK installato il 03/10/2026, non ancora usato su casi reali)",
+      "in": [
+        "testo"
+      ],
+      "out": [
+        "testo",
+        "dati"
+      ],
+      "limits": "Nessuna AI: le idee le scrive l'utente. Mai provato su un problema reale; il lessico italiano va rivisto con l'uso."
     }
   ],
-  "basis": "547f2500b4addac3"
+  "basis": "30de46621e4c1e7a"
 }
