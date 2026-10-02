@@ -1,0 +1,378 @@
+{
+  "version": "2026-10-02.1417",
+  "generated": "2026-10-02T14:17:09",
+  "capabilities": [
+    {
+      "id": "a_mir",
+      "cluster": "AUDIO",
+      "name": "Analisi audio e similarità",
+      "status": "dimostrata",
+      "desc": "Embedding CLAP, tempo, tonalità, energia e timbro di un brano o di un sample; ricerca per somiglianza su una libreria di 56 mila sample.",
+      "evidence": "samplehunter, soundlib-chat, digmore, fidesdays-engine (in produzione)",
+      "in": [
+        "audio"
+      ],
+      "out": [
+        "dati"
+      ],
+      "limits": "Il tempo ha errore d'ottava (va riportato come tre candidati); laion-clap richiede numpy<2."
+    },
+    {
+      "id": "a_stem",
+      "cluster": "AUDIO",
+      "name": "Separazione in stem",
+      "status": "dimostrata",
+      "desc": "Un brano diventa voce, basso, batteria, chitarra, piano e resto.",
+      "evidence": "autochopper, beat2als, trackteacher, stemplayer (MVSEP)",
+      "in": [
+        "audio"
+      ],
+      "out": [
+        "audio"
+      ],
+      "limits": "MVSEP consuma crediti; nessuna GPU locale."
+    },
+    {
+      "id": "a_midi",
+      "cluster": "AUDIO",
+      "name": "Trascrizione audio in MIDI",
+      "status": "dimostrata",
+      "desc": "Da uno stem monofonico a note MIDI con curve di dinamica, espressione e vibrato.",
+      "evidence": "stem2cc, loopretarget (Basic Pitch)",
+      "in": [
+        "audio"
+      ],
+      "out": [
+        "midi"
+      ],
+      "limits": "Affidabile sul monofonico, meno sul polifonico."
+    },
+    {
+      "id": "a_grid",
+      "cluster": "AUDIO",
+      "name": "Griglia dei beat e auto-warp",
+      "status": "dimostrata",
+      "desc": "Trova la pulsazione vera di un brano e lo porta a tempo fisso replicando l'auto-warp di Ableton.",
+      "evidence": "bluesky-autowarp, ytsampler (beat_this)",
+      "in": [
+        "audio"
+      ],
+      "out": [
+        "dati",
+        "audio"
+      ],
+      "limits": "Beat spuri e raddoppi di ottava vanno corretti."
+    },
+    {
+      "id": "a_voice",
+      "cluster": "AUDIO",
+      "name": "Voce sintetica e clonata",
+      "status": "dimostrata",
+      "desc": "Testo letto con voci neurali gratuite o con una voce clonata; narrazione con marker che puntano a momenti precisi.",
+      "evidence": "trackteacher, audiobook-vc (OpenVoice V2), omi-companion (edge-tts)",
+      "in": [
+        "testo"
+      ],
+      "out": [
+        "audio"
+      ],
+      "limits": "La clonazione gira solo su CPU: circa 26 minuti per 61 di audio."
+    },
+    {
+      "id": "a_omi",
+      "cluster": "AUDIO",
+      "name": "Pendant Omi come microfono",
+      "status": "dimostrata",
+      "desc": "Voce catturata via Bluetooth, decodificata e trascritta con Whisper; anche come microfono per ChatGPT.",
+      "evidence": "omi-extension-final, omi-companion",
+      "in": [
+        "voce"
+      ],
+      "out": [
+        "testo"
+      ],
+      "limits": "Il codec e l'UUID del pulsante vanno letti dal dispositivo reale."
+    },
+    {
+      "id": "m_chop",
+      "cluster": "MUSICA",
+      "name": "Chopping e loop automatici",
+      "status": "probabile",
+      "desc": "Da un sample escono loop che si chiudono su se stessi, con i metodi E. Coli e Nas Is Like; slot machine di chop con leva.",
+      "evidence": "autochopper, choparranger, chopmind (mai ascoltato né aperto in Live)",
+      "in": [
+        "audio"
+      ],
+      "out": [
+        "audio",
+        "file"
+      ],
+      "limits": "Il giudizio percettivo (suona bene?) resta umano."
+    },
+    {
+      "id": "m_perf",
+      "cluster": "MUSICA",
+      "name": "Performance MIDI con strumenti reali",
+      "status": "dimostrata",
+      "desc": "Un MIDI piatto diventa una performance di chitarra, piano o flauto, renderizzata con i VST veri.",
+      "evidence": "agt-moviola, agtc-humanizer, pianoperformer, idiomatic (DawDreamer)",
+      "in": [
+        "midi"
+      ],
+      "out": [
+        "audio",
+        "midi"
+      ],
+      "limits": ""
+    },
+    {
+      "id": "m_als",
+      "cluster": "MUSICA",
+      "name": "Progetti Ableton da codice",
+      "status": "dimostrata",
+      "desc": "Genera un Live Set .als apribile, con stem, one-shot e chop già in griglia.",
+      "evidence": "beat2als, chopmind",
+      "in": [
+        "audio",
+        "midi"
+      ],
+      "out": [
+        "file"
+      ],
+      "limits": "Il formato .als non ha librerie pubbliche aggiornate."
+    },
+    {
+      "id": "m_drums",
+      "cluster": "MUSICA",
+      "name": "Loop di batteria con microtiming",
+      "status": "dimostrata",
+      "desc": "Sceglie one-shot dalla libreria e genera loop di 4 battute con scostamenti ragionati alla Dilla.",
+      "evidence": "drumforge, dillabrain",
+      "in": [
+        "audio"
+      ],
+      "out": [
+        "audio",
+        "midi"
+      ],
+      "limits": ""
+    },
+    {
+      "id": "m_disc",
+      "cluster": "MUSICA",
+      "name": "Scoperta musicale e streaming lossless",
+      "status": "dimostrata",
+      "desc": "Playlist da Discogs + CLAP con feedback ❤️/✕ che affina un profilo; catena di risoluzione Tidal, hifi-api, JioSaavn, YouTube.",
+      "evidence": "colosso, digmore, diggaplayer, diggadesktop",
+      "in": [
+        "testo"
+      ],
+      "out": [
+        "audio",
+        "dati"
+      ],
+      "limits": "Alcune sorgenti sono zone grigie non ufficiali."
+    },
+    {
+      "id": "p_native",
+      "cluster": "APP",
+      "name": "App Android native",
+      "status": "dimostrata",
+      "desc": "App Kotlin/Compose con Room, Hilt, ExoPlayer, servizi in primo piano.",
+      "evidence": "colosso (funzionante), waypoint, schoolboy, stemplayer, leva",
+      "in": [
+        "testo"
+      ],
+      "out": [
+        "ui"
+      ],
+      "limits": "La prima build richiede circa 9 minuti."
+    },
+    {
+      "id": "p_cap",
+      "cluster": "APP",
+      "name": "App Android WebView (Capacitor)",
+      "status": "dimostrata",
+      "desc": "App progettate, compilate e installate sul Pixel 7a in una sessione.",
+      "evidence": "nodo, thyself, gentlee, sciogli, megahealth, creativeact",
+      "in": [
+        "testo"
+      ],
+      "out": [
+        "ui"
+      ],
+      "limits": "Serve il template di layout per barre di sistema e tastiera."
+    },
+    {
+      "id": "p_ext",
+      "cluster": "APP",
+      "name": "Estensioni browser MV3",
+      "status": "dimostrata",
+      "desc": "Estensioni che leggono e modificano YouTube, Spotify, ChatGPT.",
+      "evidence": "videofetcher, ytchop, ytsampler, omi-extension-final (spotify-lossless-ext da confermare dal vivo)",
+      "in": [
+        "pagina_web"
+      ],
+      "out": [
+        "testo",
+        "ui",
+        "audio"
+      ],
+      "limits": "Private Network Access sulle fetch verso 127.0.0.1."
+    },
+    {
+      "id": "p_ui",
+      "cluster": "APP",
+      "name": "Progettazione UI e UX",
+      "status": "dimostrata",
+      "desc": "Ridisegno completo dell'interfaccia della mod di Spotify; design system propri, animazioni e transizioni.",
+      "evidence": "diggadesktop, dichiarato dall'utente",
+      "in": [
+        "testo"
+      ],
+      "out": [
+        "ui"
+      ],
+      "limits": ""
+    },
+    {
+      "id": "i_llm",
+      "cluster": "AI",
+      "name": "LLM via API",
+      "status": "dimostrata",
+      "desc": "OpenRouter con modelli gratuiti scelti dal catalogo live, Groq, Gemini.",
+      "evidence": "leva, megahealth (Coach), bussola, notionmob",
+      "in": [
+        "testo"
+      ],
+      "out": [
+        "testo"
+      ],
+      "limits": "I modelli gratuiti reggono compiti piccoli e strutturati; sono deboli su testi lunghi e sul giudizio fine (misurato il 02/10/2026). OpenRouter free: 50 richieste al giorno."
+    },
+    {
+      "id": "i_inq",
+      "cluster": "AI",
+      "name": "Inchiesta adattiva e framework",
+      "status": "dimostrata",
+      "desc": "Una domanda alla volta, Cattura rapida, Libreria delle dinamiche, Coach e Specchio, 68 guide dichiarative.",
+      "evidence": "megahealth, nodo, thyself, leva",
+      "in": [
+        "testo"
+      ],
+      "out": [
+        "testo"
+      ],
+      "limits": ""
+    },
+    {
+      "id": "i_agents",
+      "cluster": "AI",
+      "name": "Agenti di sviluppo",
+      "status": "dimostrata",
+      "desc": "Claude Code e Codex che eseguono piani, con handoff e harness di validazione.",
+      "evidence": "tutti i progetti del repo",
+      "in": [
+        "testo"
+      ],
+      "out": [
+        "file",
+        "testo"
+      ],
+      "limits": ""
+    },
+    {
+      "id": "f_free",
+      "cluster": "INFRA",
+      "name": "Hosting e automazione gratuiti",
+      "status": "dimostrata",
+      "desc": "Render, Cloudflare Workers con D1 e R2, GitHub Actions come cron, repo privato come archivio cifrato.",
+      "evidence": "fidesdays-engine, notionmob, megahealth, colosso",
+      "in": [
+        "any"
+      ],
+      "out": [
+        "any"
+      ],
+      "limits": "Cold start e limiti del piano gratuito."
+    },
+    {
+      "id": "f_atlas",
+      "cluster": "INFRA",
+      "name": "Raccolta deterministica di risorse",
+      "status": "dimostrata",
+      "desc": "Oltre 6800 risorse gratuite (API, repo, modelli, servizi) in SQLite con embedding locali, senza LLM in fase di raccolta.",
+      "evidence": "atlas",
+      "in": [
+        "testo"
+      ],
+      "out": [
+        "dati"
+      ],
+      "limits": ""
+    },
+    {
+      "id": "f_render",
+      "cluster": "INFRA",
+      "name": "Rendering audio e video",
+      "status": "dimostrata",
+      "desc": "ffmpeg e Python per video verticali 1080x1920 e risposte all'impulso fisicamente informate.",
+      "evidence": "midibricks, chamberforge",
+      "in": [
+        "audio",
+        "file"
+      ],
+      "out": [
+        "file"
+      ],
+      "limits": "Su Windows lo stderr di ffmpeg va drenato (deadlock)."
+    },
+    {
+      "id": "d_meta",
+      "cluster": "METODO",
+      "name": "Costruire un meta-framework",
+      "status": "dimostrata",
+      "desc": "Fonde i migliori esempi di successo su un tema in un framework generale e lo adatta alle proprie esigenze.",
+      "evidence": "dichiarato dall'utente il 02/10/2026 (megaframework)",
+      "in": [
+        "testo"
+      ],
+      "out": [
+        "testo"
+      ],
+      "limits": ""
+    },
+    {
+      "id": "d_res",
+      "cluster": "METODO",
+      "name": "Ricerca e estrazione di tecniche",
+      "status": "dimostrata",
+      "desc": "ChatGPT cerca testi di eccellenza; Claude analizza un video YouTube per estrarre tecniche da implementare.",
+      "evidence": "dichiarato dall'utente il 02/10/2026",
+      "in": [
+        "pagina_web",
+        "testo"
+      ],
+      "out": [
+        "testo"
+      ],
+      "limits": "I passaggi tra servizi sono manuali."
+    },
+    {
+      "id": "d_book",
+      "cluster": "METODO",
+      "name": "Audiolibri personalizzati",
+      "status": "dimostrata",
+      "desc": "ChatGPT scrive in tre parti da circa 1500 parole; l'app Listen AI legge con musica di sottofondo.",
+      "evidence": "dichiarato dall'utente il 02/10/2026",
+      "in": [
+        "testo"
+      ],
+      "out": [
+        "audio"
+      ],
+      "limits": "L'ascolto non cattura ciò che colpisce: non torna indietro nulla."
+    }
+  ],
+  "basis": "b10b6f1c3497272f"
+}
