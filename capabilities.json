@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-02.1417",
-  "generated": "2026-10-02T14:17:09",
+  "version": "2026-10-02.1419",
+  "generated": "2026-10-02T14:19:03",
   "capabilities": [
     {
       "id": "a_mir",
@@ -374,5 +374,5 @@
       "limits": "L'ascolto non cattura ciò che colpisce: non torna indietro nulla."
     }
   ],
-  "basis": "b10b6f1c3497272f"
+  "basis": "547f2500b4addac3"
 }
