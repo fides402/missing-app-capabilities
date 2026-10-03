@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-03.2337",
-  "generated": "2026-10-03T23:37:37",
+  "version": "2026-10-04.0041",
+  "generated": "2026-10-04T00:41:59",
   "capabilities": [
     {
       "id": "a_mir",
@@ -407,5 +407,5 @@
       "limits": "Classificazione delle gabbie da regex IT/EN o da un modello free (non misurato); suoni sintetizzati mai ascoltati; notifica di fine missione e minimizeApp non provati sul telefono."
     }
   ],
-  "basis": "a090d57aad569a97"
+  "basis": "fa3ba62a749998aa"
 }
