@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-03.0140",
-  "generated": "2026-10-03T01:40:01",
+  "version": "2026-10-03.1725",
+  "generated": "2026-10-03T17:25:40",
   "capabilities": [
     {
       "id": "a_mir",
@@ -388,7 +388,24 @@
         "dati"
       ],
       "limits": "Nessuna AI: le idee le scrive l'utente. Mai provato su un problema reale; il lessico italiano va rivisto con l'uso."
+    },
+    {
+      "id": "x_agency",
+      "cluster": "METODO",
+      "name": "Allenamento della libertà personale (AGENCY)",
+      "status": "probabile",
+      "desc": "Sessione breve che separa ciò su cui agire (protect) da ciò che non è controllabile (release), fa emergere la regola invisibile 'potrò X quando Y', la tratta come gabbia da mettere alla prova con micro-missioni cronometrate, poi misura XP, crepe e mappa delle dipendenze nel tempo.",
+      "evidence": "agency (APK Android Capacitor, build del 03/10/2026, anteprima verificata nel browser, non ancora usato dal vivo sul telefono); riusa la catena OpenRouter con modelli free dal catalogo vivo come livello opzionale",
+      "in": [
+        "testo",
+        "ui"
+      ],
+      "out": [
+        "ui",
+        "dati"
+      ],
+      "limits": "Classificazione delle gabbie da regex IT/EN o da un modello free (non misurato); suoni sintetizzati mai ascoltati; notifica di fine missione e minimizeApp non provati sul telefono."
     }
   ],
-  "basis": "30de46621e4c1e7a"
+  "basis": "08611198fffa44e5"
 }
