@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-04.0041",
-  "generated": "2026-10-04T00:41:59",
+  "version": "2026-10-05.0256",
+  "generated": "2026-10-05T02:56:32",
   "capabilities": [
     {
       "id": "a_mir",
@@ -405,7 +405,54 @@
         "dati"
       ],
       "limits": "Classificazione delle gabbie da regex IT/EN o da un modello free (non misurato); suoni sintetizzati mai ascoltati; notifica di fine missione e minimizeApp non provati sul telefono."
+    },
+    {
+      "id": "x_cogeng",
+      "cluster": "METODO",
+      "name": "Motore cognitivo a eventi (problema → ipotesi → esperimento)",
+      "status": "probabile",
+      "desc": "Dal testo libero di un problema: obiettivo, assunzioni separate dai fatti, una nuova forma del problema, tre ipotesi filtrate da una risposta generica (ancora negativa su embedding), un esperimento con metrica e soglia, riflessione e riformulazione. Log di eventi con invarianti, router deterministico, contratto JSON validato.",
+      "evidence": "cognitive-engine/app (APK installato il 05/10/2026; 75 test)",
+      "in": [
+        "testo"
+      ],
+      "out": [
+        "testo",
+        "dati",
+        "ui"
+      ],
+      "limits": "Provato solo con un modello di esempio e con un LLM scriptato: la qualità con modelli veri non è misurata. La modalità demo risponde sempre con lo stesso esempio, qualunque cosa si scriva."
+    },
+    {
+      "id": "p_print",
+      "cluster": "APP",
+      "name": "Grafica da stampa serigrafica in SVG e CSS",
+      "status": "dimostrata",
+      "desc": "Interfacce che imitano la stampa anni '60-'70 con oggetti originali: lastre con registro sfalsato e sovrastampa, strisce di inchiostro irregolari, puntini di carta scoperta, bordi tagliati a mano, marchi generati dai dati, tenda di transizione a strisce.",
+      "evidence": "cognitive-engine/app",
+      "in": [
+        "testo"
+      ],
+      "out": [
+        "ui"
+      ],
+      "limits": "I filtri SVG pesano sul telefono: regioni strette e mai su elementi animati. Il desktop non mostra il problema; la resa dal vivo dopo la correzione non è ancora confermata."
+    },
+    {
+      "id": "d_critica",
+      "cluster": "METODO",
+      "name": "Critica di design da commissione simulata",
+      "status": "dimostrata",
+      "desc": "Dieci agenti in parallelo, ognuno con la lente di un designer reale degli anni '60-'70, giudicano pannelli di screenshot con formato fisso (voto, difetti, cosa buttare, correzioni); poi si sintetizzano consenso e dissensi.",
+      "evidence": "cognitive-engine/app (voto medio 5,3/10 alla prima passata)",
+      "in": [
+        "ui"
+      ],
+      "out": [
+        "testo"
+      ],
+      "limits": "Simulazione fondata sui metodi noti, non parole dei designer; sono giudizi di modello, non misure."
     }
   ],
-  "basis": "fa3ba62a749998aa"
+  "basis": "664d966606c92d82"
 }
