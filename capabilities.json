@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-05.0256",
-  "generated": "2026-10-05T02:56:32",
+  "version": "2026-10-05.1843",
+  "generated": "2026-10-05T18:43:27",
   "capabilities": [
     {
       "id": "a_mir",
@@ -452,7 +452,23 @@
         "testo"
       ],
       "limits": "Simulazione fondata sui metodi noti, non parole dei designer; sono giudizi di modello, non misure."
+    },
+    {
+      "id": "m_madlib_chop",
+      "cluster": "METODO",
+      "name": "Opzioni di chop nello stile di un producer, da corpus misurato",
+      "status": "dimostrata",
+      "desc": "Dato un sample, propone 4 stili di chop (loop-cella, ricombinazione di frase, corsa sequenziale, stutter) con fette in secondi sorgente, slot in battiti, scala di varispeed e anteprime. Derivato da 21 brani a sample singolo con tagli misurati dall'audio (allineamento DP frame per frame) e validato fuori-campione.",
+      "evidence": "madlib-chop-mindset",
+      "in": [
+        "audio"
+      ],
+      "out": [
+        "dati",
+        "audio"
+      ],
+      "limits": "Posizioni esatte dei tagli e varispeed non prevedibili (circa 1,4x il caso); prevede zone, tipo di taglio e grammatica. Anteprime mai ascoltate."
     }
   ],
-  "basis": "664d966606c92d82"
+  "basis": "ed4d09758bd385a3"
 }
