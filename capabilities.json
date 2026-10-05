@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-05.1937",
-  "generated": "2026-10-05T19:37:45",
+  "version": "2026-10-05.2040",
+  "generated": "2026-10-05T20:40:06",
   "capabilities": [
     {
       "id": "a_mir",
@@ -474,7 +474,7 @@
       "cluster": "APP",
       "name": "Lettore di loop gapless da link YouTube",
       "status": "probabile",
-      "desc": "App Android nativa: da un link YouTube il backend sul PC scarica l'audio alla qualita` massima, trova e classifica i loop piu` utilizzabili e l'app li riproduce come coda, ogni loop ripetuto sample-accurate su un solo AudioTrack; esporta WAV/FLAC a 24 bit.",
+      "desc": "App Android nativa: da un link YouTube (anche condiviso/aperto dall'app) scarica l'audio alla qualita` massima, trova e classifica i loop piu` utilizzabili e li riproduce come coda, ogni loop ripetuto sample-accurate su un solo AudioTrack; analisi sul PC via Tailscale o sul telefono (NewPipe + motore Kotlin + Rubber Band nativo); esporta WAV/FLAC a 24 bit.",
       "evidence": "loopcrate, madlib-chop-mindset",
       "in": [
         "pagina_web"
@@ -484,7 +484,7 @@
         "file",
         "ui"
       ],
-      "limits": "Richiede il backend acceso sul PC; UI e audio sul telefono non ancora provati dal vivo; i loop contengono anche le voci del mix."
+      "limits": "Analisi sul telefono compilata ma non ancora provata dal vivo; l'analisi sul PC richiede il backend acceso; i loop contengono anche le voci del mix."
     }
   ],
   "basis": "be609e3ccda618f9"
