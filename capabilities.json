@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-05.2040",
-  "generated": "2026-10-05T20:40:06",
+  "version": "2026-10-05.2133",
+  "generated": "2026-10-05T21:33:34",
   "capabilities": [
     {
       "id": "a_mir",
@@ -484,7 +484,7 @@
         "file",
         "ui"
       ],
-      "limits": "Analisi sul telefono compilata ma non ancora provata dal vivo; l'analisi sul PC richiede il backend acceso; i loop contengono anche le voci del mix."
+      "limits": "Analisi sul telefono (porting fedele di librosa, ~41 s per 4 min) o sul PC; i CHOP resi da Rubber Band non ancora ascoltati; i loop contengono anche le voci del mix."
     }
   ],
   "basis": "be609e3ccda618f9"
