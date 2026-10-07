@@ -1,6 +1,6 @@
 {
   "version": "2026-10-07.1342",
-  "generated": "2026-10-07T13:42:42",
+  "generated": "2026-10-07T13:42:49",
   "capabilities": [
     {
       "id": "a_mir",
@@ -503,6 +503,25 @@
         "ui"
       ],
       "limits": "Audio e latenza dei pad mai ascoltati sul telefono; YouTube puo' rompersi quando cambia (ripiego opzionale su backend PC con yt-dlp); brani oltre 15 minuti rifiutati per la memoria della WebView."
+    },
+    {
+      "id": "x_chops_to_main_loop",
+      "cluster": "AUDIO",
+      "name": "Chop pronti -> loop principale a BPM fisso, seamless, con choke stile MPC",
+      "status": "probabile",
+      "desc": "Da un set di chop WAV di un brano: griglia beat/downbeat con beat_this, tempo e metro misurati per chop, ogni battuta riallineata a un BPM target con Rubber Band R3 (intonazione preservata, correzione di tuning a A440), chop montati interi in progressione armonica con ogni attacco che taglia il precedente (choke MPC, fade 6 ms) e giunto di chiusura contiguo nel sorgente.",
+      "evidence": [
+        "chopmind",
+        "warpclone",
+        "ytsampler"
+      ],
+      "in": [
+        "audio"
+      ],
+      "out": [
+        "audio"
+      ],
+      "limits": "Mai ascoltato dall'utente: validato solo su dati (click, spaziatura dei downbeat). Stiramenti oltre ~10% non verificati."
     }
   ],
   "basis": "d397bcc97fdb1d8d"
