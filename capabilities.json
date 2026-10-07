@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-07.1247",
-  "generated": "2026-10-07T12:47:34",
+  "version": "2026-10-07.1342",
+  "generated": "2026-10-07T13:42:42",
   "capabilities": [
     {
       "id": "a_mir",
@@ -491,7 +491,7 @@
       "cluster": "APP",
       "name": "Campionatore a pad da YouTube o file (waveform, chop, export)",
       "status": "probabile",
-      "desc": "App Android (Capacitor): da link YouTube (backend PC con yt-dlp, WAV 24 bit) o da file WAV/MP3/FLAC mostra la waveform scorrevole con cursore fisso, assegna chop a 4 banchi x 16 pad con inizio/fine precisi (maniglie, lente, snap a zero-crossing, modi one-shot/gate/loop) ed esporta ZIP o WAV singoli (16/24/32 bit).",
+      "desc": "App Android (Capacitor) standalone: da link YouTube (estrazione sul telefono con NewPipeExtractor, audio al bitrate massimo, nessun PC) o da file WAV/MP3/FLAC mostra la waveform scorrevole con cursore fisso, assegna chop a 4 banchi x 16 pad con inizio/fine precisi (maniglie, lente, snap a zero-crossing, one-shot/gate/loop, marcatura dal vivo durante il play) ed esporta ZIP o WAV singoli (16/24/32 bit).",
       "evidence": "chopbox",
       "in": [
         "pagina_web",
@@ -502,8 +502,8 @@
         "file",
         "ui"
       ],
-      "limits": "Audio e latenza dei pad mai ascoltati sul telefono; YouTube richiede il backend sul PC acceso; brani oltre 12 minuti rifiutati per la memoria della WebView."
+      "limits": "Audio e latenza dei pad mai ascoltati sul telefono; YouTube puo' rompersi quando cambia (ripiego opzionale su backend PC con yt-dlp); brani oltre 15 minuti rifiutati per la memoria della WebView."
     }
   ],
-  "basis": "a2df7bf0cd5ca875"
+  "basis": "d397bcc97fdb1d8d"
 }
