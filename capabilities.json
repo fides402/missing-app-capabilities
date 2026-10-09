@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-07.1342",
-  "generated": "2026-10-07T13:42:49",
+  "version": "2026-10-09.0359",
+  "generated": "2026-10-09T03:59:08",
   "capabilities": [
     {
       "id": "a_mir",
@@ -522,7 +522,28 @@
         "audio"
       ],
       "limits": "Mai ascoltato dall'utente: validato solo su dati (click, spaziatura dei downbeat). Stiramenti oltre ~10% non verificati."
+    },
+    {
+      "id": "x_beat_from_obscure_sample",
+      "cluster": "AUDIO",
+      "name": "Sample poco noto + libreria di batterie -> beat arrangiato come progetto Ableton",
+      "status": "probabile",
+      "desc": "Da un brano scelto (YouTube, poche view): tempo/tonalita misurati, chop proposti dall'autochop, batteria e ear candy dalla libreria locale, sub che segue il sample, arrangiamento a sezioni, stem renderizzati e progetto Live con catena master dell'utente.",
+      "in": [
+        "audio",
+        "file"
+      ],
+      "out": [
+        "audio",
+        "file"
+      ],
+      "evidence": [
+        "navy-omega",
+        "chopbox",
+        "beat2als"
+      ],
+      "limits": "Mai ascoltato; stem pre-mixati; originalita' del sample non verificabile (WhoSampled blocca il fetch)."
     }
   ],
-  "basis": "d397bcc97fdb1d8d"
+  "basis": "26efcbeccdfe3bee"
 }
