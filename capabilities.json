@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-09.0359",
-  "generated": "2026-10-09T03:59:08",
+  "version": "2026-10-10.0124",
+  "generated": "2026-10-10T01:24:23",
   "capabilities": [
     {
       "id": "a_mir",
@@ -542,8 +542,30 @@
         "chopbox",
         "beat2als"
       ],
-      "limits": "Mai ascoltato; stem pre-mixati; originalita' del sample non verificabile (WhoSampled blocca il fetch)."
+      "limits": "Mai ascoltato; stem pre-mixati; WhoSampled blocca WebFetch (403) ma si legge dal browser integrato."
+    },
+    {
+      "id": "x_reference_to_beat",
+      "cluster": "AUDIO",
+      "name": "Artista di riferimento + immagine -> brani campionati misurati -> sample nuovi per mood -> beat in Ableton",
+      "status": "probabile",
+      "desc": "Dai brani di un artista legge su WhoSampled i sample usati, scarica sorgente e brano e MISURA se la batteria e' aggiunta (bande spettrali, picchi di kick, crediti), cerca sample nuovi per tonalita'/mood di un'immagine (finestre scansionate per percussivita', tonalita', pulsazione), e costruisce un progetto Live: cella a battiti snappati agli attacchi, varispeed, strato in tempo libero agganciato con warp nativo (battito/croma sulla terzina), kick e sub che seguono gli attacchi reali.",
+      "in": [
+        "audio",
+        "file",
+        "pagina_web"
+      ],
+      "out": [
+        "audio",
+        "file"
+      ],
+      "evidence": [
+        "earlbeat",
+        "beat2als",
+        "navy-omega"
+      ],
+      "limits": "Mai ascoltato: tonalita' e mood da misure, non a orecchio; l'anteprima offline non riproduce il warp Complex di Live; il fit della pulsazione di un brano in rubato lascia ~40 ms di scarto."
     }
   ],
-  "basis": "26efcbeccdfe3bee"
+  "basis": "69d56e0b08a60e2b"
 }
