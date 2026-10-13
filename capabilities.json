@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-13.1706",
-  "generated": "2026-10-13T17:06:48",
+  "version": "2026-10-13.1755",
+  "generated": "2026-10-13T17:55:09",
   "capabilities": [
     {
       "id": "a_mir",
@@ -565,7 +565,23 @@
         "navy-omega"
       ],
       "limits": "Mai ascoltato: tonalita' e mood da misure, non a orecchio; l'anteprima offline non riproduce il warp Complex di Live; il fit della pulsazione di un brano in rubato lascia ~40 ms di scarto."
+    },
+    {
+      "id": "a_similar_sample_search",
+      "cluster": "AUDIO",
+      "name": "Ricerca di sample simili a una reference",
+      "status": "dimostrata",
+      "desc": "Da una sezione di brano e uno strumento isolato (fra ~70 modelli MVSEP) a one-shot e loop simili in una libreria locale indicizzata con CLAP, in pochi millisecondi, con filtri di tempo, tonalita' e ruolo.",
+      "evidence": "soundfly",
+      "in": [
+        "audio"
+      ],
+      "out": [
+        "audio",
+        "file"
+      ],
+      "limits": "L'indice completo di una libreria da ~90k file richiede ore di CPU; MVSEP consuma crediti; nessun catalogo online (Splice non ha API pubblica)."
     }
   ],
-  "basis": "7721c9fd21cfa3f2"
+  "basis": "45ac91e41ce0cdbf"
 }
