@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-10.0124",
-  "generated": "2026-10-10T01:24:23",
+  "version": "2026-10-13.1706",
+  "generated": "2026-10-13T17:06:48",
   "capabilities": [
     {
       "id": "a_mir",
@@ -567,5 +567,5 @@
       "limits": "Mai ascoltato: tonalita' e mood da misure, non a orecchio; l'anteprima offline non riproduce il warp Complex di Live; il fit della pulsazione di un brano in rubato lascia ~40 ms di scarto."
     }
   ],
-  "basis": "69d56e0b08a60e2b"
+  "basis": "7721c9fd21cfa3f2"
 }
