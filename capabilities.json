@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-13.1755",
-  "generated": "2026-10-13T17:55:09",
+  "version": "2026-10-14.1132",
+  "generated": "2026-10-14T11:32:22",
   "capabilities": [
     {
       "id": "a_mir",
@@ -581,7 +581,25 @@
         "file"
       ],
       "limits": "L'indice completo di una libreria da ~90k file richiede ore di CPU; MVSEP consuma crediti; nessun catalogo online (Splice non ha API pubblica)."
+    },
+    {
+      "id": "a_voice_layer_sketch",
+      "cluster": "AUDIO",
+      "name": "Schizzo di composizione a strati con la voce",
+      "status": "probabile",
+      "desc": "Da una voce che canta o imita le parti, registra layer sincronizzati a battute esatte (BPM, metro, lunghezza scelti; conteggio e metronomo), li riascolta in loop con muto/solo e li esporta come WAV taggati per strumento piu' un file di note leggibile da un LLM.",
+      "evidence": "spool",
+      "in": [
+        "voce",
+        "testo"
+      ],
+      "out": [
+        "audio",
+        "file",
+        "testo"
+      ],
+      "limits": "App Android installata ma microfono, latenza e condivisione dello ZIP non ancora provati dal vivo; la latenza e' una stima compensabile; non riconosce le note: valgono quelle scritte dall'utente."
     }
   ],
-  "basis": "45ac91e41ce0cdbf"
+  "basis": "8ea4792db42c8698"
 }
