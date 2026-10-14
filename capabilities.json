@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-14.1132",
-  "generated": "2026-10-14T11:32:22",
+  "version": "2026-10-14.2322",
+  "generated": "2026-10-14T23:22:58",
   "capabilities": [
     {
       "id": "a_mir",
@@ -599,7 +599,26 @@
         "testo"
       ],
       "limits": "App Android installata ma microfono, latenza e condivisione dello ZIP non ancora provati dal vivo; la latenza e' una stima compensabile; non riconosce le note: valgono quelle scritte dall'utente."
+    },
+    {
+      "id": "x_invenzione_sistematica",
+      "cluster": "METODO",
+      "name": "Invenzione sistematica a 10 fasi (SYNTHESIS-X)",
+      "status": "probabile",
+      "desc": "Da un problema con metrica, baseline e vincoli duri guida un percorso di 10 fasi (mappa, contraddizioni, ideale, sei famiglie di candidati, attacco avversariale, portafoglio di 3 concetti con meccanismi diversi, esperimento falsificabile, evoluzione). Gate, punteggi, deduplicazione e portafoglio sono calcolati in codice con test; l'AI facoltativa propone soltanto.",
+      "evidence": "system-x",
+      "in": [
+        "testo",
+        "dati"
+      ],
+      "out": [
+        "testo",
+        "dati",
+        "file",
+        "ui"
+      ],
+      "limits": "App appena installata, mai provata con una chiave OpenRouter vera. La novita' delle idee resta non verificata: manca la ricerca di anteriorita'. Determinismo di processo, non di output dell'AI."
     }
   ],
-  "basis": "8ea4792db42c8698"
+  "basis": "13f92435115236f6"
 }
