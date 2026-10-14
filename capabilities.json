@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-15.0018",
-  "generated": "2026-10-15T00:18:46",
+  "version": "2026-10-15.0022",
+  "generated": "2026-10-15T00:22:47",
   "capabilities": [
     {
       "id": "a_mir",
@@ -638,5 +638,5 @@
       "limits": "Motore con test in codice, ma app appena installata e mai usata dal vivo. I punteggi iniziali sono stime a regole fisse, non misure: vanno corretti dall'utente. Nessuna AI: non valuta la novita' delle idee ne' la loro riuscita commerciale."
     }
   ],
-  "basis": "a6c4eeb4fd51fe2f"
+  "basis": "54110b51a07f2c6c"
 }
