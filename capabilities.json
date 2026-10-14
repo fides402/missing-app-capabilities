@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-14.2322",
-  "generated": "2026-10-14T23:22:58",
+  "version": "2026-10-15.0018",
+  "generated": "2026-10-15T00:18:46",
   "capabilities": [
     {
       "id": "a_mir",
@@ -618,7 +618,25 @@
         "ui"
       ],
       "limits": "App appena installata, mai provata con una chiave OpenRouter vera. La novita' delle idee resta non verificata: manca la ricerca di anteriorita'. Determinismo di processo, non di output dell'AI."
+    },
+    {
+      "id": "x_generazione_soluzioni",
+      "cluster": "METODO",
+      "name": "Generazione deterministica di idee da barriere e risorse (CATALYST-RX)",
+      "status": "probabile",
+      "desc": "Da un obiettivo misurabile, le barriere che lo bloccano (12 classi, peso 1-5), le risorse disponibili (12 classi) e i limiti (budget, programmazione, dati altrui) enumera concatenazioni di meccanismi fino a 3 passaggi, applica veti, le ordina con una formula a pesi fissi e compila per le prime 5 la scheda: passaggi, primo test a mano, soglia, criterio di abbandono, prove V0-V4. Stesso input, stesso risultato; se manca una risorsa lo dice invece di inventare.",
+      "evidence": "catalyst",
+      "in": [
+        "testo",
+        "dati"
+      ],
+      "out": [
+        "testo",
+        "dati",
+        "ui"
+      ],
+      "limits": "Motore con test in codice, ma app appena installata e mai usata dal vivo. I punteggi iniziali sono stime a regole fisse, non misure: vanno corretti dall'utente. Nessuna AI: non valuta la novita' delle idee ne' la loro riuscita commerciale."
     }
   ],
-  "basis": "13f92435115236f6"
+  "basis": "a6c4eeb4fd51fe2f"
 }
