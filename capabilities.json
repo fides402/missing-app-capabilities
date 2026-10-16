@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-16.0210",
-  "generated": "2026-10-16T02:10:38",
+  "version": "2026-10-16.0222",
+  "generated": "2026-10-16T02:22:20",
   "capabilities": [
     {
       "id": "a_mir",
@@ -657,7 +657,28 @@
         "file"
       ],
       "limits": "Mai ascoltato da Claude: il giudizio e' dell'utente (su due brani ha corretto solo la palette del secondo chop e qualche attacco). Il controllo di omogeneita' della palette e' descritto ma non ancora automatico; nei brani in tempo libero la griglia e' scelta, non letta."
+    },
+    {
+      "id": "m_learn_chop_from_breakdown",
+      "cluster": "METODO",
+      "name": "Da un video \"sample breakdown\" a una tecnica di chopping misurata e riusabile",
+      "status": "dimostrata",
+      "desc": "Procura video, brano finito intero, sample originale e trascrizioni; allinea il risultato sul sample con un Viterbi a penalita' di salto e misura forma (quota di materiale naturale), lunghezza delle fette in battiti, ganci ricorrenti, alternanza di accordi, fase e tipo di colpo alla partenza; separa misurato da interpretato, prova il metodo su un sample nuovo a round e legge le correzioni manuali dell'utente nel progetto Live come verita' di terreno.",
+      "evidence": [
+        "dilla-dontcry",
+        "madlib-chop-mindset",
+        "beat2als"
+      ],
+      "in": [
+        "pagina_web",
+        "audio"
+      ],
+      "out": [
+        "dati",
+        "file"
+      ],
+      "limits": "Un solo brano di riferimento studiato a fondo: i principi generali richiedono almeno un secondo esempio dello stesso producer. Mai ascoltato da Claude."
     }
   ],
-  "basis": "20f0230d284b2b39"
+  "basis": "16c650fb11902394"
 }
