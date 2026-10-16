@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-16.0222",
-  "generated": "2026-10-16T02:22:20",
+  "version": "2026-10-16.1806",
+  "generated": "2026-10-16T18:06:58",
   "capabilities": [
     {
       "id": "a_mir",
@@ -678,7 +678,22 @@
         "file"
       ],
       "limits": "Un solo brano di riferimento studiato a fondo: i principi generali richiedono almeno un secondo esempio dello stesso producer. Mai ascoltato da Claude."
+    },
+    {
+      "id": "p_scena3d",
+      "cluster": "APP",
+      "name": "Scena 3D fotografica in app web",
+      "status": "dimostrata",
+      "desc": "Scena three.js offline dentro un'app Capacitor: camera con focale e diaframma fisici (profondità di campo reale), luci con penombra, difetti di camera in post-processing; fallback SVG senza WebGL.",
+      "evidence": "ocular",
+      "in": [
+        "dati"
+      ],
+      "out": [
+        "ui"
+      ],
+      "limits": "Verificato sul telefono solo da log (WebGL ok); l'aspetto reale non ancora visto. Anteprima affidabile solo con Chrome headless, non col pane del browser."
     }
   ],
-  "basis": "16c650fb11902394"
+  "basis": "d9d6a3a25478ec4c"
 }
