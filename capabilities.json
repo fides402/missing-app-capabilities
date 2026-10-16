@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-16.2248",
-  "generated": "2026-10-16T22:48:02",
+  "version": "2026-10-16.2347",
+  "generated": "2026-10-16T23:47:37",
   "capabilities": [
     {
       "id": "a_mir",
@@ -710,7 +710,23 @@
         "file"
       ],
       "limits": "Un solo brano studiato: le regole sono ipotesi. Mai ascoltato. L'MPC non si vede nel video, i pad sono dedotti dall'audio."
+    },
+    {
+      "id": "a_conductor_style_beat",
+      "cluster": "AUDIO",
+      "name": "Beat in stile di un producer da un sample nuovo, con progetto Ableton",
+      "status": "probabile",
+      "desc": "Applica le regole misurate di un producer (varispeed, flip contiguo, stab raro, kick e hat dalla libreria) a un sample nuovo, anche solo i primi secondi; clip warpate agganciate battuta per battuta, progetto Ableton verificato e render.",
+      "evidence": "conductor-study",
+      "in": [
+        "audio"
+      ],
+      "out": [
+        "audio",
+        "file"
+      ],
+      "limits": "Regole da un solo brano e dalle correzioni dell'utente; mai ascoltato dall'autore. Giunzioni e groove vanno giudicati a orecchio."
     }
   ],
-  "basis": "5d6f0f00ef21e1e5"
+  "basis": "8e21ae42bf2f260c"
 }
