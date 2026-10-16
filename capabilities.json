@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-15.0022",
-  "generated": "2026-10-15T00:22:47",
+  "version": "2026-10-16.0210",
+  "generated": "2026-10-16T02:10:38",
   "capabilities": [
     {
       "id": "a_mir",
@@ -636,7 +636,28 @@
         "ui"
       ],
       "limits": "Motore con test in codice, ma app appena installata e mai usata dal vivo. I punteggi iniziali sono stime a regole fisse, non misure: vanno corretti dall'utente. Nessuna AI: non valuta la novita' delle idee ne' la loro riuscita commerciale."
+    },
+    {
+      "id": "x_dilla_beat_from_sample",
+      "cluster": "AUDIO",
+      "name": "Sample (Spotify/YouTube) -> beat drumless da ~2:30 con la tecnica di chopping misurata su un brano di riferimento",
+      "status": "dimostrata",
+      "desc": "Da un brano: scarica l'originale, misura pulsazione (o riconosce il tempo libero), zone con attacchi vs zone sostenute, accordi e basso; costruisce forma (passaggi naturali lunghi + sezioni di chop con due accordi per battuta e gancio da 2 battiti, palette timbrica unica), fette che partono sull'attacco vero sulla griglia e finiscono in un calo, FEEL e giunture ottimizzate dal motore di un campionatore (Node), warp solo come ritocco, audit di ogni giunzione, progetto Live e consegna sul telefono; opzionale a cappella gia' a tempo.",
+      "evidence": [
+        "dilla-dontcry",
+        "chopbox",
+        "beat2als"
+      ],
+      "in": [
+        "audio",
+        "pagina_web"
+      ],
+      "out": [
+        "audio",
+        "file"
+      ],
+      "limits": "Mai ascoltato da Claude: il giudizio e' dell'utente (su due brani ha corretto solo la palette del secondo chop e qualche attacco). Il controllo di omogeneita' della palette e' descritto ma non ancora automatico; nei brani in tempo libero la griglia e' scelta, non letta."
     }
   ],
-  "basis": "54110b51a07f2c6c"
+  "basis": "20f0230d284b2b39"
 }
