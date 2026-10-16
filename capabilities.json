@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-16.1806",
-  "generated": "2026-10-16T18:06:58",
+  "version": "2026-10-16.2248",
+  "generated": "2026-10-16T22:48:02",
   "capabilities": [
     {
       "id": "a_mir",
@@ -693,7 +693,24 @@
         "ui"
       ],
       "limits": "Verificato sul telefono solo da log (WebGL ok); l'aspetto reale non ancora visto. Anteprima affidabile solo con Chrome headless, non col pane del browser."
+    },
+    {
+      "id": "a_stile_producer_da_audio",
+      "cluster": "AUDIO",
+      "name": "Imparare lo stile di un producer da un tutorial e applicarlo a un sample nuovo",
+      "status": "probabile",
+      "desc": "Dal tutorial di un producer misura varispeed, mappa dei tagli sul sample originale, stem di batteria e feel (offset in ms), poi li trasforma in un algoritmo che costruisce flip e batteria su un sample nuovo, con progetto Ableton e render.",
+      "evidence": "conductor-study",
+      "in": [
+        "audio",
+        "pagina_web"
+      ],
+      "out": [
+        "audio",
+        "file"
+      ],
+      "limits": "Un solo brano studiato: le regole sono ipotesi. Mai ascoltato. L'MPC non si vede nel video, i pad sono dedotti dall'audio."
     }
   ],
-  "basis": "d9d6a3a25478ec4c"
+  "basis": "5d6f0f00ef21e1e5"
 }
