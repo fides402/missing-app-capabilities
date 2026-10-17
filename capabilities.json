@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-16.2347",
-  "generated": "2026-10-16T23:47:37",
+  "version": "2026-10-17.2127",
+  "generated": "2026-10-17T21:27:02",
   "capabilities": [
     {
       "id": "a_mir",
@@ -726,7 +726,70 @@
         "file"
       ],
       "limits": "Regole da un solo brano e dalle correzioni dell'utente; mai ascoltato dall'autore. Giunzioni e groove vanno giudicati a orecchio."
+    },
+    {
+      "id": "a_workspace",
+      "cluster": "APP",
+      "name": "Workspace a blocchi con database",
+      "status": "dimostrata",
+      "desc": "Editor di pagine a blocchi (slash menu, markdown, colonne, tabelle, codice, media) e database con viste Table/Board/Calendar/Timeline/Gallery/Chart, formule, relazioni e rollup, offline.",
+      "evidence": "notnotion (provato nel browser; schema e funzioni ricavati da Notion PC e APK)",
+      "in": [
+        "testo",
+        "file"
+      ],
+      "out": [
+        "dati",
+        "file"
+      ],
+      "limits": "Un solo utente, nessuna collaborazione in tempo reale; blocco sincronizzato non implementato; DnD touch non provato."
+    },
+    {
+      "id": "i_drive_sync",
+      "cluster": "INFRA",
+      "name": "Sync dati su Google Drive",
+      "status": "probabile",
+      "desc": "Le pagine vivono sul dispositivo e si sincronizzano nella cartella nascosta dell'app sul Drive dell'utente, con login Google senza server proprio (device flow).",
+      "evidence": "notnotion (testato solo con un Drive finto)",
+      "in": [
+        "dati"
+      ],
+      "out": [
+        "dati"
+      ],
+      "limits": "Login e Drive reali mai provati; in modalita' test il token scade dopo 7 giorni; conflitti risolti per pagina (vince l'ultima modifica)."
+    },
+    {
+      "id": "m_reverse_app",
+      "cluster": "METODO",
+      "name": "Reverse engineering di app (APK e Electron)",
+      "status": "dimostrata",
+      "desc": "Si apre un APK o un asar come archivio per leggere schema dati, stringhe dell'interfaccia e colori reali, e se ne ricava una mappa di funzioni e token di design.",
+      "evidence": "notnotion (Notion PC 4.2.0 e Android 0.6.4222)",
+      "in": [
+        "file"
+      ],
+      "out": [
+        "testo",
+        "dati"
+      ],
+      "limits": "Senza apktool/jadx non c'e' decompilazione del codice: restano risorse, stringhe e dati; non si vede l'app in esecuzione."
+    },
+    {
+      "id": "i_pc_android",
+      "cluster": "INFRA",
+      "name": "Stessa web app su PC e Android",
+      "status": "dimostrata",
+      "desc": "Un solo codice web impacchettato come app Windows (Electron) e come APK (Capacitor), installati entrambi.",
+      "evidence": "notnotion, nodo, megahealth",
+      "in": [
+        "ui"
+      ],
+      "out": [
+        "file"
+      ],
+      "limits": "Su PC serve un protocollo app:// per i moduli; su Android lo streaming di rete e il microfono vanno verificati sul telefono."
     }
   ],
-  "basis": "8e21ae42bf2f260c"
+  "basis": "27bc8bb4e3b1a698"
 }
