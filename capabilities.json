@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-17.2127",
-  "generated": "2026-10-17T21:27:02",
+  "version": "2026-10-18.0054",
+  "generated": "2026-10-18T00:54:29",
   "capabilities": [
     {
       "id": "a_mir",
@@ -764,8 +764,8 @@
       "cluster": "METODO",
       "name": "Reverse engineering di app (APK e Electron)",
       "status": "dimostrata",
-      "desc": "Si apre un APK o un asar come archivio per leggere schema dati, stringhe dell'interfaccia e colori reali, e se ne ricava una mappa di funzioni e token di design.",
-      "evidence": "notnotion (Notion PC 4.2.0 e Android 0.6.4222)",
+      "desc": "Si apre un APK o un asar come archivio per leggere schema dati, stringhe dell'interfaccia e colori reali, e se ne ricava una mappa di funzioni e token di design. Anche IPA iOS: CSS dell'interfaccia, schema dati e palette si leggono senza decompilare.",
+      "evidence": "notnotion (Notion PC 4.2.0 e Android 0.6.4222), beatmaker-x",
       "in": [
         "file"
       ],
@@ -789,7 +789,22 @@
         "file"
       ],
       "limits": "Su PC serve un protocollo app:// per i moduli; su Android lo streaming di rete e il microfono vanno verificati sul telefono."
+    },
+    {
+      "id": "a_latency_calib",
+      "cluster": "AUDIO",
+      "name": "Calibrazione latenza cuffie (anche Bluetooth)",
+      "status": "probabile",
+      "desc": "Misura il ritardo reale dell'uscita audio con chirp e microfono, tap test e sync suono/flash; un profilo per ogni uscita applicato in automatico.",
+      "evidence": "beatmaker-x",
+      "in": [
+        "audio"
+      ],
+      "out": [
+        "dati"
+      ],
+      "limits": "Verificata solo con loopback simulato (errore sotto 1 ms); mai provata con cuffie Bluetooth vere."
     }
   ],
-  "basis": "27bc8bb4e3b1a698"
+  "basis": "88d218313f3b3b85"
 }
