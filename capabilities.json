@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-18.1735",
-  "generated": "2026-10-18T17:35:28",
+  "version": "2026-10-18.2032",
+  "generated": "2026-10-18T20:32:23",
   "capabilities": [
     {
       "id": "a_mir",
@@ -858,5 +858,5 @@
       "limits": "Provato solo in Standalone e con la UI pilotata via CDP; mai ascoltato ne' aperto in un DAW, drag-out del MIDI non verificato. Richiede Node, yt-dlp e ffmpeg installati."
     }
   ],
-  "basis": "dc80cd2d6491b680"
+  "basis": "809fe3db0ab1269f"
 }
