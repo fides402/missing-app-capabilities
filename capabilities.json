@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-18.0054",
-  "generated": "2026-10-18T00:54:29",
+  "version": "2026-10-18.0304",
+  "generated": "2026-10-18T03:04:04",
   "capabilities": [
     {
       "id": "a_mir",
@@ -804,7 +804,25 @@
         "dati"
       ],
       "limits": "Verificata solo con loopback simulato (errore sotto 1 ms); mai provata con cuffie Bluetooth vere."
+    },
+    {
+      "id": "a_era_collage_beat",
+      "cluster": "AUDIO",
+      "name": "Collage d'epoca multiagente (beat da dischi diversi)",
+      "status": "probabile",
+      "desc": "Cerca dischi della stessa scena/epoca di una reference (esclusa), assegna ruoli (break, cella armonica, rullante donatore, stab, texture), taglia, fascia e degrada per strato, arrangia e verifica con un critico anti-imitazione; esporta un progetto Ableton con warp nativo.",
+      "evidence": "beatforge",
+      "in": [
+        "testo",
+        "audio"
+      ],
+      "out": [
+        "audio",
+        "file",
+        "dati"
+      ],
+      "limits": "Mai ascoltato: groove e gusto sono proxy misurati; dipende da yt-dlp e da ricerca YouTube; MVSEP previsto ma non usato."
     }
   ],
-  "basis": "88d218313f3b3b85"
+  "basis": "4dd062a04f4dc50c"
 }
