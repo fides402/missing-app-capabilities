@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-18.0304",
-  "generated": "2026-10-18T03:04:04",
+  "version": "2026-10-18.0441",
+  "generated": "2026-10-18T04:41:45",
   "capabilities": [
     {
       "id": "a_mir",
@@ -822,7 +822,24 @@
         "dati"
       ],
       "limits": "Mai ascoltato: groove e gusto sono proxy misurati; dipende da yt-dlp e da ricerca YouTube; MVSEP previsto ma non usato."
+    },
+    {
+      "id": "a_vst_clone",
+      "cluster": "AUDIO",
+      "name": "Clone leggero di un plugin audio",
+      "status": "dimostrata",
+      "desc": "Misura un plugin VST3 installato come scatola nera (sweep, rumore, toni a piu' livelli, test di composizione dei moduli), ne ricava struttura e parametri e lo ricostruisce come VST3 C++/JUCE molto piu' leggero: filtri esatti da risposta complessa, modelli lineari ridotti, curve statiche e piccole reti addestrate dove serve, UI ricostruita con meter e curve animate. Verifica con test di differenza contro l'originale e misura della CPU.",
+      "evidence": "orionlite",
+      "in": [
+        "file",
+        "audio"
+      ],
+      "out": [
+        "file",
+        "ui"
+      ],
+      "limits": "Fedelta' misurata modulo per modulo: ottima sui filtri e sulle curve statiche, media sui compressori, debole sui moduli con memoria lunga o dinamica dipendente dal livello (drive neurale). Serve un ascolto umano prima di dichiararlo equivalente."
     }
   ],
-  "basis": "4dd062a04f4dc50c"
+  "basis": "3f43e324c7803932"
 }
