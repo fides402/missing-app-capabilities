@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-18.2032",
-  "generated": "2026-10-18T20:32:23",
+  "version": "2026-10-18.2116",
+  "generated": "2026-10-18T21:16:07",
   "capabilities": [
     {
       "id": "a_mir",
@@ -856,7 +856,23 @@
         "ui"
       ],
       "limits": "Provato solo in Standalone e con la UI pilotata via CDP; mai ascoltato ne' aperto in un DAW, drag-out del MIDI non verificato. Richiede Node, yt-dlp e ffmpeg installati."
+    },
+    {
+      "id": "a_apk_clone",
+      "cluster": "APP",
+      "name": "Clone leggero di un'app Android",
+      "status": "dimostrata",
+      "desc": "Prende un APK, ne ispeziona manifest, asset e librerie per capire le funzioni reali, e le rifa' da zero come app Capacitor molto piu' leggera: motore WebGL scritto in proprio (regolazioni, filtri), salvataggio in galleria con un piccolo plugin nativo, build e installazione sul telefono via adb. Niente asset o modelli dell'originale.",
+      "evidence": "quel",
+      "in": [
+        "file"
+      ],
+      "out": [
+        "file",
+        "ui"
+      ],
+      "limits": "Replica le funzioni, non l'aspetto esatto: i filtri sono propri. Le parti che dipendono da modelli o asset proprietari (effetti sul volto, AI) restano fuori. Export video e salvataggio non ancora provati sul telefono."
     }
   ],
-  "basis": "809fe3db0ab1269f"
+  "basis": "819eb7607eb7a037"
 }
