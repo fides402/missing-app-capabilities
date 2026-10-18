@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-18.2116",
-  "generated": "2026-10-18T21:16:07",
+  "version": "2026-10-18.2340",
+  "generated": "2026-10-18T23:40:08",
   "capabilities": [
     {
       "id": "a_mir",
@@ -845,7 +845,7 @@
       "cluster": "AUDIO",
       "name": "Sampler VST3 con autochop e pattern MIDI trascinabili",
       "status": "probabile",
-      "desc": "Plugin VST3/Standalone (JUCE) che porta in un DAW il motore di chopping dell'app CHOPPERIA: carica un file o un link YouTube/Spotify, trova da solo i punti di chop (autochop che impara dalle scelte), genera cinque pattern bar-aligned e li esporta come file MIDI da trascinare in una clip, mentre i pad (MIDI 36-99) suonano i chop con varispeed agganciato al tempo del DAW. UI web nel WebView2 di JUCE.",
+      "desc": "Plugin VST3/Standalone (JUCE) che porta in un DAW il motore di chopping dell'app CHOPPERIA: carica un file o un link YouTube/Spotify, trova da solo i punti di chop (autochop che impara dalle scelte), genera cinque pattern bar-aligned e li esporta come file MIDI da trascinare in una clip, mentre i pad (MIDI 36-99) suonano i chop con varispeed agganciato al tempo del DAW. UI web nel WebView2 di JUCE. Key lock: il tempo del DAW cambia senza toccare l'intonazione (stretch di fase ricreato dal comportamento misurato di un time-stretcher commerciale) e un controllo KEY trasporta in semitoni.",
       "evidence": "chopperia-vst",
       "in": [
         "file",
@@ -855,7 +855,7 @@
         "midi",
         "ui"
       ],
-      "limits": "Provato solo in Standalone e con la UI pilotata via CDP; mai ascoltato ne' aperto in un DAW, drag-out del MIDI non verificato. Richiede Node, yt-dlp e ffmpeg installati."
+      "limits": "Provato solo in Standalone e con la UI pilotata via CDP; mai ascoltato ne' aperto in un DAW, drag-out del MIDI non verificato. Richiede Node, yt-dlp e ffmpeg installati. Il key lock e' provato solo in un host headless (tempo e intonazione misurati), non ascoltato ne' in un DAW."
     },
     {
       "id": "a_apk_clone",
@@ -872,7 +872,22 @@
         "ui"
       ],
       "limits": "Replica le funzioni, non l'aspetto esatto: i filtri sono propri. Le parti che dipendono da modelli o asset proprietari (effetti sul volto, AI) restano fuori. Export video e salvataggio non ancora provati sul telefono."
+    },
+    {
+      "id": "a_stretch_pnt",
+      "cluster": "AUDIO",
+      "name": "Time-stretch e key shift di qualita' (ricreato da un plugin commerciale)",
+      "status": "dimostrata",
+      "desc": "Cambia durata e/o tonalita' di un campione senza artefatti evidenti: separa armonico e percussivo (HPSS), stira l'armonico con vocoder di fase agganciato ai picchi, lascia intatti gli attacchi e ricampiona con sinc per il cambio di chiave; supporta una mappa dei tempi (warping). Ricreato misurando un plugin commerciale pilotato in headless (stato iniettato, render a sezioni) contro l'ideale generato direttamente al tempo di arrivo. Gira in JavaScript (Worker del telefono) e in C++ (plugin), con KEY LOCK nel sequencer dell'app e nel sampler VST3.",
+      "evidence": "chopbox, chopperia-vst",
+      "in": [
+        "audio"
+      ],
+      "out": [
+        "audio"
+      ],
+      "limits": "Misurato su sonde sintetiche e su due brani (distanza spettrale ~1 dB dal riferimento commerciale), non ancora giudicato all'ascolto; piu' lento del vecchio WSOLA (circa 1x tempo reale in JS, 'fast' per il telefono); la qualita' cala su rapporti estremi."
     }
   ],
-  "basis": "819eb7607eb7a037"
+  "basis": "69bb17b1877fb939"
 }
