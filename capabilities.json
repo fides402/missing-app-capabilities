@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-18.0441",
-  "generated": "2026-10-18T04:41:45",
+  "version": "2026-10-18.1729",
+  "generated": "2026-10-18T17:29:58",
   "capabilities": [
     {
       "id": "a_mir",
@@ -841,5 +841,5 @@
       "limits": "Fedelta' misurata modulo per modulo: ottima sui filtri e sulle curve statiche, media sui compressori, debole sui moduli con memoria lunga o dinamica dipendente dal livello (drive neurale). Serve un ascolto umano prima di dichiararlo equivalente."
     }
   ],
-  "basis": "3f43e324c7803932"
+  "basis": "dc80cd2d6491b680"
 }
