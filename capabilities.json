@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-19.1553",
-  "generated": "2026-10-19T15:53:03",
+  "version": "2026-10-19.2018",
+  "generated": "2026-10-19T20:18:50",
   "capabilities": [
     {
       "id": "a_mir",
@@ -936,7 +936,41 @@
         "file"
       ],
       "limits": "Addestrato su una sola coppia originale/V1; preset e tipi di suono sono euristiche non misurate; mai ascoltato; non replica V2 (bandwidth extension neurale)."
+    },
+    {
+      "id": "a_samplette_catalog_player",
+      "cluster": "AUDIO",
+      "name": "Catalogo Samplette + looper stile Tracklib (desktop)",
+      "status": "dimostrata",
+      "desc": "App Windows che pesca campioni dal catalogo di Samplette (shuffle, filtri genere/stile/regione/tonalita'/BPM/anno/views) e li carica in un player con griglia dei beat, loop a battute, varispeed e drum loop.",
+      "evidence": "samplette-loop (protocollo CSRF verificato dal vivo; ingest e analisi provati da sorgente e da exe)",
+      "in": [
+        "dati",
+        "testo"
+      ],
+      "out": [
+        "audio",
+        "ui"
+      ],
+      "limits": "Filtri Pro (keywords/topic) non disponibili; BPM librosa puo' uscire a meta'/doppio; interfaccia mai confrontata con Tracklib; audio mai ascoltato."
+    },
+    {
+      "id": "a_youtube_wav_export",
+      "cluster": "AUDIO",
+      "name": "Download WAV da YouTube (brano, loop, tratto)",
+      "status": "dimostrata",
+      "desc": "WAV 16 bit 44.1 kHz stereo da bestaudio (itag 251 Opus) con yt-dlp + QuickJS + ffmpeg, come EvroHQ Downloader; brano intero o tratto tagliato al campione.",
+      "evidence": "samplette-loop/backend/download.py, re/FINDINGS.md (EvroHQ letto dal suo main process)",
+      "in": [
+        "pagina_web",
+        "testo"
+      ],
+      "out": [
+        "audio",
+        "file"
+      ],
+      "limits": "Qualita' limitata dalla sorgente YouTube (Opus ~150 kbps); dipende dalle sfide anti-bot di YouTube."
     }
   ],
-  "basis": "1836f334bd84bd4f"
+  "basis": "0ce7ef098cd0e9e6"
 }
