@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-19.2332",
-  "generated": "2026-10-19T23:32:58",
+  "version": "2026-10-19.2340",
+  "generated": "2026-10-19T23:40:40",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1006,10 +1006,10 @@
     {
       "id": "a_beat_structure_analysis",
       "cluster": "AUDIO",
-      "name": "Struttura di un beat: sezioni, parti ripetute, loop, intro e drop",
+      "name": "Struttura di un beat sul telefono: sezioni, parti ripetute, loop, intro e drop",
       "status": "dimostrata",
       "desc": "Da un type beat YouTube misura tempo con correzione dell'ottava, tonalita' (Camelot), confini di sezione agganciati alle battute, etichette A/B/A per somiglianza, lunghezza del loop e variazione fra ripetizioni, secondi all'ingresso della batteria e al drop. Dichiara le ambiguita'.",
-      "evidence": "typestudio/backend (verita' di terreno su 4 brani sintetici con confini entro 0.1 battuta; un beat reale misurato, drop alla battuta 9)",
+      "evidence": "typestudio (backend Python e versione JS sul telefono: verita' di terreno su brani sintetici con confini entro 0.1 battuta; un beat reale misurato sul Pixel 7a con risultato identico al Python, 55 s dal download all'analisi)",
       "in": [
         "pagina_web"
       ],
@@ -1017,7 +1017,7 @@
         "dati",
         "testo"
       ],
-      "limits": "Un solo beat reale; assume 4/4; sezioni a volte spezzate in due con la stessa etichetta; mai ascoltato. La versione che gira sul telefono e' in lavorazione."
+      "limits": "Un solo beat reale; assume 4/4; sezioni a volte spezzate in due con la stessa etichetta; tempi lenti (66-74 BPM) possono uscire raddoppiati; mai ascoltato."
     }
   ],
   "basis": "19813a9ad1c9e895"
