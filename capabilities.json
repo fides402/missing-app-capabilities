@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-20.0050",
-  "generated": "2026-10-20T00:50:09",
+  "version": "2026-10-20.0146",
+  "generated": "2026-10-20T01:46:58",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1051,7 +1051,22 @@
         "ui"
       ],
       "limits": "Serve la serie giornaliera del video; non prevede esplosioni improvvise; calibrazione valida solo con almeno 8 video storici."
+    },
+    {
+      "id": "a_midi_style_loops_from_transcription",
+      "cluster": "AUDIO",
+      "name": "Loop MIDI da 8 battute nello stile di un pianista, imparato da registrazioni",
+      "status": "probabile",
+      "desc": "Trascrive un'esecuzione al piano (Transkun), ne misura voicing, comping, linee, swing e velocity, e genera nuovi loop MIDI da 8 battute chiusi su se stessi, con controllo anti-copia sul materiale trascritto.",
+      "evidence": "evans-loops (stile Bill Evans da 3 brani; metriche battono un modello nullo, 3 demo generati)",
+      "in": [
+        "audio"
+      ],
+      "out": [
+        "midi"
+      ],
+      "limits": "Mai ascoltato: provata solo con metriche statistiche. Trascrizione da mix di trio rumorosa; un solo pianista e 3 brani."
     }
   ],
-  "basis": "19813a9ad1c9e895"
+  "basis": "bf4eae4566097c3a"
 }
