@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-19.2018",
-  "generated": "2026-10-19T20:18:50",
+  "version": "2026-10-19.2055",
+  "generated": "2026-10-19T20:55:29",
   "capabilities": [
     {
       "id": "a_mir",
@@ -959,8 +959,8 @@
       "cluster": "AUDIO",
       "name": "Download WAV da YouTube (brano, loop, tratto)",
       "status": "dimostrata",
-      "desc": "WAV 16 bit 44.1 kHz stereo da bestaudio (itag 251 Opus) con yt-dlp + QuickJS + ffmpeg, come EvroHQ Downloader; brano intero o tratto tagliato al campione.",
-      "evidence": "samplette-loop/backend/download.py, re/FINDINGS.md (EvroHQ letto dal suo main process)",
+      "desc": "WAV 16 bit 44.1 kHz stereo da bestaudio (itag 251 Opus) con yt-dlp + QuickJS + ffmpeg, come EvroHQ Downloader; brano intero o tratto tagliato al campione. Disponibile anche in CHOPPERIA (Android: foglio Export; DAW: barra SAVE WAV).",
+      "evidence": "samplette-loop/backend/download.py, re/FINDINGS.md (EvroHQ letto dal suo main process); chopbox, chopperia-vst",
       "in": [
         "pagina_web",
         "testo"
@@ -972,5 +972,5 @@
       "limits": "Qualita' limitata dalla sorgente YouTube (Opus ~150 kbps); dipende dalle sfide anti-bot di YouTube."
     }
   ],
-  "basis": "0ce7ef098cd0e9e6"
+  "basis": "9540e74945c0cba8"
 }
