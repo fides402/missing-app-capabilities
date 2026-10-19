@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-19.1437",
-  "generated": "2026-10-19T14:37:30",
+  "version": "2026-10-19.1529",
+  "generated": "2026-10-19T15:29:44",
   "capabilities": [
     {
       "id": "a_mir",
@@ -845,7 +845,7 @@
       "cluster": "AUDIO",
       "name": "Sampler VST3 con autochop e pattern MIDI trascinabili",
       "status": "probabile",
-      "desc": "Plugin VST3/Standalone (JUCE) che porta in un DAW il motore di chopping dell'app CHOPPERIA: carica un file o un link YouTube/Spotify, trova da solo i punti di chop (autochop che impara dalle scelte), genera cinque pattern bar-aligned e li esporta come file MIDI da trascinare in una clip, mentre i pad (MIDI 36-99) suonano i chop con varispeed agganciato al tempo del DAW. UI web nel WebView2 di JUCE. Key lock: il tempo del DAW cambia senza toccare l'intonazione (stretch di fase ricreato dal comportamento misurato di un time-stretcher commerciale) e un controllo KEY trasporta in semitoni.",
+      "desc": "Plugin VST3/Standalone (JUCE) che porta in un DAW il motore di chopping dell'app CHOPPERIA: carica un file o un link YouTube/Spotify, trova da solo i punti di chop (autochop che impara dalle scelte), genera cinque pattern bar-aligned e li esporta come file MIDI da trascinare in una clip; i pad (MIDI 36-99) suonano i chop con varispeed agganciato al tempo del DAW. Waveform ad alta risoluzione colorata per chop, flag con linguetta da afferrare e spostare, nudge del punto d'inizio al millisecondo, ogni chop trascinabile fuori come WAV 24 bit; il progetto salvato torna com'era (campione, chop, vista, schede) anche se il file del campione manca, ricaricandolo dalla sorgente. Installer .exe per darlo ad altri. UI web nel WebView2 di JUCE.",
       "evidence": "chopperia-vst",
       "in": [
         "file",
@@ -855,7 +855,7 @@
         "midi",
         "ui"
       ],
-      "limits": "Provato solo in Standalone e con la UI pilotata via CDP; mai ascoltato ne' aperto in un DAW, drag-out del MIDI non verificato. Richiede Node, yt-dlp e ffmpeg installati. Il key lock e' provato solo in un host headless (tempo e intonazione misurati), non ascoltato ne' in un DAW."
+      "limits": "Provato in Standalone, con la UI pilotata via CDP/browser e con il VST3 in un host Python (salvataggio e riapertura dello stato); mai ascoltato ne' aperto in Ableton Live, drag-out di MIDI e WAV non verificato dentro un DAW. Richiede WebView2 e VC++ runtime; Node e ffmpeg sono nell'installer, yt-dlp no (senza, i link YouTube/Spotify non funzionano)."
     },
     {
       "id": "a_apk_clone",
@@ -877,7 +877,7 @@
       "id": "a_stretch_pnt",
       "cluster": "AUDIO",
       "name": "Time-stretch e key shift di qualita' (ricreato da un plugin commerciale)",
-      "status": "dimostrata",
+      "status": "probabile",
       "desc": "Cambia durata e/o tonalita' di un campione senza artefatti evidenti: separa armonico e percussivo (HPSS), stira l'armonico con vocoder di fase agganciato ai picchi, lascia intatti gli attacchi e ricampiona con sinc per il cambio di chiave; supporta una mappa dei tempi (warping). Ricreato misurando un plugin commerciale pilotato in headless (stato iniettato, render a sezioni) contro l'ideale generato direttamente al tempo di arrivo. Gira in JavaScript (Worker del telefono) e in C++ (plugin), con KEY LOCK nel sequencer dell'app e nel sampler VST3.",
       "evidence": "chopbox, chopperia-vst",
       "in": [
@@ -886,7 +886,7 @@
       "out": [
         "audio"
       ],
-      "limits": "Misurato su sonde sintetiche e su due brani (distanza spettrale ~1 dB dal riferimento commerciale), non ancora giudicato all'ascolto; piu' lento del vecchio WSOLA (circa 1x tempo reale in JS, 'fast' per il telefono); la qualita' cala su rapporti estremi."
+      "limits": "RITIRATA dall'uso nelle app (su richiesta dell'utente si e' tornati al varispeed normale): resta come codice di riferimento. Misurata su sonde sintetiche e su due brani (distanza spettrale ~1 dB dal riferimento commerciale), mai giudicata all'ascolto; la versione in tempo reale per voce costa ~1.5% di un core."
     },
     {
       "id": "a_loop_crop_bar",
@@ -921,5 +921,5 @@
       "limits": "La parte col modello non e' stata provata con una chiave vera; la scheda locale e' prudente (non indovina lo strumento). Non interroga il catalogo: la ricerca resta manuale."
     }
   ],
-  "basis": "a90237eb1884418f"
+  "basis": "b328fa5d2bf60634"
 }
