@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-19.2055",
-  "generated": "2026-10-19T20:55:29",
+  "version": "2026-10-19.2332",
+  "generated": "2026-10-19T23:32:58",
   "capabilities": [
     {
       "id": "a_mir",
@@ -970,7 +970,55 @@
         "file"
       ],
       "limits": "Qualita' limitata dalla sorgente YouTube (Opus ~150 kbps); dipende dalle sfide anti-bot di YouTube."
+    },
+    {
+      "id": "i_google_auth_native",
+      "cluster": "INFRA",
+      "name": "Accesso Google nativo su Android con scope sensibili (YouTube Analytics)",
+      "status": "dimostrata",
+      "desc": "Un'app Android ottiene un access token Google per scope sensibili (yt-analytics.readonly, youtube.readonly) con l'Authorization API di Play Services, senza client secret e senza schema di ritorno personalizzato, con scelta esplicita dell'account fra quelli del telefono.",
+      "evidence": "typestudio (token ottenuto e API Analytics/Data v3 interrogate dal vivo sul Pixel; scoperto che Google rifiuta lo schema custom dei client Android e che il device-flow non ammette yt-analytics)",
+      "in": [
+        "ui",
+        "dati"
+      ],
+      "out": [
+        "dati"
+      ],
+      "limits": "In modalita' Test il consenso scade dopo 7 giorni; i canali 'brand' possono non essere selezionabili da Android (verifica dal vivo in corso); serve l'app in primo piano per rinnovare il token."
+    },
+    {
+      "id": "x_typebeat_channel_analytics",
+      "cluster": "METODO",
+      "name": "Analitiche di canale type beat con consigli provati e previsioni validate",
+      "status": "dimostrata",
+      "desc": "Dal canale YouTube: rendimento di ogni video contro i coetanei per eta', artisti 'type', effetti del titolo, orari con intervalli bootstrap e controllo dei falsi positivi, retention a fasce, ciclo di vita, previsioni con backtest e modello per-video con validazione leave-one-out che rifiuta di predire quando non batte la mediana. Ogni consiglio porta le prove; l'AI legge solo risultati gia' calcolati e le sue voci senza prove vengono scartate.",
+      "evidence": "typestudio (46 test su dati sintetici con effetti nascosti noti; client YouTube provato con server finto e dal vivo)",
+      "in": [
+        "dati"
+      ],
+      "out": [
+        "ui",
+        "testo"
+      ],
+      "limits": "Provato su dati simulati e sul canale vuoto dell'account; un effetto orario del +30% non e' rilevabile con ~70 video (il motore tace); impressioni/CTR miniature non sono nell'API (serve il CSV di Studio)."
+    },
+    {
+      "id": "a_beat_structure_analysis",
+      "cluster": "AUDIO",
+      "name": "Struttura di un beat: sezioni, parti ripetute, loop, intro e drop",
+      "status": "dimostrata",
+      "desc": "Da un type beat YouTube misura tempo con correzione dell'ottava, tonalita' (Camelot), confini di sezione agganciati alle battute, etichette A/B/A per somiglianza, lunghezza del loop e variazione fra ripetizioni, secondi all'ingresso della batteria e al drop. Dichiara le ambiguita'.",
+      "evidence": "typestudio/backend (verita' di terreno su 4 brani sintetici con confini entro 0.1 battuta; un beat reale misurato, drop alla battuta 9)",
+      "in": [
+        "pagina_web"
+      ],
+      "out": [
+        "dati",
+        "testo"
+      ],
+      "limits": "Un solo beat reale; assume 4/4; sezioni a volte spezzate in due con la stessa etichetta; mai ascoltato. La versione che gira sul telefono e' in lavorazione."
     }
   ],
-  "basis": "9540e74945c0cba8"
+  "basis": "19813a9ad1c9e895"
 }
