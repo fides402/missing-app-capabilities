@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-19.2340",
-  "generated": "2026-10-19T23:40:40",
+  "version": "2026-10-20.0050",
+  "generated": "2026-10-20T00:50:09",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1018,6 +1018,39 @@
         "testo"
       ],
       "limits": "Un solo beat reale; assume 4/4; sezioni a volte spezzate in due con la stessa etichetta; tempi lenti (66-74 BPM) possono uscire raddoppiati; mai ascoltato."
+    },
+    {
+      "id": "x_success_map_per_channel",
+      "cluster": "METODO",
+      "name": "Mappa interna di cosa predice il successo di un video (con livelli di evidenza)",
+      "status": "dimostrata",
+      "desc": "Per ogni video unisce formato del titolo, artisti, mood, parole, durata, orario, miniatura (colori, luminosita', dettagli) e struttura del beat, e impara con ridge validata leave-one-out e bootstrap quali caratteristiche spostano il rendimento, a parita' di tutto il resto. Distingue 'solido' da 'indizio', tiene un registro dei nuovi upload e verifica nel tempo le proprie previsioni.",
+      "evidence": "typestudio (69 test; taratura su canali di puro rumore: 0 falsi segnali; canale reale con 200 video)",
+      "in": [
+        "dati",
+        "testo"
+      ],
+      "out": [
+        "ui",
+        "dati"
+      ],
+      "limits": "Effetti piccoli o su pochi video non emergono; con 200 video trova circa 30-60% degli effetti veri; correlazioni, non cause."
+    },
+    {
+      "id": "a_video_forecast_calibrated",
+      "cluster": "METODO",
+      "name": "Previsione per singolo upload con intervalli calibrati sugli errori reali",
+      "status": "dimostrata",
+      "desc": "Prevede le views dei prossimi 28 giorni di un video appena uscito (decadimento esponenziale con base, oppure profilo tipico del canale nei primi giorni) e calibra l'intervallo sul backtest dei video piu' vecchi dello stesso canale.",
+      "evidence": "typestudio (test fuori campione: l'intervallo 10-90% contiene il valore vero oltre il 60% delle volte)",
+      "in": [
+        "dati"
+      ],
+      "out": [
+        "dati",
+        "ui"
+      ],
+      "limits": "Serve la serie giornaliera del video; non prevede esplosioni improvvise; calibrazione valida solo con almeno 8 video storici."
     }
   ],
   "basis": "19813a9ad1c9e895"
