@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-19.1529",
-  "generated": "2026-10-19T15:29:44",
+  "version": "2026-10-19.1553",
+  "generated": "2026-10-19T15:53:03",
   "capabilities": [
     {
       "id": "a_mir",
@@ -919,7 +919,24 @@
         "dati"
       ],
       "limits": "La parte col modello non e' stata provata con una chiave vera; la scheda locale e' prudente (non indovina lo strumento). Non interroga il catalogo: la ricerca resta manuale."
+    },
+    {
+      "id": "a_artifact_mask_cleaner",
+      "cluster": "AUDIO",
+      "name": "Pulizia artefatti spettrali (stile Sunofix V1)",
+      "status": "dimostrata",
+      "desc": "Rimuove lo 'shimmer' da codec/generazione AI (3-10 kHz) con una maschera di guadagno tempo-frequenza appresa, a fase intatta e livello invariato; exe Windows con batch e drag&drop, preset e tipo di suono.",
+      "evidence": "sunofix-clone (misure su originale/V1/V2 di un job reale; test su drone e loop mono degradati con mp3)",
+      "in": [
+        "audio",
+        "file"
+      ],
+      "out": [
+        "audio",
+        "file"
+      ],
+      "limits": "Addestrato su una sola coppia originale/V1; preset e tipi di suono sono euristiche non misurate; mai ascoltato; non replica V2 (bandwidth extension neurale)."
     }
   ],
-  "basis": "b328fa5d2bf60634"
+  "basis": "1836f334bd84bd4f"
 }
