@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-18.2340",
-  "generated": "2026-10-18T23:40:08",
+  "version": "2026-10-19.1437",
+  "generated": "2026-10-19T14:37:30",
   "capabilities": [
     {
       "id": "a_mir",
@@ -887,7 +887,39 @@
         "audio"
       ],
       "limits": "Misurato su sonde sintetiche e su due brani (distanza spettrale ~1 dB dal riferimento commerciale), non ancora giudicato all'ascolto; piu' lento del vecchio WSOLA (circa 1x tempo reale in JS, 'fast' per il telefono); la qualita' cala su rapporti estremi."
+    },
+    {
+      "id": "a_loop_crop_bar",
+      "cluster": "AUDIO",
+      "name": "Registrazione con loop non ritagliati -> loop ritagliato alla battuta",
+      "status": "dimostrata",
+      "desc": "Da una registrazione lunga o sporca (anche con sezioni diverse e silenzi) trova il periodo che si ripete, ne ricava BPM e numero di battute, sceglie start ed end alla battuta e ritaglia al campione su un punto a zero, senza dissolvenze. Misura la chiusura del loop confrontando la testa con cio' che segue la fine nell'originale; propone altre lunghezze (1/2/4/8 battute), permette di spostare l'inizio di un battito e di ascoltare il loop senza stacchi. Se non c'e' ripetizione ritaglia un one-shot dall'attacco alla coda.",
+      "evidence": "splice-lab (provato su quattro registrazioni reali: basso, loop, una registrazione da 112 s con sezioni diverse, un one-shot)",
+      "in": [
+        "audio"
+      ],
+      "out": [
+        "audio",
+        "dati"
+      ],
+      "limits": "Mai ascoltato: la chiusura e' misurata, non giudicata a orecchio. Quando il file non e' un numero intero di periodi, la battuta 1 e' dedotta dalla fase degli attacchi e puo' essere sbagliata (si corregge a mano). Con ripetizioni deboli o non identiche (suoni con effetti nel tempo) la chiusura non e' verificabile."
+    },
+    {
+      "id": "a_search_card_tags",
+      "cluster": "AUDIO",
+      "name": "Un suono -> scheda di ricerca per un catalogo di sample (tag, filtri, descrizione)",
+      "status": "probabile",
+      "desc": "Misura di un sample o di un riferimento (tonalita' e scala con ambiguita' dichiarata, tempo con affidabilita', timbro, tipo) tradotta in tag di ricerca, filtri da impostare e testi per la ricerca a parole di un catalogo come Splice. Un modello via API scrive la scheda sulle sole misure; senza chiave ne esce una locale deterministica.",
+      "evidence": "splice-lab",
+      "in": [
+        "audio"
+      ],
+      "out": [
+        "testo",
+        "dati"
+      ],
+      "limits": "La parte col modello non e' stata provata con una chiave vera; la scheda locale e' prudente (non indovina lo strumento). Non interroga il catalogo: la ricerca resta manuale."
     }
   ],
-  "basis": "69bb17b1877fb939"
+  "basis": "a90237eb1884418f"
 }
