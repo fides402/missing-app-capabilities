@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-20.1927",
-  "generated": "2026-10-20T19:27:32",
+  "version": "2026-10-20.2006",
+  "generated": "2026-10-20T20:06:43",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1082,7 +1082,25 @@
         "file"
       ],
       "limits": "Un solo libro prodotto. Trascrizioni automatiche con nomi propri incerti; un video su dieci senza trascrizione; i numeri dei casi citati sono dichiarati dalle fonti e non verificati."
+    },
+    {
+      "id": "a_guided_channel_coach",
+      "cluster": "APP",
+      "name": "App guidata a sessioni a schermo intero: strategia di un canale YouTube e creazione di ogni video in 5 fasi",
+      "status": "dimostrata",
+      "desc": "Trasforma un metodo scritto in un percorso per passi (un passo per schermata, avanzamento, riprende dove lasci), con database di outlier con punteggio, generatore di titoli, diagnosi del collo di bottiglia e prompt compilati dai dati dell'utente. Tutto locale, senza account.",
+      "evidence": "catena-app (APK Capacitor 7 dal libro jaketrinder-libro; 7 passi di strategia + 5 fasi per video, provati con test Playwright su tutti i flussi; installata sul Pixel 7a)",
+      "in": [
+        "testo",
+        "dati"
+      ],
+      "out": [
+        "ui",
+        "dati",
+        "testo"
+      ],
+      "limits": "Mai usata dal vivo dall'utente; nessuna AI integrata (i prompt si copiano in un assistente esterno); il metodo e i numeri dei casi vengono dai video di una sola fonte e sono dichiarati, non verificati."
     }
   ],
-  "basis": "11b99c6f639d52cf"
+  "basis": "79955cb9b5c7eb8b"
 }
