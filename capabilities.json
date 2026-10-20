@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-20.0146",
-  "generated": "2026-10-20T01:46:58",
+  "version": "2026-10-20.1927",
+  "generated": "2026-10-20T19:27:32",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1066,7 +1066,23 @@
         "midi"
       ],
       "limits": "Mai ascoltato: provata solo con metriche statistiche. Trascrizione da mix di trio rumorosa; un solo pianista e 3 brani."
+    },
+    {
+      "id": "x_libro_da_video_youtube",
+      "cluster": "METODO",
+      "name": "Libro EPUB con grafici da un canale YouTube (sottotitoli -> framework -> pipeline)",
+      "status": "dimostrata",
+      "desc": "Estrae le trascrizioni dei video di un canale dal pannello trascrizione in Chrome (yt-dlp prende 429 sui sottotitoli), fa scrivere appunti per video ad agenti paralleli, e assembla un EPUB italiano validato con grafici SVG, schede, prompt e glossario.",
+      "evidence": "jaketrinder-libro (9 video di un canale, 16 capitoli, 29 grafici, ~108 pagine A5, epubcheck 0 messaggi); libro-megaframework (stessa pipeline di build)",
+      "in": [
+        "pagina_web",
+        "testo"
+      ],
+      "out": [
+        "file"
+      ],
+      "limits": "Un solo libro prodotto. Trascrizioni automatiche con nomi propri incerti; un video su dieci senza trascrizione; i numeri dei casi citati sono dichiarati dalle fonti e non verificati."
     }
   ],
-  "basis": "bf4eae4566097c3a"
+  "basis": "11b99c6f639d52cf"
 }
