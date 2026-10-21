@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-21.1730",
-  "generated": "2026-10-21T17:30:29",
+  "version": "2026-10-21.2130",
+  "generated": "2026-10-21T21:30:52",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1116,7 +1116,23 @@
         "file"
       ],
       "limits": "Selettori DOM di ChatGPT osservati dal vivo il 21/10/2026 e fragili ai cambi di interfaccia; ChatGPT puo' sbagliare l'anatomia (6 dita) o ignorare la reference; serve Comet aperto con una tab chatgpt.com loggata; nessuna garanzia di tempi (1-3 min a immagine)."
+    },
+    {
+      "id": "x_metodo_calza",
+      "cluster": "METODO",
+      "name": "Metodo di problem solving personale a due livelli",
+      "status": "probabile",
+      "desc": "Un problema personale (relazioni, visibilita' online, scelta di cosa costruire) diventa una riga quotidiana fatto/mossa/esito piu' un livello profondo a richiesta: cosa lo mantiene, eccezione e tasso base, tre candidati (ovvio/inverso/incrocio), sonda con soglia e scadenza, rilettura settimanale dei pattern ricorrenti.",
+      "evidence": "metodo-universale (CALZA v1), confrontato con il problem solving strategico su 3 problemi reali da 2 giudici indipendenti",
+      "in": [
+        "testo"
+      ],
+      "out": [
+        "testo",
+        "dati"
+      ],
+      "limits": "Valutato solo in simulazione: nessun esito reale misurato. Perde sulla diagnosi rispetto al problem solving strategico. Non adatto a disagio acuto."
     }
   ],
-  "basis": "a39332f31da86567"
+  "basis": "104c3a886dc872ae"
 }
