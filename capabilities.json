@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-21.1614",
-  "generated": "2026-10-21T16:14:15",
+  "version": "2026-10-21.1730",
+  "generated": "2026-10-21T17:30:29",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1100,7 +1100,23 @@
         "testo"
       ],
       "limits": "Mai usata dal vivo dall'utente; nessuna AI integrata (i prompt si copiano in un assistente esterno); il metodo e i numeri dei casi vengono dai video di una sola fonte e sono dichiarati, non verificati."
+    },
+    {
+      "id": "i_chatgpt_pilotato_da_claude",
+      "cluster": "INFRA",
+      "name": "ChatGPT pilotato da Claude Code nel browser dell'utente (prompt + immagini in, immagini generate in uscita)",
+      "status": "dimostrata",
+      "desc": "Estensione MV3 propria in Comet/Chrome + server locale: Claude manda un prompt con eventuali immagini di riferimento, l'estensione le scrive/allega in chatgpt.com col login dell'utente, aspetta la generazione e rimanda su disco le immagini generate (anche recupero da chat esistenti). Aggira il blocco 'restricted by policy' dell'estensione Claude in Chrome.",
+      "evidence": "gptbridge (foto e disegno della copertina BRIVIDI NOTTURNI generati da ChatGPT con reference allegata e recuperati su disco; comandi send/grab/list)",
+      "in": [
+        "testo",
+        "file"
+      ],
+      "out": [
+        "file"
+      ],
+      "limits": "Selettori DOM di ChatGPT osservati dal vivo il 21/10/2026 e fragili ai cambi di interfaccia; ChatGPT puo' sbagliare l'anatomia (6 dita) o ignorare la reference; serve Comet aperto con una tab chatgpt.com loggata; nessuna garanzia di tempi (1-3 min a immagine)."
     }
   ],
-  "basis": "6b6da7d76e79746b"
+  "basis": "a39332f31da86567"
 }
