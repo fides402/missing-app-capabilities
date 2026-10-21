@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-20.2006",
-  "generated": "2026-10-20T20:06:43",
+  "version": "2026-10-21.1614",
+  "generated": "2026-10-21T16:14:15",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1102,5 +1102,5 @@
       "limits": "Mai usata dal vivo dall'utente; nessuna AI integrata (i prompt si copiano in un assistente esterno); il metodo e i numeri dei casi vengono dai video di una sola fonte e sono dichiarati, non verificati."
     }
   ],
-  "basis": "79955cb9b5c7eb8b"
+  "basis": "6b6da7d76e79746b"
 }
