@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-22.0014",
-  "generated": "2026-10-22T00:14:59",
+  "version": "2026-10-22.0145",
+  "generated": "2026-10-22T01:45:13",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1166,7 +1166,24 @@
         "pagina_web"
       ],
       "limits": "Non e' CapCut: mancano reverse, keyframe, maschere, chroma key, video in overlay, effetti, template. Sottotitoli richiedono una chiave Groq."
+    },
+    {
+      "id": "a_accordi_da_link",
+      "cluster": "AUDIO",
+      "name": "Riconoscimento degli accordi di un brano da link YouTube/Spotify",
+      "status": "probabile",
+      "desc": "Dato un link (o un titolo) scarica l'audio, calcola cromagramma armonico e del basso sincronizzato ai battiti, decodifica gli accordi con Viterbi su template (triadi, settime, sus4), stima tonalita', metrica e sezioni ripetute; l'app mostra accordo corrente, mappa delle battute, diagrammi e idee di ricombinazione (sostituzioni, prestiti modali, dominanti secondarie) ascoltabili con un sintetizzatore.",
+      "evidence": "chordia (APK Android + backend librosa/yt-dlp): verificato su brano sintetico Am-F-C-G e su Canon in D (tonalita' e giro riconoscibili); mai provato sul telefono ne' ascoltato",
+      "in": [
+        "pagina_web",
+        "testo"
+      ],
+      "out": [
+        "dati",
+        "ui"
+      ],
+      "limits": "Accuratezza non misurata su brani con voce e batteria pesanti; le settime sono stimate con prior prudente; richiede il backend sul PC acceso e sulla stessa Wi-Fi; l'AI per le ricombinazioni e' facoltativa e mai provata con chiave vera."
     }
   ],
-  "basis": "dfad65e047662d00"
+  "basis": "c6a09143582f10ff"
 }
