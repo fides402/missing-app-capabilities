@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-21.2130",
-  "generated": "2026-10-21T21:30:52",
+  "version": "2026-10-22.0014",
+  "generated": "2026-10-22T00:14:59",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1132,7 +1132,41 @@
         "dati"
       ],
       "limits": "Valutato solo in simulazione: nessun esito reale misurato. Perde sulla diagnosi rispetto al problem solving strategico. Non adatto a disagio acuto."
+    },
+    {
+      "id": "a_allinea_transienti",
+      "cluster": "AUDIO",
+      "name": "Allineamento a tempo di un brano pulito a una registrazione",
+      "status": "dimostrata",
+      "desc": "Confronta un brano pulito con l'audio registrato in un video: envelope degli attacchi, cross-correlazione e rifinitura sui transienti danno il ritardo al millisecondo; il brano si mette a tempo sotto il video, che si muta.",
+      "evidence": "cutline (CUPCATTO): test JVM su segnali sintetici (errore <= 3 ms) e su AAC vero sul telefono",
+      "in": [
+        "audio"
+      ],
+      "out": [
+        "audio",
+        "dati"
+      ],
+      "limits": "Serve che il brano corrisponda davvero al parlato/suonato nel video; con rumore forte la confidenza cala. L'AAC aggiunge ~46 ms di priming misurato."
+    },
+    {
+      "id": "a_app_editor_video",
+      "cluster": "APP",
+      "name": "Editor video Android con sottotitoli automatici e registrazione",
+      "status": "probabile",
+      "desc": "Timeline con snap, trim, velocita', filtri, ritaglio, testi, adesivi, immagini sovrapposte, sottotitoli automatici (Whisper su Groq, lingua e font a scelta), voce da testo, registrazione in-app con conto alla rovescia e brano guida, guida delle zone Reels, export H.264.",
+      "evidence": "cutline (APK installato il 22/10/2026; export verificato sul telefono, gesti e sottotitoli non ancora usati dal vivo)",
+      "in": [
+        "file",
+        "audio",
+        "testo"
+      ],
+      "out": [
+        "file",
+        "pagina_web"
+      ],
+      "limits": "Non e' CapCut: mancano reverse, keyframe, maschere, chroma key, video in overlay, effetti, template. Sottotitoli richiedono una chiave Groq."
     }
   ],
-  "basis": "104c3a886dc872ae"
+  "basis": "dfad65e047662d00"
 }
