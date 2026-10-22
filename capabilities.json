@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-22.0416",
-  "generated": "2026-10-22T04:16:42",
+  "version": "2026-10-22.1921",
+  "generated": "2026-10-22T19:21:18",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1216,7 +1216,40 @@
         "ui"
       ],
       "limits": "Provato solo con provider simulati; qualita' reale del testo e voce mai verificate; stile ricavato da screenshot di un'altra app, non dal suo codice (i testi li genera il suo server)."
+    },
+    {
+      "id": "x_generatore_stile_newsletter",
+      "cluster": "AI",
+      "name": "Nuovi articoli nello stile di una newsletter, con vaglio di un pubblico simulato",
+      "status": "probabile",
+      "desc": "Da un corpus di numeri di una newsletter ricava voce, temi, modelli mentali, fonti e formati; genera nuovi numeri su temi mai ripetuti (piano con memoria, bozza, editing chirurgico, verifica delle fonti con ricerca) e li accetta solo se un panel di personas del pubblico, simulato da un LLM, supera soglie severe. Offre anche un master prompt da incollare in un altro LLM e importa la risposta.",
+      "evidence": "imperfectionist",
+      "in": [
+        "testo",
+        "dati"
+      ],
+      "out": [
+        "testo",
+        "ui"
+      ],
+      "limits": "Mai provato con chiavi vere dei provider; il pubblico e' simulato (giudice indulgente per natura, soglie scelte a mano); la critica indipendente sulle prime bozze ha trovato fonte travisata, biografia inventata e struttura ripetuta; fino a 41 chiamate per un tentativo fallito."
+    },
+    {
+      "id": "x_corpus_da_casella_posta",
+      "cluster": "INFRA",
+      "name": "Scaricare un corpus di email da una casella tramite connettore e analizzarlo con agenti in parallelo",
+      "status": "dimostrata",
+      "desc": "Cerca le email di una newsletter con il connettore Gmail, salva ogni numero come file di testo con agenti paralleli (uno per gruppo, un file alla volta) e poi lo analizza con agenti separati per voce, temi, fonti e pubblico.",
+      "evidence": "imperfectionist",
+      "in": [
+        "testo"
+      ],
+      "out": [
+        "file",
+        "testo"
+      ],
+      "limits": "Il Chrome dell'utente blocca click e tasti su Gmail: serve il connettore; un agente che ricopia articoli lunghi puo' essere fermato dal filtro dei contenuti (4 numeri su 48 mancanti)."
     }
   ],
-  "basis": "f2eecb5128e06dd7"
+  "basis": "86d8851376b98922"
 }
