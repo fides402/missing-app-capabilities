@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-22.0145",
-  "generated": "2026-10-22T01:45:13",
+  "version": "2026-10-22.0414",
+  "generated": "2026-10-22T04:14:41",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1183,7 +1183,23 @@
         "ui"
       ],
       "limits": "Accuratezza non misurata su brani con voce e batteria pesanti; le settime sono stimate con prior prudente; richiede il backend sul PC acceso e sulla stessa Wi-Fi; l'AI per le ricombinazioni e' facoltativa e mai provata con chiave vera."
+    },
+    {
+      "id": "x_look_da_coppia",
+      "cluster": "APP",
+      "name": "Look fotografico da una coppia prima/dopo",
+      "status": "probabile",
+      "desc": "Da una foto prima e dopo un filtro misura la trasformazione (curva tonale, tinta, colore per tonalita', grana) e la riscrive come preset JSON; lo stesso shader lo applica a foto e video in modo adattivo al contenuto.",
+      "evidence": "refilm",
+      "in": [
+        "file"
+      ],
+      "out": [
+        "file",
+        "dati"
+      ],
+      "limits": "Misurato su una sola scena (n=1); adattivita' scelta a progetto, non misurata; app non ancora provata sul telefono."
     }
   ],
-  "basis": "c6a09143582f10ff"
+  "basis": "66f5b06719a0f9c1"
 }
