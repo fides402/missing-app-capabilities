@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-22.2035",
-  "generated": "2026-10-22T20:35:59",
+  "version": "2026-10-22.2036",
+  "generated": "2026-10-22T20:36:12",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1300,5 +1300,5 @@
       "limits": "Il prompt non e' stato incollato in un LLM e giudicato; la qualita' dei testi dipende dal modello esterno; i campioni verbatim sono brevi e per uso personale; l'OCR dei PDF sporca i conteggi."
     }
   ],
-  "basis": "599dc76eb838d239"
+  "basis": "186b0ebb5f07cadd"
 }
