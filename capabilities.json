@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-22.1921",
-  "generated": "2026-10-22T19:21:18",
+  "version": "2026-10-22.1930",
+  "generated": "2026-10-22T19:30:05",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1249,7 +1249,23 @@
         "testo"
       ],
       "limits": "Il Chrome dell'utente blocca click e tasti su Gmail: serve il connettore; un agente che ricopia articoli lunghi puo' essere fermato dal filtro dei contenuti (4 numeri su 48 mancanti)."
+    },
+    {
+      "id": "x_foto_libere_commons_catalogo",
+      "cluster": "APP",
+      "name": "Catalogare foto di licenza libera da Wikimedia Commons in un ricettario consultabile e copiabile",
+      "status": "dimostrata",
+      "desc": "Cerca immagini per categoria su Wikimedia Commons con autore e licenza, le sceglie a occhio da fogli contatto e le impacchetta in un'app Android con schede, filtri, preferiti, mix e testi pronti da copiare.",
+      "evidence": "lightrecipe",
+      "in": [
+        "testo"
+      ],
+      "out": [
+        "ui",
+        "dati"
+      ],
+      "limits": "La ricerca testuale di Commons e' rumorosa per le tecniche specifiche: molte voci restano senza foto adatta e servono schede generate; la scelta delle foto e' manuale."
     }
   ],
-  "basis": "86d8851376b98922"
+  "basis": "8b09a1ebccbcb1a6"
 }
