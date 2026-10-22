@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-22.0414",
-  "generated": "2026-10-22T04:14:41",
+  "version": "2026-10-22.0416",
+  "generated": "2026-10-22T04:16:42",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1199,7 +1199,24 @@
         "dati"
       ],
       "limits": "Misurato su una sola scena (n=1); adattivita' scelta a progetto, non misurata; app non ancora provata sul telefono."
+    },
+    {
+      "id": "x_riassunto_libro_standalone",
+      "cluster": "AI",
+      "name": "Riassunto a punti chiave di un libro, sul telefono, con AI a rotazione",
+      "status": "probabile",
+      "desc": "Da PDF/EPUB/TXT estrae il testo, lo divide in blocchi, prende appunti, costruisce una scaletta e scrive N punti chiave (titolo-consiglio, paragrafi, insight, citazioni) ruotando fra tre provider AI con modelli letti dai cataloghi dal vivo; le citazioni sono accettate solo se presenti nel testo. Lettura ad alta voce con voce Android o Gemini TTS.",
+      "evidence": "booksum",
+      "in": [
+        "file"
+      ],
+      "out": [
+        "testo",
+        "audio",
+        "ui"
+      ],
+      "limits": "Provato solo con provider simulati; qualita' reale del testo e voce mai verificate; stile ricavato da screenshot di un'altra app, non dal suo codice (i testi li genera il suo server)."
     }
   ],
-  "basis": "66f5b06719a0f9c1"
+  "basis": "f2eecb5128e06dd7"
 }
