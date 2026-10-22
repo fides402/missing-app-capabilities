@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-22.1930",
-  "generated": "2026-10-22T19:30:05",
+  "version": "2026-10-22.2032",
+  "generated": "2026-10-22T20:32:04",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1265,7 +1265,23 @@
         "dati"
       ],
       "limits": "La ricerca testuale di Commons e' rumorosa per le tecniche specifiche: molte voci restano senza foto adatta e servono schede generate; la scelta delle foto e' manuale."
+    },
+    {
+      "id": "x_grafica_gradiente_grana",
+      "cluster": "APP",
+      "name": "Generare sfondi a gradiente fluido con grana pellicola in qualunque palette e comporre poster di concerto in trittico",
+      "status": "dimostrata",
+      "desc": "Impara da una reference il layout di macchie sfumate e la grana misurata, lo rigenera con altre palette e forme diverse ma simili, e lo assembla con tipografia grottesca, sigillo e soggetto su nero.",
+      "evidence": "grain-gradient-poster",
+      "in": [
+        "file",
+        "testo"
+      ],
+      "out": [
+        "file"
+      ],
+      "limits": "Verificato solo a occhio e con RMS sul gradiente; i font sono equivalenti gratuiti dell'originale; i loghi di terzi sono segnaposto."
     }
   ],
-  "basis": "8b09a1ebccbcb1a6"
+  "basis": "802435dfb88ec3da"
 }
