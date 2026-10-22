@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-22.2032",
-  "generated": "2026-10-22T20:32:04",
+  "version": "2026-10-22.2035",
+  "generated": "2026-10-22T20:35:59",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1281,7 +1281,24 @@
         "file"
       ],
       "limits": "Verificato solo a occhio e con RMS sul gradiente; i font sono equivalenti gratuiti dell'originale; i loghi di terzi sono segnaposto."
+    },
+    {
+      "id": "x_master_prompt_stile_autore",
+      "cluster": "AI",
+      "name": "Master prompt per scrivere nella voce di un autore, a partire dai suoi libri",
+      "status": "probabile",
+      "desc": "Dai libri di un autore (PDF/EPUB/MOBI scaricati dal telefono) estrae il testo, studia voce, struttura, ritmo, lessico, modelli mentali e caricatura con conteggi verificati, e compone un master prompt (stile, campioni brevi, mosse campionate con memoria, procedura, lista di controllo) da incollare in un LLM esterno su qualunque argomento, piu' un prompt di revisione.",
+      "evidence": "watts, imperfectionist",
+      "in": [
+        "file",
+        "testo"
+      ],
+      "out": [
+        "testo",
+        "ui"
+      ],
+      "limits": "Il prompt non e' stato incollato in un LLM e giudicato; la qualita' dei testi dipende dal modello esterno; i campioni verbatim sono brevi e per uso personale; l'OCR dei PDF sporca i conteggi."
     }
   ],
-  "basis": "802435dfb88ec3da"
+  "basis": "599dc76eb838d239"
 }
