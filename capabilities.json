@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-23.1945",
-  "generated": "2026-10-23T19:45:46",
+  "version": "2026-10-23.2211",
+  "generated": "2026-10-23T22:11:27",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1318,7 +1318,26 @@
         "cutline"
       ],
       "limits": "Export provato sul telefono con un reel di prova da 6 s; interfaccia, trascinamento del testo e 30 video di fila mai provati dal vivo. Gli hook li scrive un LLM esterno."
+    },
+    {
+      "id": "x_forgotify_dig",
+      "cluster": "MUSICA",
+      "name": "Brani Spotify quasi mai ascoltati, aperti direttamente nel proprio player",
+      "status": "probabile",
+      "desc": "Legge il backend pubblico di un sito di scoperta (brani Spotify a popolarita' ~0, filtro per genere) e apre il brano scelto nel proprio player Android tramite deep link, che lo accoda e lo riproduce con la catena di risoluzione esistente. Archivio e streak locali.",
+      "in": [
+        "dati"
+      ],
+      "out": [
+        "audio",
+        "ui"
+      ],
+      "evidence": [
+        "forgotify-dig",
+        "diggaplayer"
+      ],
+      "limits": "Mai provata sul telefono (installazione non fatta); dipende da un backend gratuito di terzi che puo' impiegare decine di secondi a svegliarsi; nessuna anteprima audio."
     }
   ],
-  "basis": "e053bf87310d1c89"
+  "basis": "5db3cd1f7c7b87c9"
 }
