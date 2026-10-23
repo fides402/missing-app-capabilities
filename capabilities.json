@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-23.2211",
-  "generated": "2026-10-23T22:11:27",
+  "version": "2026-10-23.2308",
+  "generated": "2026-10-23T23:08:08",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1337,7 +1337,27 @@
         "diggaplayer"
       ],
       "limits": "Mai provata sul telefono (installazione non fatta); dipende da un backend gratuito di terzi che puo' impiegare decine di secondi a svegliarsi; nessuna anteprima audio."
+    },
+    {
+      "id": "x_similacra",
+      "cluster": "MUSICA",
+      "name": "Analisi musicale e ricerca per somiglianza di un brano, da file, YouTube o Spotify",
+      "status": "probabile",
+      "desc": "App Android che e' client dell'API di un servizio di analisi musicale: carichi una reference (file audio, link YouTube o traccia Spotify) e ottieni BPM, tonalita', mood, genere, strumenti, voce e andamento nel tempo; poi cerca brani simili con vincoli (BPM, genere, tonalita', voce), per descrizione testuale, parole chiave o testo, e playlist abbinabili. Libreria e crate.",
+      "in": [
+        "audio",
+        "pagina_web",
+        "testo"
+      ],
+      "out": [
+        "dati",
+        "ui"
+      ],
+      "evidence": [
+        "similacra"
+      ],
+      "limits": "Usa i modelli e la quota dell'account del servizio (non analizza in locale). Mai provata con credenziali reali: login, upload e campi privati dell'API non verificati."
     }
   ],
-  "basis": "5db3cd1f7c7b87c9"
+  "basis": "33b397428293d458"
 }
