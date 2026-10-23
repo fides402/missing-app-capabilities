@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-22.2036",
-  "generated": "2026-10-22T20:36:12",
+  "version": "2026-10-23.1945",
+  "generated": "2026-10-23T19:45:46",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1298,7 +1298,27 @@
         "ui"
       ],
       "limits": "Il prompt non e' stato incollato in un LLM e giudicato; la qualita' dei testi dipende dal modello esterno; i campioni verbatim sono brevi e per uso personale; l'OCR dei PDF sporca i conteggi."
+    },
+    {
+      "id": "x_hook_variants_video",
+      "cluster": "APP",
+      "name": "Da un reel pronto a 30 versioni, ognuna con un hook di testo diverso",
+      "status": "probabile",
+      "desc": "Compone un prompt con la conoscenza del profilo Instagram per far scrivere a un LLM esterno 30 hook in inglese, li legge dalla lista incollata, li posiziona sul video con le guide delle zone coperte da Instagram Reels e produce un video per hook (testo sovrapposto per i primi secondi, audio invariato) in un solo passaggio sul telefono.",
+      "in": [
+        "file",
+        "testo"
+      ],
+      "out": [
+        "file",
+        "testo"
+      ],
+      "evidence": [
+        "hookfy",
+        "cutline"
+      ],
+      "limits": "Export provato sul telefono con un reel di prova da 6 s; interfaccia, trascinamento del testo e 30 video di fila mai provati dal vivo. Gli hook li scrive un LLM esterno."
     }
   ],
-  "basis": "186b0ebb5f07cadd"
+  "basis": "e053bf87310d1c89"
 }
