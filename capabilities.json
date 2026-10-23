@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-23.2308",
-  "generated": "2026-10-23T23:08:08",
+  "version": "2026-10-24.0048",
+  "generated": "2026-10-24T00:48:20",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1357,7 +1357,25 @@
         "similacra"
       ],
       "limits": "Usa i modelli e la quota dell'account del servizio (non analizza in locale). Mai provata con credenziali reali: login, upload e campi privati dell'API non verificati."
+    },
+    {
+      "id": "x_cercaidee",
+      "cluster": "METODO",
+      "name": "Scoperta sistematica di software e strumenti esistenti su un ambito, con verifica e memoria",
+      "status": "probabile",
+      "desc": "Skill di Claude: dato un ambito, lo scompone in sottodomini, cerca sul web (panoramica, frontiera, ramificazione), verifica i candidati via API GitHub/Hugging Face/URL, deduplica, assegna punteggi trasparenti senza peso della popolarita' e presenta schede con fonti; memoria delle scoperte e feedback con quota di esplorazione indipendente. Cerca cose esistenti, non idee di app.",
+      "in": [
+        "testo"
+      ],
+      "out": [
+        "testo",
+        "dati"
+      ],
+      "evidence": [
+        "cercaidee"
+      ],
+      "limits": "Test reale su un solo ambito, con snippet di ricerca e API GitHub (pagine ufficiali non aperte). Memoria tra sessioni verificata solo da test automatici. I punteggi sono stime, non misure."
     }
   ],
-  "basis": "33b397428293d458"
+  "basis": "f67d53d52cff14cc"
 }
