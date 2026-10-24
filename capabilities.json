@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-24.0048",
-  "generated": "2026-10-24T00:48:20",
+  "version": "2026-10-24.1425",
+  "generated": "2026-10-24T14:25:20",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1375,7 +1375,29 @@
         "cercaidee"
       ],
       "limits": "Test reale su un solo ambito, con snippet di ricerca e API GitHub (pagine ufficiali non aperte). Memoria tra sessioni verificata solo da test automatici. I punteggi sono stime, non misure."
+    },
+    {
+      "id": "x_client_api_riverso",
+      "cluster": "INFRA",
+      "name": "Client Android di un servizio web ricavato dalle sue API (reverse engineering)",
+      "status": "dimostrata",
+      "desc": "Dato un sito senza API ufficiale, ne mappa le chiamate dal codice del front-end (REA), poi costruisce un'app Android che le usa con cookie persistenti, flusso SSE e conversione audio nativa, aggiungendo ingressi che il sito non ha (link, condivisione da altre app, upload).",
+      "in": [
+        "pagina_web"
+      ],
+      "out": [
+        "ui",
+        "dati"
+      ],
+      "evidence": [
+        "digdeeper-app"
+      ],
+      "limits": [
+        "Dipende dal servizio: quote, login e cambi di API sono suoi",
+        "Login Google impossibile in WebView: serve incollare la sessione",
+        "Upload e sessione non provati con un account reale"
+      ]
     }
   ],
-  "basis": "f67d53d52cff14cc"
+  "basis": "7ae4bb934ca637e3"
 }
