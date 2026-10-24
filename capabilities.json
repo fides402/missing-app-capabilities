@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-24.1425",
-  "generated": "2026-10-24T14:25:20",
+  "version": "2026-10-24.2345",
+  "generated": "2026-10-24T23:45:01",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1397,7 +1397,55 @@
         "Login Google impossibile in WebView: serve incollare la sessione",
         "Upload e sessione non provati con un account reale"
       ]
+    },
+    {
+      "id": "x_lettering_costruito_poligoni",
+      "cluster": "APP",
+      "name": "Ricostruire lettere di una reference come tracciati SVG costruiti (poligoni ortogonali con raggi per angolo) e progettarne di nuove con le stesse regole",
+      "status": "dimostrata",
+      "desc": "Misura sui pixel spessore delle aste, raggi degli archi, raccordi e solchi di un gruppo di lettere, le costruisce come vettori (non da un font), confronta le maschere con l'originale, corregge le differenze principali e riusa le regole misurate per una parola nuova.",
+      "evidence": "disordine-necessario, adi-01",
+      "in": [
+        "file"
+      ],
+      "out": [
+        "file"
+      ],
+      "limits": "Solo angoli di 90 gradi e cerchi; un solo gruppo di quattro lettere ricostruito (scarto residuo circa 3,6% dopo la correzione); nessun kerning ottico; fedelta' valutata su maschere e a occhio."
+    },
+    {
+      "id": "x_misure_reference_e_giudizio_separato",
+      "cluster": "METODO",
+      "name": "Misurare reference visive e far giudicare varianti a valutatori separati con chiave sigillata",
+      "status": "dimostrata",
+      "desc": "Estrae misure riproducibili da immagini (palette, quota di fondo, contatto col bordo, vuoto massimo, rapporto solco/spessore), crea varianti controllate, le fa ordinare da valutatori che non conoscono la chiave e confronta i giudizi con le intenzioni, segnalando le variabili non isolate.",
+      "evidence": "disordine-necessario, adi-01",
+      "in": [
+        "file"
+      ],
+      "out": [
+        "dati",
+        "testo"
+      ],
+      "limits": "I valutatori sono istanze di modello (non persone, correlate col progettista); le misure sono su immagini ridotte; una parte delle differenze percepite era dovuta ad artefatti di elaborazione."
+    },
+    {
+      "id": "x_studio_multiagente_contratti_json",
+      "cluster": "AI",
+      "name": "Orchestrare agenti specializzati che si passano solo file JSON validati, con critica cieca su render anonimi",
+      "status": "probabile",
+      "desc": "Toolchain locale con contratti JSON Schema, lint e rendering SVG, pacchetto anonimo con chiave separata, macchina a stati del workflow ed esportazione con hash; i ruoli (ricerca, curatela, concept, design, produzione, critica) sono file di agenti e skill di Claude Code.",
+      "evidence": "adi-01",
+      "in": [
+        "testo",
+        "file"
+      ],
+      "out": [
+        "file",
+        "dati"
+      ],
+      "limits": "La toolchain e' testata (test automatici); la delega fra agenti e' stata eseguita con un agente generico che legge i file di ruolo, mentre la registrazione nativa dei sei agenti non e' verificata; il giudizio estetico umano non e' nel sistema."
     }
   ],
-  "basis": "7ae4bb934ca637e3"
+  "basis": "6afc2dc0b2dae307"
 }
