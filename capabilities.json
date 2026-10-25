@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-25.1851",
-  "generated": "2026-10-25T18:51:17",
+  "version": "2026-10-26.0055",
+  "generated": "2026-10-26T00:55:26",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1478,7 +1478,25 @@
         "audio",
         "ui"
       ]
+    },
+    {
+      "id": "a_lastfm_gusto_profondo",
+      "cluster": "MUSICA",
+      "name": "Analisi profonda del gusto musicale da uno scrobble history di Last.fm, con lettura AI",
+      "status": "probabile",
+      "desc": "Scarica la cronologia pubblica di un utente Last.fm e calcola oscurita' assoluta (listener globali), hit-ness dei brani, entropia di generi, mappa oraria, sessioni, fedelta', ossessioni, evoluzione del gusto, confronto fra utenti e artisti simili poco noti; un LLM su Groq interpreta solo i numeri gia' calcolati (ritratto, contraddizioni, chat).",
+      "evidence": "strata (motore testato su dati sintetici, sincronizzazione provata con Last.fm simulato)",
+      "in": [
+        "dati",
+        "testo"
+      ],
+      "out": [
+        "ui",
+        "testo",
+        "dati"
+      ],
+      "limits": "Mai provata con una API key vera ne' sul telefono; l'oscurita' e' assoluta, non un percentile fra utenti; soglie euristiche da tarare su dati reali."
     }
   ],
-  "basis": "280113d7f4069da4"
+  "basis": "ad88a1423e1025d5"
 }
