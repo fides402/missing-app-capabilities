@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-24.2345",
-  "generated": "2026-10-24T23:45:01",
+  "version": "2026-10-25.1515",
+  "generated": "2026-10-25T15:15:53",
   "capabilities": [
     {
       "id": "a_mir",
@@ -796,7 +796,7 @@
       "name": "Calibrazione latenza cuffie (anche Bluetooth)",
       "status": "probabile",
       "desc": "Misura il ritardo reale dell'uscita audio con chirp e microfono, tap test e sync suono/flash; un profilo per ogni uscita applicato in automatico.",
-      "evidence": "beatmaker-x",
+      "evidence": "beatmaker-x, bml-lab (riusata per sincronizzare la registrazione della voce)",
       "in": [
         "audio"
       ],
@@ -1445,7 +1445,23 @@
         "dati"
       ],
       "limits": "La toolchain e' testata (test automatici); la delega fra agenti e' stata eseguita con un agente generico che legge i file di ruolo, mentre la registrazione nativa dei sei agenti non e' verificata; il giudizio estetico umano non e' nel sistema."
+    },
+    {
+      "id": "a_voce_to_midi_scala",
+      "cluster": "AUDIO",
+      "name": "Cantare una parte e ottenere MIDI pulito, agganciato alla scala, suonato da uno strumento a campioni",
+      "status": "probabile",
+      "desc": "Tracciamento dell'altezza della voce (YIN con Viterbi), segmentazione in note, scala intuita dalle note cantate con correzione della deriva d'intonazione, quantizzazione su griglia con ritardo sistematico compensato, riproduzione con soundfont leggeri e export ZIP di file MIDI (composizione + una traccia per strumento).",
+      "evidence": "bml-lab (trascrizione provata su voce sintetica con ~87% note esatte; app installata sul telefono)",
+      "in": [
+        "voce"
+      ],
+      "out": [
+        "midi",
+        "audio"
+      ],
+      "limits": "Tarata solo su voce sintetica, mai provata con voce vera; registri sopra ~800 Hz imprecisi; suono dai campioni General MIDI, non da librerie da studio."
     }
   ],
-  "basis": "6afc2dc0b2dae307"
+  "basis": "0eeda60142cda9a0"
 }
