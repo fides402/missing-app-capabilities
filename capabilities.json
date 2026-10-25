@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-25.1515",
-  "generated": "2026-10-25T15:15:53",
+  "version": "2026-10-25.1851",
+  "generated": "2026-10-25T18:51:17",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1461,7 +1461,24 @@
         "audio"
       ],
       "limits": "Tarata solo su voce sintetica, mai provata con voce vera; registri sopra ~800 Hz imprecisi; suono dai campioni General MIDI, non da librerie da studio."
+    },
+    {
+      "id": "a_accordi_bundle_isolati",
+      "cluster": "AUDIO",
+      "name": "Riconoscere gli accordi di un brano, trovare i loop di 4 battute migliori e isolare ogni parte dove quegli accordi compaiono, suonabile a pad",
+      "status": "probabile",
+      "desc": "Riconoscimento accordi (chroma + Viterbi), algoritmo deterministico di punteggio (catchiness, rappabilita', raccordo armonico e audio) che ordina loop di 4 accordi presenti nel brano; ogni bundle diventa un set di chop snappati sugli attacchi, un banco per accordo, che il sampler ferma da solo a fine parte.",
+      "evidence": "chopperia-chords (algoritmo e UI provati su un brano reale e nel browser con ponte finto; plugin compilato); motore accordi da chordia",
+      "limits": "Mai ascoltato ne' provato in Ableton; accuratezza degli accordi non misurata su brani con voce/batteria pesanti; richiede Python con librosa sul PC.",
+      "in": [
+        "audio"
+      ],
+      "out": [
+        "midi",
+        "audio",
+        "ui"
+      ]
     }
   ],
-  "basis": "0eeda60142cda9a0"
+  "basis": "280113d7f4069da4"
 }
