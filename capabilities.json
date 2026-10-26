@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-26.0131",
-  "generated": "2026-10-26T01:31:25",
+  "version": "2026-10-26.1943",
+  "generated": "2026-10-26T19:43:04",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1514,7 +1514,53 @@
         "dati"
       ],
       "limits": "Mai eseguito il ciclo con una chiave Gemini vera; il punteggio e' una stima dell'LLM tarata su un giudizio umano-assistito, non un ascolto; app mai aperta sul telefono."
+    },
+    {
+      "id": "a_controllo_app_esterna_media3",
+      "cluster": "INFRA",
+      "name": "Pilotare un'altra app Android di riproduzione (coda, like, playlist) da un'app propria",
+      "status": "dimostrata",
+      "desc": "Un'app agisce da MediaController media3 sulla sessione esposta di un lettore musicale gia' installato e gli manda comandi di sessione personalizzati (coda di brani, like, playlist, lettura dei Mi piace). Il lettore suona per intero anche a schermo spento perche' la coda vive nel suo servizio.",
+      "in": [
+        "dati",
+        "ui"
+      ],
+      "out": [
+        "audio",
+        "dati"
+      ],
+      "evidence": [
+        "setto-swipes",
+        "diggaplayer"
+      ],
+      "limits": [
+        "serve poter modificare il lettore per aggiungere i comandi",
+        "schermo spento a lungo non ancora provato dal vivo"
+      ]
+    },
+    {
+      "id": "a_dj_swipe_grafo_artisti",
+      "cluster": "MUSICA",
+      "name": "DJ a swipe: scoperta musicale che si sposta su un grafo di artisti con like e skip",
+      "status": "probabile",
+      "desc": "Parte da pochi artisti scelti, espande i vicini (artisti correlati Deezer, Last.fm), approfondisce dopo un like e si allontana dopo uno skip; modalita' vicino/bilanciato/sorpresa, mix di brani poco ascoltati (Forgotify), mood rilassato stimato da tag e genere, consigli con il motivo, apprendimento dai Mi piace importati da Digga o da un CSV Exportify.",
+      "in": [
+        "testo",
+        "dati"
+      ],
+      "out": [
+        "audio",
+        "ui",
+        "dati"
+      ],
+      "evidence": [
+        "setto-swipes"
+      ],
+      "limits": [
+        "il mood e' una stima per tag/genere, non misura l'audio",
+        "consigli e import Exportify non ancora provati con dati reali sul telefono"
+      ]
     }
   ],
-  "basis": "40d72e3147e80896"
+  "basis": "680eafc7c567e867"
 }
