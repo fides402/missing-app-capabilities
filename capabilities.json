@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-26.0055",
-  "generated": "2026-10-26T00:55:26",
+  "version": "2026-10-26.0131",
+  "generated": "2026-10-26T01:31:25",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1496,7 +1496,25 @@
         "dati"
       ],
       "limits": "Mai provata con una API key vera ne' sul telefono; l'oscurita' e' assoluta, non un percentile fra utenti; soglie euristiche da tarare su dati reali."
+    },
+    {
+      "id": "a_feed_dischi_per_impatto",
+      "cluster": "MUSICA",
+      "name": "Feed quotidiano di dischi filtrato per impatto, calibrato su dischi di riferimento",
+      "status": "probabile",
+      "desc": "Legge feed RSS di testate musicali, fa estrarre a un LLM (Gemini con schema JSON) disco, artista, intro in italiano e genere, e assegna un punteggio di impatto confrontando ogni novita' con dischi di riferimento gia' valutati; tiene solo quelli di impatto simile. Copertine da Deezer. Le fonti si ricavano trascrivendo (Whisper) i video di un recensore e cercando chi ha trattato gli stessi dischi.",
+      "evidence": "music-radar (feed RSS verificati vivi, UI provata in anteprima, APK installata)",
+      "in": [
+        "testo",
+        "pagina_web",
+        "dati"
+      ],
+      "out": [
+        "ui",
+        "dati"
+      ],
+      "limits": "Mai eseguito il ciclo con una chiave Gemini vera; il punteggio e' una stima dell'LLM tarata su un giudizio umano-assistito, non un ascolto; app mai aperta sul telefono."
     }
   ],
-  "basis": "ad88a1423e1025d5"
+  "basis": "40d72e3147e80896"
 }
