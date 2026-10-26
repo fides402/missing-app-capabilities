@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-26.1943",
-  "generated": "2026-10-26T19:43:04",
+  "version": "2026-10-26.1944",
+  "generated": "2026-10-26T19:44:07",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1529,14 +1529,8 @@
         "audio",
         "dati"
       ],
-      "evidence": [
-        "setto-swipes",
-        "diggaplayer"
-      ],
-      "limits": [
-        "serve poter modificare il lettore per aggiungere i comandi",
-        "schermo spento a lungo non ancora provato dal vivo"
-      ]
+      "evidence": "setto-swipes, diggaplayer (verificato da logcat sul telefono per il controllo del lettore)",
+      "limits": "serve poter modificare il lettore per aggiungere i comandi; schermo spento a lungo non ancora provato dal vivo"
     },
     {
       "id": "a_dj_swipe_grafo_artisti",
@@ -1553,13 +1547,8 @@
         "ui",
         "dati"
       ],
-      "evidence": [
-        "setto-swipes"
-      ],
-      "limits": [
-        "il mood e' una stima per tag/genere, non misura l'audio",
-        "consigli e import Exportify non ancora provati con dati reali sul telefono"
-      ]
+      "evidence": "setto-swipes",
+      "limits": "il mood e' una stima per tag/genere, non misura l'audio; consigli e import Exportify non ancora provati con dati reali sul telefono"
     }
   ],
   "basis": "680eafc7c567e867"
