@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-26.1944",
-  "generated": "2026-10-26T19:44:07",
+  "version": "2026-10-27.2323",
+  "generated": "2026-10-27T23:23:36",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1549,7 +1549,39 @@
       ],
       "evidence": "setto-swipes",
       "limits": "il mood e' una stima per tag/genere, non misura l'audio; consigli e import Exportify non ancora provati con dati reali sul telefono"
+    },
+    {
+      "id": "a_drumsep_locale",
+      "cluster": "AUDIO",
+      "name": "Separare un drumloop in kick/snare/toms/hi-hat/ride/crash in locale, senza cloud",
+      "status": "dimostrata",
+      "desc": "Modello DrumSep (MDX23C, 6 stem) eseguito su CPU: un loop di 12 s richiede circa 80 s. Si applica anche a un singolo colpo per scoprire se e' composto da piu' strumenti sovrapposti.",
+      "in": [
+        "audio"
+      ],
+      "out": [
+        "audio",
+        "dati"
+      ],
+      "evidence": "drumsnatch",
+      "limits": "circa 6-7 volte il tempo reale su CPU; non ha una classe 808 (si ricava dal residuo e dai colpi tonali lunghi)"
+    },
+    {
+      "id": "a_oneshot_risintesi",
+      "cluster": "AUDIO",
+      "name": "Ricostruire un one-shot di batteria per sintesi parametrica (armoniche con fase + rumore a bande)",
+      "status": "probabile",
+      "desc": "Sceglie il colpo piu' pulito di ogni strumento, lo descrive con pitch, armoniche, fase e inviluppi per banda e lo risintetizza in tre versioni (fedele, corta, lunga) con tune; include 808/sub.",
+      "in": [
+        "audio"
+      ],
+      "out": [
+        "audio",
+        "dati"
+      ],
+      "evidence": "drumsnatch (corr. d'onda 808 0,95 / kick 0,93 / snare 0,83 misurata)",
+      "limits": "mai ascoltato; ride, crash e hi-hat sono approssimazioni a bande, non copie"
     }
   ],
-  "basis": "680eafc7c567e867"
+  "basis": "9f2252545957ad44"
 }
