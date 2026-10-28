@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-27.2323",
-  "generated": "2026-10-27T23:23:36",
+  "version": "2026-10-28.1438",
+  "generated": "2026-10-28T14:38:08",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1581,7 +1581,38 @@
       ],
       "evidence": "drumsnatch (corr. d'onda 808 0,95 / kick 0,93 / snare 0,83 misurata)",
       "limits": "mai ascoltato; ride, crash e hi-hat sono approssimazioni a bande, non copie"
+    },
+    {
+      "id": "i_sync_stato_riproduzione",
+      "cluster": "INFRA",
+      "name": "Sincronizzare lo stato di riproduzione fra PC e telefono (stile Spotify Connect) su un Worker Cloudflare gratuito",
+      "status": "probabile",
+      "desc": "Un Durable Object con WebSocket tiene un solo stato condiviso (brano, posizione, coda, dispositivo attivo), comandi remoti e blob JSON; ripiego su Gist privato GitHub. Si riprende l'ascolto sull'altro dispositivo alla posizione estrapolata.",
+      "in": [
+        "dati"
+      ],
+      "out": [
+        "dati"
+      ],
+      "evidence": "miro/sync-worker (REST, WebSocket e blob provati in locale con un token di prova)",
+      "limits": "lato Android non ancora scritto; mai provato fra due dispositivi reali; il ripiego Gist non ha tempo reale"
+    },
+    {
+      "id": "a_player_desktop_stream",
+      "cluster": "APP",
+      "name": "Riprodurre un brano di un catalogo senza audio proprio risolvendo lo stream da piu' sorgenti (Tidal FLAC poi YouTube) in un'app desktop",
+      "status": "probabile",
+      "desc": "Server locale Node + Electron: dal titolo e artista trova lo stream (istanze hifi-api in corsa insieme, poi yt-dlp con punteggio dei candidati), una ricerca alla volta, cache negativa solo per i miss definitivi.",
+      "in": [
+        "testo"
+      ],
+      "out": [
+        "audio",
+        "ui"
+      ],
+      "evidence": "miro/app (un brano reale risolto via YouTube e riprodotto in browser)",
+      "limits": "login Spotify e ramo Tidal non verificati dal vivo; nessun ascolto reale; Electron non avviato"
     }
   ],
-  "basis": "9f2252545957ad44"
+  "basis": "8513ec55221f730d"
 }
