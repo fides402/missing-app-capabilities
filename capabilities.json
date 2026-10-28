@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-28.2316",
-  "generated": "2026-10-28T23:16:11",
+  "version": "2026-10-28.2323",
+  "generated": "2026-10-28T23:23:18",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1647,5 +1647,5 @@
       "limits": "punteggi euristici mai ascoltati ne' validati con uno studio pairwise; pattern fissi per ruolo"
     }
   ],
-  "basis": "4e2e6111787f9ce8"
+  "basis": "39ded3e3a8a52d1c"
 }
