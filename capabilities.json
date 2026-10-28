@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-28.1719",
-  "generated": "2026-10-28T17:19:58",
+  "version": "2026-10-28.2316",
+  "generated": "2026-10-28T23:16:11",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1629,7 +1629,23 @@
       ],
       "evidence": "soundteller/ (DSP misurato su 3 tracce sintetiche, UI provata con modello simulato)",
       "limits": "Gemini mai provato con chiave vera; link YouTube/Spotify non provati sul telefono; DSP non provato su musica reale"
+    },
+    {
+      "id": "x_sonicfit",
+      "cluster": "MUSICA",
+      "name": "Suggerire dalla propria libreria i sample che funzionano insieme a un loop (kick, snare, hat, perc, overhead, 808, drum loop, loop acustici/synth) con motivazioni misurate e audition A/B",
+      "status": "probabile",
+      "desc": "App desktop: categoria di ogni file da percorso + classificatore su embedding CLAP, ricerca a due stadi e scoring sul mix ipotetico loop+candidato (bande, decay, intonazione, tempo/tonalita'), A/B a volume pareggiato.",
+      "in": [
+        "audio"
+      ],
+      "out": [
+        "audio",
+        "ui"
+      ],
+      "evidence": "sonicfit/ (catalogo di ~73k file classificato, motore provato su loop reale con risultati spiegati)",
+      "limits": "punteggi euristici mai ascoltati ne' validati con uno studio pairwise; pattern fissi per ruolo"
     }
   ],
-  "basis": "234326e3eb2257f1"
+  "basis": "4e2e6111787f9ce8"
 }
