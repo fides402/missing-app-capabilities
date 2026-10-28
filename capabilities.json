@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-28.1438",
-  "generated": "2026-10-28T14:38:08",
+  "version": "2026-10-28.1719",
+  "generated": "2026-10-28T17:19:58",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1612,7 +1612,24 @@
       ],
       "evidence": "miro/app (un brano reale risolto via YouTube e riprodotto in browser)",
       "limits": "login Spotify e ramo Tidal non verificati dal vivo; nessun ascolto reale; Electron non avviato"
+    },
+    {
+      "id": "x_soundteller",
+      "cluster": "MUSICA",
+      "name": "Analizzare un brano (link YouTube/Spotify, titolo o file) con generi, mood, strumenti, testo, BPM, tonalita' e golden minute, standalone su Android",
+      "status": "probabile",
+      "desc": "APK Capacitor: DSP sul telefono (tempo, tonalita', accordi, finestra piu' ripetuta) piu' giudizio di un modello audio (Gemini, chiave dell'utente, modello dal catalogo vivo) con schema JSON forzato.",
+      "in": [
+        "testo",
+        "audio"
+      ],
+      "out": [
+        "testo",
+        "ui"
+      ],
+      "evidence": "soundteller/ (DSP misurato su 3 tracce sintetiche, UI provata con modello simulato)",
+      "limits": "Gemini mai provato con chiave vera; link YouTube/Spotify non provati sul telefono; DSP non provato su musica reale"
     }
   ],
-  "basis": "8513ec55221f730d"
+  "basis": "234326e3eb2257f1"
 }
