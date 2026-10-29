@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-28.2323",
-  "generated": "2026-10-28T23:23:18",
+  "version": "2026-10-29.1639",
+  "generated": "2026-10-29T16:39:41",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1645,7 +1645,23 @@
       ],
       "evidence": "sonicfit/ (catalogo di ~73k file classificato, motore provato su loop reale con risultati spiegati)",
       "limits": "punteggi euristici mai ascoltati ne' validati con uno studio pairwise; pattern fissi per ruolo"
+    },
+    {
+      "id": "x_hifix",
+      "cluster": "AUDIO",
+      "name": "Restaurare un sample a bassa qualita' (codec lossy) in WAV 24 bit ad alta qualita'",
+      "status": "probabile",
+      "desc": "App desktop: stima il taglio in frequenza dallo spettro, restauro neurale (Apollo) a blocchi su CPU che ricostruisce le alte frequenze e pulisce gli artefatti del codec, armoniche classiche opzionali, A/B a volume pareggiato con spettro prima/dopo.",
+      "in": [
+        "audio"
+      ],
+      "out": [
+        "audio",
+        "ui"
+      ],
+      "evidence": "hifix/ (errore spettrale su MP3 64k sintetico 17,0 -> 10,5 dB, un solo esempio)",
+      "limits": "mai ascoltato da un umano; modello generativo che inventa dettagli plausibili; lento su CPU (~13x la durata); provato su un solo bitrate."
     }
   ],
-  "basis": "39ded3e3a8a52d1c"
+  "basis": "225afa9e19acebea"
 }
