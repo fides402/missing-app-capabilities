@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-29.1639",
-  "generated": "2026-10-29T16:39:41",
+  "version": "2026-10-29.1640",
+  "generated": "2026-10-29T16:40:46",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1663,5 +1663,5 @@
       "limits": "mai ascoltato da un umano; modello generativo che inventa dettagli plausibili; lento su CPU (~13x la durata); provato su un solo bitrate."
     }
   ],
-  "basis": "225afa9e19acebea"
+  "basis": "046820eeb728ca53"
 }
