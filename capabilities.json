@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-30.2012",
-  "generated": "2026-10-30T20:12:29",
+  "version": "2026-10-30.2253",
+  "generated": "2026-10-30T22:53:25",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1679,7 +1679,23 @@
       ],
       "evidence": "bluesky-session-players/ (12 test, render reale con Ample Guitar T da stato catturato, sonde CC)",
       "limits": "Percorso LLM mai provato con chiave valida; banco Kontakt vero non verificato; mai ascoltato da un umano."
+    },
+    {
+      "id": "a_video_clips",
+      "cluster": "APP",
+      "name": "Video lungo in feed di clip verticali",
+      "status": "probabile",
+      "desc": "Da uno o più link YouTube lunghi: trascrizione, scelta dei momenti migliori e clip 9:16 mostrate come feed a scorrimento verticale.",
+      "evidence": "opusfeed (backend FastAPI + app Capacitor; provato su un video, non a lungo sul telefono)",
+      "in": [
+        "pagina_web"
+      ],
+      "out": [
+        "file",
+        "ui"
+      ],
+      "limits": "Scelta dei momenti euristica (nessun LLM attivo); il PC deve essere acceso e raggiungibile; rendering lento su video lunghi."
     }
   ],
-  "basis": "d250c3adbf8174f2"
+  "basis": "1a060e3b4819a787"
 }
