@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-29.2223",
-  "generated": "2026-10-29T22:23:45",
+  "version": "2026-10-30.2012",
+  "generated": "2026-10-30T20:12:29",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1681,5 +1681,5 @@
       "limits": "Percorso LLM mai provato con chiave valida; banco Kontakt vero non verificato; mai ascoltato da un umano."
     }
   ],
-  "basis": "114c807113be6163"
+  "basis": "d250c3adbf8174f2"
 }
