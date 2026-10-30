@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-30.2253",
-  "generated": "2026-10-30T22:53:25",
+  "version": "2026-10-30.2335",
+  "generated": "2026-10-30T23:35:57",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1695,7 +1695,24 @@
         "ui"
       ],
       "limits": "Scelta dei momenti euristica (nessun LLM attivo); il PC deve essere acceso e raggiungibile; rendering lento su video lunghi."
+    },
+    {
+      "id": "x_flashcard_libricini",
+      "cluster": "APP",
+      "name": "Libreria di flashcard: ZIP di carte PNG in libricini sfogliabili, con prompt per generarle",
+      "status": "dimostrata",
+      "desc": "Importa uno ZIP (cartella cards con PNG e index.csv), lo salva sul telefono e lo mostra come libricino con indice, preferite, zoom e posizione ricordata; tiene a un tocco il prompt per far generare le carte a ChatGPT.",
+      "evidence": "flashbook (APK Capacitor 7; import e lettore provati nel browser a 412x915, non ancora sul telefono)",
+      "in": [
+        "file",
+        "testo"
+      ],
+      "out": [
+        "ui",
+        "dati"
+      ],
+      "limits": "Legge solo ZIP con immagini PNG, JPG o WebP; la qualità delle carte dipende da ChatGPT. Gesti e file picker non provati sul telefono."
     }
   ],
-  "basis": "1a060e3b4819a787"
+  "basis": "a8a1adf7d37ff262"
 }
