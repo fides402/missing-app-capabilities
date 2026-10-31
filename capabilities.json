@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-31.0347",
-  "generated": "2026-10-31T03:47:55",
+  "version": "2026-10-31.2041",
+  "generated": "2026-10-31T20:41:25",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1746,7 +1746,28 @@
         "ui"
       ],
       "limits": "Mai ascoltato da un umano: le metriche (concordanza accordi 44-75%, correlazione transienti 42-69%) non sono giudizi d'ascolto. Tarato su un solo caso reale; se il sample non contiene gli accordi richiesti sceglie il piu' vicino; reference senza armonia = segue solo il ritmo."
+    },
+    {
+      "id": "x_imagobeat",
+      "cluster": "AUDIO",
+      "name": "IMAGOBEAT: da un'immagine a sample rari (libreria + internet) con bundle di suoni per categoria",
+      "status": "probabile",
+      "desc": "Un prompt copia-incolla fa leggere a ChatGPT l'immagine come profilo musicale JSON (umore, epoca, geografia, tempo, tonalità, strumenti, produzione, più direzioni e query). L'app cerca loop nella libreria locale (CLAP testo-audio, tempo, tonalità) e brani su YouTube (sezione scaricata e confrontata con CLAP), poi per ogni campione propone i suoni di tutte le categorie di sonicfit, con audizione insieme e bundle copiabile.",
+      "in": [
+        "testo",
+        "file"
+      ],
+      "out": [
+        "audio",
+        "ui",
+        "dati"
+      ],
+      "evidence": [
+        "imagobeat",
+        "sonicfit"
+      ],
+      "limits": "Mai ascoltata da un umano; non provata con una risposta vera di ChatGPT (solo un esempio). Solo YouTube come fonte web; punteggi euristici."
     }
   ],
-  "basis": "5c67b82f243182c6"
+  "basis": "8a90ee33d907ef26"
 }
