@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-31.0157",
-  "generated": "2026-10-31T01:57:24",
+  "version": "2026-10-31.0347",
+  "generated": "2026-10-31T03:47:55",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1729,7 +1729,24 @@
         "ui"
       ],
       "limits": "Il controllo tecnico non giudica l'estetica; nessun preflight di stampa (bleed, CMYK); la critica automatica condivide i bias del generatore; skill e agent si caricano solo al riavvio di Claude Code."
+    },
+    {
+      "id": "x_loop_genesis",
+      "cluster": "AUDIO",
+      "name": "Loop Genesis: loop dal sample che ricalcano groove e funzioni armoniche di una reference, senza trasporre",
+      "status": "dimostrata",
+      "desc": "Da un loop di riferimento misura tempo, transienti con scarto in ms (groove) e accordi (riconoscimento a template con Viterbi); sul sample trova punti di taglio sugli attacchi veri e sui cambi d'accordo; genera piu' loop della durata della reference, con tagli a funzione armonica equivalente, render circolare seamless, altezza originale (niente trasposizione o stretch) e verifica indipendente degli accordi riascoltati.",
+      "evidence": "loopgenesis, chordia, chopbox (attack.js), sonicfit (UI); test su reference sintetica Am F C G + sample reale",
+      "in": [
+        "audio",
+        "audio"
+      ],
+      "out": [
+        "audio",
+        "ui"
+      ],
+      "limits": "Mai ascoltato da un umano: le metriche (concordanza accordi 44-75%, correlazione transienti 42-69%) non sono giudizi d'ascolto. Tarato su un solo caso reale; se il sample non contiene gli accordi richiesti sceglie il piu' vicino; reference senza armonia = segue solo il ritmo."
     }
   ],
-  "basis": "c50590627d9b80bb"
+  "basis": "5c67b82f243182c6"
 }
