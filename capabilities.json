@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-30.2335",
-  "generated": "2026-10-30T23:35:57",
+  "version": "2026-10-31.0157",
+  "generated": "2026-10-31T01:57:24",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1712,7 +1712,24 @@
         "dati"
       ],
       "limits": "Legge solo ZIP con immagini PNG, JPG o WebP; la qualità delle carte dipende da ChatGPT. Gesti e file picker non provati sul telefono."
+    },
+    {
+      "id": "x_design_studio",
+      "cluster": "METODO",
+      "name": "Design studio: poster con varianti divergenti, render reale, controlli tecnici e memoria del gusto",
+      "status": "dimostrata",
+      "desc": "Da un brief produce 3-5 varianti HTML/SVG strutturalmente diverse, le renderizza con Chromium, controlla dimensioni, font, sovrapposizioni, contrasto e copy obbligatorio, costruisce il confronto A/B/C e registra solo le scelte reali dell'utente. Palette misurate dai pixel di reference e font con licenza verificata.",
+      "evidence": "design-engine, .claude/skills/design-studio, design-runs (demo FORMA e 5 poster Bluesky Music Library); 31 test automatici",
+      "in": [
+        "testo",
+        "file"
+      ],
+      "out": [
+        "file",
+        "ui"
+      ],
+      "limits": "Il controllo tecnico non giudica l'estetica; nessun preflight di stampa (bleed, CMYK); la critica automatica condivide i bias del generatore; skill e agent si caricano solo al riavvio di Claude Code."
     }
   ],
-  "basis": "a8a1adf7d37ff262"
+  "basis": "c50590627d9b80bb"
 }
