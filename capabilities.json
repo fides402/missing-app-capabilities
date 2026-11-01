@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-01.2044",
-  "generated": "2026-11-01T20:44:30",
+  "version": "2026-11-01.2254",
+  "generated": "2026-11-01T22:54:06",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1784,7 +1784,24 @@
         "chromagraph-android"
       ],
       "limits": "Look approssimato, non l'originale. Provato dal vivo solo scatto e sviluppo; editor ed export non verificati."
+    },
+    {
+      "id": "x_chopduel_swipe_training",
+      "cluster": "METODO",
+      "name": "Insegnare il gusto dei punti di taglio con swipe pass/match",
+      "status": "probabile",
+      "desc": "Da un link YouTube o Spotify (Spotify via ricerca del brano su YouTube) propone punti di taglio come carte con anteprima a battute; i pass/match addestrano un modello sui soli inizi, con contatore cross-genere e criteri fissi di 'addestrato' (accuratezza su brani mai visti). Esporta JSON/CSV e un payload per l'autochop.",
+      "evidence": "chopduel (derivato da chopbox/CHOPPERIA)",
+      "in": [
+        "audio",
+        "pagina_web"
+      ],
+      "out": [
+        "dati",
+        "file"
+      ],
+      "limits": "Appena costruita: anteprime mai ascoltate, gesti non provati sul telefono vero, soglie di 'addestrato' sono ipotesi. Spotify non fornisce audio: serve un risultato YouTube corretto."
     }
   ],
-  "basis": "8d2b7e984018b782"
+  "basis": "9fb799ac013bfbab"
 }
