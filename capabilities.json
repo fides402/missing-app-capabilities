@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-01.2254",
-  "generated": "2026-11-01T22:54:13",
+  "version": "2026-11-02.0019",
+  "generated": "2026-11-02T00:19:16",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1801,7 +1801,24 @@
         "file"
       ],
       "limits": "Appena costruita: anteprime mai ascoltate, gesti non provati sul telefono vero, soglie di 'addestrato' sono ipotesi. Spotify non fornisce audio: serve un risultato YouTube corretto."
+    },
+    {
+      "id": "x_chopperia_duel_daw",
+      "cluster": "AUDIO",
+      "name": "Plugin DAW con autochop addestrato dal duello dei chop",
+      "status": "probabile",
+      "desc": "Versione del plugin VST3 di chopperia in cui il cervello dell'autochop e' un modello addestrato solo sulle scelte pass/match del duello (soli punti d'inizio), fuso col prior euristico; l'apprendimento in uso e' disattivato, il modello e' fisso e ricaricato a ogni avvio.",
+      "evidence": "chopperia-duel (da chopperia-vst), chopduel",
+      "in": [
+        "audio",
+        "dati"
+      ],
+      "out": [
+        "audio",
+        "midi"
+      ],
+      "limits": "Sul dato disponibile il modello batte il prior di pochissimo (0.723 contro 0.717 di AUC su brani mai visti); la fine dei chop resta euristica. Mai ascoltato in un DAW."
     }
   ],
-  "basis": "9fb799ac013bfbab"
+  "basis": "8a1fdca8466b896e"
 }
