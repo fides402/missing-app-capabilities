@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-31.2041",
-  "generated": "2026-10-31T20:41:25",
+  "version": "2026-11-01.1559",
+  "generated": "2026-11-01T15:59:20",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1769,5 +1769,5 @@
       "limits": "Mai ascoltata da un umano; non provata con una risposta vera di ChatGPT (solo un esempio). Solo YouTube come fonte web; punteggi euristici."
     }
   ],
-  "basis": "8a90ee33d907ef26"
+  "basis": "e82a864e77f69f6e"
 }
