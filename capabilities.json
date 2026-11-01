@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-01.1559",
-  "generated": "2026-11-01T15:59:20",
+  "version": "2026-11-01.2044",
+  "generated": "2026-11-01T20:44:30",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1767,7 +1767,24 @@
         "sonicfit"
       ],
       "limits": "Mai ascoltata da un umano; non provata con una risposta vera di ChatGPT (solo un esempio). Solo YouTube come fonte web; punteggi euristici."
+    },
+    {
+      "id": "x_chromagraph_android",
+      "cluster": "APP",
+      "name": "Camera RAW per Pixel: scatto multi-esposizione, sviluppo con look cinematografico, grana e alone",
+      "status": "probabile",
+      "desc": "App Android nativa (Camera2) che cattura RAW dai sensori fisici del Pixel 7a, fonde 4 frame, sviluppa in lineare di scena con look, grana e halation regolabili, editor non distruttivo ed export JPEG/HEIC.",
+      "in": [
+        "ui"
+      ],
+      "out": [
+        "file"
+      ],
+      "evidence": [
+        "chromagraph-android"
+      ],
+      "limits": "Look approssimato, non l'originale. Provato dal vivo solo scatto e sviluppo; editor ed export non verificati."
     }
   ],
-  "basis": "e82a864e77f69f6e"
+  "basis": "8d2b7e984018b782"
 }
