@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-02.0019",
-  "generated": "2026-11-02T00:19:16",
+  "version": "2026-11-02.0305",
+  "generated": "2026-11-02T03:05:54",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1820,5 +1820,5 @@
       "limits": "Sul dato disponibile il modello batte il prior di pochissimo (0.723 contro 0.717 di AUC su brani mai visti); la fine dei chop resta euristica. Mai ascoltato in un DAW."
     }
   ],
-  "basis": "8a1fdca8466b896e"
+  "basis": "dc43252465db0c0d"
 }
