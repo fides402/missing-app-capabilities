@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-02.0313",
-  "generated": "2026-11-02T03:13:47",
+  "version": "2026-11-04.0111",
+  "generated": "2026-11-04T01:11:20",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1835,7 +1835,28 @@
         "file"
       ],
       "limits": "Mai ascoltato ne' aperto in Live: tempi da beat tracking su dischi suonati dal vivo (da confermare a orecchio); il render e' emulato in numpy, gli effetti per traccia non sono nel progetto."
+    },
+    {
+      "id": "x_creative_decision_engine",
+      "cluster": "AI",
+      "name": "Motore creativo a decisioni ad alto impatto (musica, grafica, problem solving)",
+      "status": "dimostrata",
+      "desc": "Da un'intenzione vaga a poche scelte decisive: genera direzioni concettualmente diverse con dieci operatori creativi, stima quale decisione umana cambia di piu' il risultato, mostra anteprime a confronto e impara dalle scelte. Esporta brief, MIDI/WAV di bozza, SVG, strategia con esperimento.",
+      "in": [
+        "testo"
+      ],
+      "out": [
+        "file",
+        "midi",
+        "audio",
+        "pagina_web",
+        "ui"
+      ],
+      "evidence": [
+        "cie"
+      ],
+      "limits": "Senza chiave AI lavora a regole e lessico, non e' ragionamento AI; il WAV e' una sintesi di bozza mai ascoltata dal sistema; le stime di novita' sono interne."
     }
   ],
-  "basis": "73972c71f07d55bc"
+  "basis": "5d18eec16a15fa30"
 }
