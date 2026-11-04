@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-04.0115",
-  "generated": "2026-11-04T01:15:23",
+  "version": "2026-11-04.1242",
+  "generated": "2026-11-04T12:42:44",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1854,7 +1854,24 @@
       ],
       "evidence": "skill cie, cie (prototipo app, 30 test)",
       "limits": "Senza chiave AI lavora a regole e lessico, non e' ragionamento AI; il WAV e' una sintesi di bozza mai ascoltata dal sistema; le stime di novita' sono interne."
+    },
+    {
+      "id": "x_vst_headless_reference",
+      "cluster": "AUDIO",
+      "name": "Plugin VST3 reale come riferimento di misura (render headless + preset testuali)",
+      "status": "dimostrata",
+      "desc": "Un VST3 installato viene caricato in background, i suoi parametri sono letti con i testi reali (Hz, dB, nomi dei tipi), un file preset testuale e' mappato sugli indici e un audio e' renderizzato: serve da verita' per confrontare un'emulazione DSP o validare preset generati.",
+      "in": [
+        "file",
+        "audio"
+      ],
+      "out": [
+        "audio",
+        "dati"
+      ],
+      "evidence": "rc20-studio (mappa preset->parametri verificata sul plugin)",
+      "limits": "Verificato su un solo plugin; l'emulazione DSP confrontata con il riferimento non e' ancora costruita; l'ascolto resta dell'utente."
     }
   ],
-  "basis": "5b8214de9dd00757"
+  "basis": "e2c6158f1b1fa6ce"
 }
