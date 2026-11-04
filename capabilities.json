@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-04.0111",
-  "generated": "2026-11-04T01:11:35",
+  "version": "2026-11-04.0115",
+  "generated": "2026-11-04T01:15:23",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1839,9 +1839,9 @@
     {
       "id": "x_creative_decision_engine",
       "cluster": "AI",
-      "name": "Motore creativo a decisioni ad alto impatto (musica, grafica, problem solving)",
+      "name": "Direzione creativa a poche decisioni ad alto impatto (skill di processo)",
       "status": "dimostrata",
-      "desc": "Da un'intenzione vaga a poche scelte decisive: genera direzioni concettualmente diverse con dieci operatori creativi, stima quale decisione umana cambia di piu' il risultato, mostra anteprime a confronto e impara dalle scelte. Esporta brief, MIDI/WAV di bozza, SVG, strategia con esperimento.",
+      "desc": "Da un'intenzione vaga a 1-3 scelte decisive in chat: direzioni diverse con dieci operatori creativi, alternative concrete con anteprima, osservato separato da inferito, cambio di regole quando i rifiuti si ripetono. Prototipo in cie con generatore di bozze MIDI/WAV.",
       "in": [
         "testo"
       ],
@@ -1852,9 +1852,9 @@
         "pagina_web",
         "ui"
       ],
-      "evidence": "cie (30 test verdi, UI provata nel browser; nessun beat ancora ascoltato)",
+      "evidence": "skill cie, cie (prototipo app, 30 test)",
       "limits": "Senza chiave AI lavora a regole e lessico, non e' ragionamento AI; il WAV e' una sintesi di bozza mai ascoltata dal sistema; le stime di novita' sono interne."
     }
   ],
-  "basis": "5d18eec16a15fa30"
+  "basis": "5b8214de9dd00757"
 }
