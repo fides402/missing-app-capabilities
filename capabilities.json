@@ -1,6 +1,6 @@
 {
   "version": "2026-11-04.0111",
-  "generated": "2026-11-04T01:11:20",
+  "generated": "2026-11-04T01:11:35",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1852,9 +1852,7 @@
         "pagina_web",
         "ui"
       ],
-      "evidence": [
-        "cie"
-      ],
+      "evidence": "cie (30 test verdi, UI provata nel browser; nessun beat ancora ascoltato)",
       "limits": "Senza chiave AI lavora a regole e lessico, non e' ragionamento AI; il WAV e' una sintesi di bozza mai ascoltata dal sistema; le stime di novita' sono interne."
     }
   ],
