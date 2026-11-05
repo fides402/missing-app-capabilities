@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-05.0200",
-  "generated": "2026-11-05T02:00:52",
+  "version": "2026-11-05.1425",
+  "generated": "2026-11-05T14:25:54",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1887,7 +1887,23 @@
       ],
       "evidence": "stemsplit (modello di separazione in 6 stem, app PC installata)",
       "limits": "Solo CPU (circa 4-5 volte piu' lento del tempo reale); ordine di tre stem su sei dedotto, non confermato a orecchio; la giunzione tra finestre non e' quella dell'originale; pesi di terzi, uso personale."
+    },
+    {
+      "id": "a_chain_to_ir_vst",
+      "cluster": "AUDIO",
+      "name": "Catena di effetti Ableton in VST3 identico",
+      "status": "dimostrata",
+      "desc": "Decodifica un rack .adg, misura la catena di plugin veri in headless, verifica che sia lineare e la riproduce come plugin VST3 con convoluzione stereo, dry/wet e interfaccia propria.",
+      "evidence": "fantastic-chamber, rc20-studio, vst-plugin-matching",
+      "in": [
+        "file",
+        "audio"
+      ],
+      "out": [
+        "file"
+      ],
+      "limits": "Vale solo per catene lineari e tempo-invarianti; le non linearita' (saturazione) non si catturano con una sola risposta all'impulso; mai ascoltato in un host."
     }
   ],
-  "basis": "798a1b8bfb8c546e"
+  "basis": "33d87a5218a3d473"
 }
