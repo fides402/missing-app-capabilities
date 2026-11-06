@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-06.1819",
-  "generated": "2026-11-06T18:19:03",
+  "version": "2026-11-06.2359",
+  "generated": "2026-11-06T23:59:52",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1935,7 +1935,23 @@
         "file"
       ],
       "limits": "La separazione lascia bleed di voce e sample; un job alla volta sul piano gratuito (~7 min a brano); con poche decine di brani il test ha poca potenza."
+    },
+    {
+      "id": "a_consigli_film_serie_fides",
+      "cluster": "AI",
+      "name": "Consigliare film e serie recenti o di un range di anni giudicandoli per meccanismo narrativo, non per genere",
+      "status": "ipotizzata",
+      "desc": "Un pulsante genera consigli filtrati per tipo, periodo (ultimo mese, due mesi, range anni) e animazione: candidati da TMDB con date verificate, proposte di un modello con ricerca web ririsolte su TMDB, poi giudizio con un framework a nove firme narrative (verdetto forte/parziale/incerta, perche', attrito, cosa non si sa). Chiavi solo sul telefono.",
+      "evidence": "fidesflix, AI-Movie-Concierge",
+      "in": [
+        "dati"
+      ],
+      "out": [
+        "ui",
+        "dati"
+      ],
+      "limits": "Provato solo con TMDB e modello simulati, mai con chiavi vere ne' sul telefono; la qualita' dei giudizi sulle uscite recenti dipende dalla sinossi disponibile."
     }
   ],
-  "basis": "7f4f8ce0fb28a146"
+  "basis": "bac285e08f45febb"
 }
