@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-06.1757",
-  "generated": "2026-11-06T17:57:24",
+  "version": "2026-11-06.1819",
+  "generated": "2026-11-06T18:19:03",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1937,5 +1937,5 @@
       "limits": "La separazione lascia bleed di voce e sample; un job alla volta sul piano gratuito (~7 min a brano); con poche decine di brani il test ha poca potenza."
     }
   ],
-  "basis": "f08f594ff3f64333"
+  "basis": "7f4f8ce0fb28a146"
 }
