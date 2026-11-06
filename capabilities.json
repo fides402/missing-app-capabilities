@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-05.1425",
-  "generated": "2026-11-05T14:25:54",
+  "version": "2026-11-06.1757",
+  "generated": "2026-11-06T17:57:24",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1903,7 +1903,39 @@
         "file"
       ],
       "limits": "Vale solo per catene lineari e tempo-invarianti; le non linearita' (saturazione) non si catturano con una sola risposta all'impulso; mai ascoltato in un host."
+    },
+    {
+      "id": "a_oneshot_gusto_producer",
+      "cluster": "AUDIO",
+      "name": "Ordinare i one-shot di batteria di una libreria secondo il gusto di un producer, dato un sample",
+      "status": "probabile",
+      "desc": "Carichi un sample e ricevi kick e hi-hat della tua libreria ordinati per vicinanza ai suoni scelti da un producer (decadimento, luminosita', bassi, attacco), con anteprima A/B sul sample e spiegazione per feature. Indice di decine di migliaia di one-shot con descrittori propri.",
+      "evidence": "conductorfit, sonicfit",
+      "in": [
+        "audio"
+      ],
+      "out": [
+        "ui",
+        "dati"
+      ],
+      "limits": "Gusto misurato su 8 brani: nessuna relazione sample-suono statisticamente significativa, e' soprattutto un prior; snare e tom non modellati; mai ascoltato dall'autore."
+    },
+    {
+      "id": "a_studio_batteria_producer",
+      "cluster": "METODO",
+      "name": "Studiare le scelte di batteria di un producer da brani finiti con stem e test di permutazione",
+      "status": "dimostrata",
+      "desc": "Da una finestra di 20 s per brano: separazione cloud in stem e poi in kick/snare/hi-hat/tom, rilevazione dei colpi, descrittori dei one-shot e del sample, scarto dei brani senza batteria aggiunta (ripetizione dello stesso colpo), correlazioni con permutazioni e correzione per test multipli, valutazione leave-one-out.",
+      "evidence": "conductorfit",
+      "in": [
+        "audio"
+      ],
+      "out": [
+        "dati",
+        "file"
+      ],
+      "limits": "La separazione lascia bleed di voce e sample; un job alla volta sul piano gratuito (~7 min a brano); con poche decine di brani il test ha poca potenza."
     }
   ],
-  "basis": "33d87a5218a3d473"
+  "basis": "f08f594ff3f64333"
 }
