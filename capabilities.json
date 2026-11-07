@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-06.2359",
-  "generated": "2026-11-06T23:59:52",
+  "version": "2026-11-07.1637",
+  "generated": "2026-11-07T16:37:55",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1951,7 +1951,27 @@
         "dati"
       ],
       "limits": "Provato solo con TMDB e modello simulati, mai con chiavi vere ne' sul telefono; la qualita' dei giudizi sulle uscite recenti dipende dalla sinossi disponibile."
+    },
+    {
+      "id": "x_stem_mixer_auto_offline",
+      "cluster": "AUDIO",
+      "name": "Stem separati -> mix e master automatici offline con mixer a manopole",
+      "status": "probabile",
+      "desc": "App desktop PC: da 2-64 file stem (assegnati a Drums/Bass/Backing/Lead/Aux) renderizza un mix con catena per stem scalata da Strength (EQ, compressione, transient, saturazione, de-esser, riverbero), denoise spettrale per stem, master con tone, glue, loudness verso LUFS del preset e limiter a -1 dB; 5 preset, lock, solo/mute, meter e export WAV 16/24/32f.",
+      "in": [
+        "audio",
+        "file"
+      ],
+      "out": [
+        "audio",
+        "file",
+        "ui"
+      ],
+      "evidence": [
+        "finalist-clone"
+      ],
+      "limits": "Mai ascoltato a orecchio, provato solo su stem sintetici; motore DSP proprio, non equivale a quello del prodotto che ha ispirato l'interfaccia; un file solo resta un unico stem (nessun upmix)."
     }
   ],
-  "basis": "bac285e08f45febb"
+  "basis": "c15f640c30bc5052"
 }
