@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-07.1637",
-  "generated": "2026-11-07T16:37:55",
+  "version": "2026-11-08.1449",
+  "generated": "2026-11-08T14:49:36",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1973,5 +1973,5 @@
       "limits": "Mai ascoltato a orecchio, provato solo su stem sintetici; motore DSP proprio, non equivale a quello del prodotto che ha ispirato l'interfaccia; un file solo resta un unico stem (nessun upmix)."
     }
   ],
-  "basis": "c15f640c30bc5052"
+  "basis": "0894fa1a5fa5b546"
 }
