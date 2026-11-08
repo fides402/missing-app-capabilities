@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-08.1449",
-  "generated": "2026-11-08T14:49:36",
+  "version": "2026-11-08.2218",
+  "generated": "2026-11-08T22:18:54",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1971,7 +1971,23 @@
         "finalist-clone"
       ],
       "limits": "Mai ascoltato a orecchio, provato solo su stem sintetici; motore DSP proprio, non equivale a quello del prodotto che ha ispirato l'interfaccia; un file solo resta un unico stem (nessun upmix)."
+    },
+    {
+      "id": "x_beat_pack_feed",
+      "cluster": "AUDIO",
+      "name": "Feed di pacchetti-beat a 78 BPM da sample trovati sul web",
+      "status": "probabile",
+      "desc": "Un server sul PC cerca brani su YouTube, scarica il brano intero in WAV, taglia loop di 2 o 4 battute fra battiti veri con il motore di taglio di CHOP DUEL, li porta a 78 BPM per varispeed alla lunghezza esatta, aggiunge una batteria con microtiming (banca di groove) e restituisce stem separati (campione, kick, snare, hat, perc) con nome e note generati da un LLM; l'utente tiene o scarta, muta o cambia singoli elementi ed esporta loop, premix, stem e brano intero.",
+      "evidence": "cassetto2 (Stashd): pipeline completa eseguita sul PC fino all'esportazione; anteprima mobile provata nel browser; app Android non ancora provata sul telefono",
+      "in": [
+        "pagina_web"
+      ],
+      "out": [
+        "audio",
+        "file"
+      ],
+      "limits": "Nessun ascolto umano dei risultati; il tempo e' ottenuto trasportando il campione (fino a 4,5 semitoni); il beat tracker scarta una parte dei brani; il server deve essere acceso sulla stessa rete."
     }
   ],
-  "basis": "0894fa1a5fa5b546"
+  "basis": "4278aba2d1de4b77"
 }
