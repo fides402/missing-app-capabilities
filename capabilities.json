@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-09.1322",
-  "generated": "2026-11-09T13:22:43",
+  "version": "2026-11-09.1324",
+  "generated": "2026-11-09T13:24:26",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1989,5 +1989,5 @@
       "limits": "Nessun ascolto umano dei risultati; il tempo e' ottenuto trasportando il campione (fino a 4,5 semitoni); il beat tracker scarta una parte dei brani; il server deve essere acceso sulla stessa rete."
     }
   ],
-  "basis": "47a001c349a59160"
+  "basis": "190dd33d74510e52"
 }
