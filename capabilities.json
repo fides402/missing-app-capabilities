@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-10.1747",
-  "generated": "2026-11-10T17:47:17",
+  "version": "2026-11-10.1839",
+  "generated": "2026-11-10T18:39:27",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2023,18 +2023,18 @@
     {
       "id": "x_laboratorio_idee_art_direction",
       "cluster": "APP",
-      "name": "Laboratorio guidato per sviluppare un'idea creativa e montare prompt immagine/video",
+      "name": "Guida passo passo al prompting di ChatGPT per immagini, con prompt montati dalle risposte",
       "status": "probabile",
-      "desc": "Un'app Android accompagna un'idea attraverso 21 strumenti in 5 capitoli (radar culturale, cambio di scala, contrasti, scala dall'ovvio al troppo strano e ritorno, catena insight-idea-regola visiva, regole del mondo sempre/mai, casting, imperfezioni volute, schema a 10 righe, 8 riprese, diagnosi e scelta dei risultati). Una domanda per schermata, tutto salvato sul telefono. Dalle risposte monta da sola un prompt immagine e i prompt delle riprese con imperfezioni e negazioni in coda, una 'bibbia' riassuntiva e tre richieste pronte da incollare in una chat AI per farsi contraddire. Nessuna AI dentro l'app.",
-      "evidence": "dirigi (APK Capacitor): 12 schermate collaudate a 412x915 con barra e tastiera simulate, flusso nuova idea -> strumento -> scheda -> indietro provato in automatico",
+      "desc": "Un'app Android accompagna un'idea in 10 passi (frase, dall'ovvio al troppo strano e ritorno, lettura di una reference, regole sempre/mai, schema in 8 righe, imperfezioni volute, correzione di una cosa sola, scheda personaggio, scelta, domanda finale). A ogni passo l'utente decide una cosa in una schermata e riceve un prompt gia' scritto con dentro le sue risposte, da copiare in una chat AI, piu' due righe su cosa guardare nella risposta. Tutto salvato sul telefono, con una pagina che raccoglie decisioni e prompt. Nessuna AI dentro l'app.",
+      "evidence": "dirigi (APK Capacitor): 12 schermate collaudate a 412x915 con barra e tastiera simulate, flusso nuova idea -> passo -> prompt -> passo successivo provato in automatico",
       "in": [
         "testo"
       ],
       "out": [
         "testo"
       ],
-      "limits": "Mai usata dal vivo dall'utente; i prompt sono montati per concatenazione, senza riscrittura; tastiera vera, tasto indietro e condivisione non provati sul telefono."
+      "limits": "Mai usata dal vivo dall'utente; i prompt non sono mai stati provati davvero in una chat AI; tastiera vera, tasto indietro e condivisione non provati sul telefono."
     }
   ],
-  "basis": "56023fdf26e155ae"
+  "basis": "8105039fabf7ae52"
 }
