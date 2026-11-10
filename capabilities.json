@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-10.1839",
-  "generated": "2026-11-10T18:39:27",
+  "version": "2026-11-10.2156",
+  "generated": "2026-11-10T21:56:28",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2034,7 +2034,24 @@
         "testo"
       ],
       "limits": "Mai usata dal vivo dall'utente; i prompt non sono mai stati provati davvero in una chat AI; tastiera vera, tasto indietro e condivisione non provati sul telefono."
+    },
+    {
+      "id": "x_design_intelligence_loop",
+      "cluster": "METODO",
+      "name": "Ciclo di design con regressioni rilevate, ripristino versioni e A/B pre-registrato",
+      "status": "probabile",
+      "desc": "Sopra il design studio: snapshot di versioni con QA, confronto tra versioni (nuovi fail, diff pixel), ripristino automatico se la modifica peggiora o non è osservabile, stop per rendimenti nulli; esperimenti A/B con criteri congelati e pacchetto cieco; regole di design che cambiano livello solo con evidenze. Non misura l'eccellenza estetica.",
+      "evidence": "design-engine/iterate.py (provato con regressione iniettata), experiment.py, design-knowledge, design-experiments/forma-01 (in corso)",
+      "in": [
+        "testo",
+        "file"
+      ],
+      "out": [
+        "file",
+        "dati"
+      ],
+      "limits": "Il giudizio estetico resta a critico LLM (non indipendente) e all'utente; un solo esperimento, nessuna prova di superiorità."
     }
   ],
-  "basis": "8105039fabf7ae52"
+  "basis": "b297f63c3004437e"
 }
