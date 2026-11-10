@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-09.1338",
-  "generated": "2026-11-09T13:38:18",
+  "version": "2026-11-10.0153",
+  "generated": "2026-11-10T01:53:41",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1987,7 +1987,39 @@
         "file"
       ],
       "limits": "Nessun ascolto umano dei risultati; il tempo e' ottenuto trasportando il campione (fino a 4,5 semitoni); il beat tracker scarta una parte dei brani; il server deve essere acceso sulla stessa rete."
+    },
+    {
+      "id": "x_font_da_descrizione",
+      "cluster": "APP",
+      "name": "Font installabile (OTF/TTF) da descrizione a parole o da reference",
+      "status": "probabile",
+      "desc": "Una skill genera un font vero con maiuscole, minuscole, cifre e punteggiatura: ogni lettera e' una linea centrale spazzata da un pennino parametrico (contrasto per traslazione, rotazione o espansione, serif a lastra o filiformi), con spaziatura calcolata dal bianco interno delle lettere e kerning automatico. Parte da una descrizione tradotta in parametri oppure da un font o da ritagli di lettere di una reference, di cui misura pennino, angolo e proporzioni; consegna anche un foglio di prova.",
+      "evidence": "fontsmith (skill globale + cartella fontsmith): 4 preset generati, caricati come OTF/TTF e guardati nei fogli di prova; misura da font ritrova i parametri di quelli generati",
+      "in": [
+        "testo",
+        "file"
+      ],
+      "out": [
+        "file"
+      ],
+      "limits": "Mancano accenti, quindi l'italiano e' incompleto; contorni poligonali e non curve; a e g a un solo piano; nessun corsivo vero; l'utente non ha ancora giudicato i fogli di prova; non installato nel sistema."
+    },
+    {
+      "id": "x_ricalco_vettoriale_smooth",
+      "cluster": "APP",
+      "name": "Ricalco vettoriale a curve smooth di una sagoma da foto o maschera",
+      "status": "probabile",
+      "desc": "Da una foto con soggetto isolato (o una maschera) si ricava la sagoma e la si ricalca in pochi ancoraggi con curve di Bezier a tangente continua, spigoli netti solo dove il contorno gira davvero; la tolleranza regola quanto la forma e' stilizzata. In alternativa il contorno e' scomposto in rette e archi di cerchio. Esce un SVG vero, un foglio con ancoraggi e maniglie, il lockup col testo e una prova di leggibilita' a 110, 54 e 32 px.",
+      "evidence": "mascotgeo (skill globale: trace.py, bezier.py, geo.py): provato su 3 sagome da foto libere (Wikimedia) e confrontato con la maschera (IoU 0.94-0.96); i risultati estetici NON sono stati approvati dall'utente",
+      "in": [
+        "file"
+      ],
+      "out": [
+        "file",
+        "ui"
+      ],
+      "limits": "La maschera da foto con fondo complesso va fatta con soglie di colore e GrabCut e puo' sbagliare i bordi; la scelta del soggetto e della forma d'autore resta umana; per i loghi BML i soggetti figurativi sono vietati"
     }
   ],
-  "basis": "190dd33d74510e52"
+  "basis": "9679586a472a4bba"
 }
