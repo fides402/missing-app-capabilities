@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-10.0154",
-  "generated": "2026-11-10T01:54:12",
+  "version": "2026-11-10.1747",
+  "generated": "2026-11-10T17:47:17",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2019,7 +2019,22 @@
         "ui"
       ],
       "limits": "La maschera da foto con fondo complesso va fatta con soglie di colore e GrabCut e puo' sbagliare i bordi; la scelta del soggetto e della forma d'autore resta umana; per i loghi BML i soggetti figurativi sono vietati"
+    },
+    {
+      "id": "x_laboratorio_idee_art_direction",
+      "cluster": "APP",
+      "name": "Laboratorio guidato per sviluppare un'idea creativa e montare prompt immagine/video",
+      "status": "probabile",
+      "desc": "Un'app Android accompagna un'idea attraverso 21 strumenti in 5 capitoli (radar culturale, cambio di scala, contrasti, scala dall'ovvio al troppo strano e ritorno, catena insight-idea-regola visiva, regole del mondo sempre/mai, casting, imperfezioni volute, schema a 10 righe, 8 riprese, diagnosi e scelta dei risultati). Una domanda per schermata, tutto salvato sul telefono. Dalle risposte monta da sola un prompt immagine e i prompt delle riprese con imperfezioni e negazioni in coda, una 'bibbia' riassuntiva e tre richieste pronte da incollare in una chat AI per farsi contraddire. Nessuna AI dentro l'app.",
+      "evidence": "dirigi (APK Capacitor): 12 schermate collaudate a 412x915 con barra e tastiera simulate, flusso nuova idea -> strumento -> scheda -> indietro provato in automatico",
+      "in": [
+        "testo"
+      ],
+      "out": [
+        "testo"
+      ],
+      "limits": "Mai usata dal vivo dall'utente; i prompt sono montati per concatenazione, senza riscrittura; tastiera vera, tasto indietro e condivisione non provati sul telefono."
     }
   ],
-  "basis": "9679586a472a4bba"
+  "basis": "56023fdf26e155ae"
 }
