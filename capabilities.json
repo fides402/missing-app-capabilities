@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-11.1643",
-  "generated": "2026-11-11T16:43:26",
+  "version": "2026-11-11.2032",
+  "generated": "2026-11-11T20:32:00",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2089,5 +2089,5 @@
       "limits": "Interfaccia disegnata dal layout noto di Canva, non misurata sull'originale; testo a stile unico per casella, niente gruppi, template, stock o video; ridimensionamento/rotazione col mouse e PDF non provati."
     }
   ],
-  "basis": "9c098513b2e21f01"
+  "basis": "ab921bcb91b83a9f"
 }
