@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-11.0403",
-  "generated": "2026-11-11T04:03:34",
+  "version": "2026-11-11.1643",
+  "generated": "2026-11-11T16:43:26",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2069,7 +2069,25 @@
         "ui"
       ],
       "limits": "Mai ascoltata da un umano: scelte di stack, stretch e bilanciamento sono euristiche verificate solo a numeri. Niente MIDI, synth, automazioni o arrangiamento a sezioni. L'agente non ascolta."
+    },
+    {
+      "id": "x_editor_grafico_agente_mcp",
+      "cluster": "APP",
+      "name": "Editor grafico a canvas pilotabile da un agente AI (MCP) con font installati e caricabili",
+      "status": "probabile",
+      "desc": "App desktop con editor a pagine (testo, forme, immagini con filtri, livelli, allineamento, esportazione PNG/JPG/PDF) il cui documento è modificabile sia a mano sia da un agente via MCP: l'agente legge lo stato reale, aggiunge o cambia elementi, chiede alla finestra il render della pagina e lo guarda per verificare. Reference di grafica allegabili in chat; font installati nel sistema o caricati dall'utente.",
+      "evidence": "designconvo (modifica di un colore da chat con verifica a render, provata; finestra nativa con icona verificata)",
+      "in": [
+        "testo",
+        "file",
+        "ui"
+      ],
+      "out": [
+        "file",
+        "ui"
+      ],
+      "limits": "Interfaccia disegnata dal layout noto di Canva, non misurata sull'originale; testo a stile unico per casella, niente gruppi, template, stock o video; ridimensionamento/rotazione col mouse e PDF non provati."
     }
   ],
-  "basis": "2fe28079e48d60d0"
+  "basis": "9c098513b2e21f01"
 }
