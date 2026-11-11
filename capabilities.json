@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-10.2156",
-  "generated": "2026-11-10T21:56:28",
+  "version": "2026-11-11.0403",
+  "generated": "2026-11-11T04:03:34",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2051,7 +2051,25 @@
         "dati"
       ],
       "limits": "Il giudizio estetico resta a critico LLM (non indipendente) e all'utente; un solo esperimento, nessuna prova di superiorità."
+    },
+    {
+      "id": "x_loop_daw_agent",
+      "cluster": "AUDIO",
+      "name": "DAW a loop sulla propria libreria, pilotabile da un agente AI (MCP)",
+      "status": "probabile",
+      "desc": "App desktop che compone a strati dalla libreria di sample: ricerca per suono/nome con filtro su tempo e tonalità, stack di loop compatibili, timeline con taglio e porzione dei loop, intonazione di un clip su un altro, stretch e trasposizione verso tempo/tonalità di progetto, mixer con misure di livello, export master e stem, sample dal web. Gli stessi 31 comandi sono esposti a un agente via MCP, che può creare, mixare a numeri ed esportare una produzione da una richiesta scritta.",
+      "evidence": "beatscovery (produzione intera eseguita via MCP: stack, pattern, bilanciamento, export; UI verificata a tre larghezze), motore di ricerca e caccia web riusati da imagobeat/soundfly",
+      "in": [
+        "testo",
+        "audio"
+      ],
+      "out": [
+        "audio",
+        "file",
+        "ui"
+      ],
+      "limits": "Mai ascoltata da un umano: scelte di stack, stretch e bilanciamento sono euristiche verificate solo a numeri. Niente MIDI, synth, automazioni o arrangiamento a sezioni. L'agente non ascolta."
     }
   ],
-  "basis": "b297f63c3004437e"
+  "basis": "2fe28079e48d60d0"
 }
