@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-11.2032",
-  "generated": "2026-11-11T20:32:00",
+  "version": "2026-11-13.1605",
+  "generated": "2026-11-13T16:05:41",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2087,7 +2087,23 @@
         "ui"
       ],
       "limits": "Interfaccia disegnata dal layout noto di Canva, non misurata sull'originale; testo a stile unico per casella, niente gruppi, template, stock o video; ridimensionamento/rotazione col mouse e PDF non provati."
+    },
+    {
+      "id": "x_coppia_kick_808_da_relazioni",
+      "cluster": "AUDIO",
+      "name": "Coppie kick + 808 dalla propria libreria, derivate dalle relazioni misurate in una traccia di riferimento",
+      "status": "probabile",
+      "desc": "Da una traccia di riferimento separata in stem si misurano le relazioni tra kick, 808 e sample (altezza dell'808 sulla radice accordata sul suono reale, coda del kick che arriva sul pitch dell'808, purezza e durata dell'808, vuoto sotto i 120 Hz). Dato un nuovo sample se ne leggono radice, accordatura, tempo e vuoto; si scelgono dalla libreria kick e 808 con strategie diverse (una che rispetta le relazioni, altre che ne rompono una per volta), si riaccordano e si rimisura il risultato sul render prima di proporlo; esporta kit di colpi accordati.",
+      "evidence": "fulcro (verificato con misure sul render, non ascoltato)",
+      "limits": "Relazioni derivate da una sola traccia: ipotesi, non regola. Radice del sample rilevata in modo ambiguo. Giudizio percettivo non verificato.",
+      "in": [
+        "audio"
+      ],
+      "out": [
+        "audio",
+        "file"
+      ]
     }
   ],
-  "basis": "ab921bcb91b83a9f"
+  "basis": "ba308b24bbb499c1"
 }
