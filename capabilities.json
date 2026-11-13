@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-13.2001",
-  "generated": "2026-11-13T20:01:18",
+  "version": "2026-11-13.2216",
+  "generated": "2026-11-13T22:16:32",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2103,7 +2103,26 @@
         "audio",
         "file"
       ]
+    },
+    {
+      "id": "x_analisi_mercato_nicchie_youtube",
+      "cluster": "METODO",
+      "name": "Analisi di mercato di nicchie YouTube (domanda, offerta, visibilità, competitor) per decidere keyword e strategia di pubblicazione",
+      "status": "dimostrata",
+      "desc": "Per un elenco di nicchie nella forma «<nicchia> type beat» (o altro formato di ricerca) raccoglie dalle pagine pubbliche di YouTube i primi risultati del mese, la stima dei video caricati nel mese e gli ultimi video dei canali; li incrocia con le ricerche mensili e la concorrenza di vidIQ e con Google Trends. Calcola proporzioni trasportabili (domanda per nuovo video, view mediane relative alla nicchia, view/iscritti, cadenza, quota di titoli con artista, keyword condivise) e un indice di opportunità con filtri eliminatori; produce un manuale PDF con il metodo in sette passi e uno script che ripete l'analisi su una nicchia nuova.",
+      "in": [
+        "testo",
+        "pagina_web",
+        "dati"
+      ],
+      "out": [
+        "file",
+        "dati",
+        "testo"
+      ],
+      "evidence": "typebeat-manual (33 canali, 990 video, 40 nicchie; script provato su una nicchia fuori campione)",
+      "limits": "Campione di canali che funzionano (bias del sopravvissuto); stime vidIQ Free e di YouTube; pesi e soglie dell'indice sono ipotesi; nessun dato su miniature, ritenzione, ricavi."
     }
   ],
-  "basis": "f0adf928f522dd23"
+  "basis": "df4a51b02992c585"
 }
