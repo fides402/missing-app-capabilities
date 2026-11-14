@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-13.2216",
-  "generated": "2026-11-13T22:16:32",
+  "version": "2026-11-15.0004",
+  "generated": "2026-11-15T00:04:47",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1106,7 +1106,7 @@
       "cluster": "INFRA",
       "name": "ChatGPT pilotato da Claude Code nel browser dell'utente (prompt + immagini in, immagini generate in uscita)",
       "status": "dimostrata",
-      "desc": "Estensione MV3 propria in Comet/Chrome + server locale: Claude manda un prompt con eventuali immagini di riferimento, l'estensione le scrive/allega in chatgpt.com col login dell'utente, aspetta la generazione e rimanda su disco le immagini generate (anche recupero da chat esistenti). Aggira il blocco 'restricted by policy' dell'estensione Claude in Chrome.",
+      "desc": "Estensione MV3 propria in Comet/Chrome + server locale: Claude manda un prompt con eventuali immagini di riferimento, l'estensione le scrive/allega in chatgpt.com col login dell'utente, aspetta la generazione e rimanda su disco le immagini generate (anche recupero da chat esistenti). Aggira il blocco 'restricted by policy' dell'estensione Claude in Chrome. Legge anche le risposte intere (non troncate) di una chat esistente.",
       "evidence": "gptbridge (foto e disegno della copertina BRIVIDI NOTTURNI generati da ChatGPT con reference allegata e recuperati su disco; comandi send/grab/list)",
       "in": [
         "testo",
@@ -2122,7 +2122,38 @@
       ],
       "evidence": "typebeat-manual (33 canali, 990 video, 40 nicchie; script provato su una nicchia fuori campione)",
       "limits": "Campione di canali che funzionano (bias del sopravvissuto); stime vidIQ Free e di YouTube; pesi e soglie dell'indice sono ipotesi; nessun dato su miniature, ritenzione, ricavi."
+    },
+    {
+      "id": "x_dna_logo_da_reference",
+      "cluster": "METODO",
+      "name": "Grammatica di un logo di riferimento -> identita nuove per brand diversi, con valutazione cieca",
+      "status": "dimostrata",
+      "desc": "Misura un logo di riferimento sui pixel, ne ricava regole di costruzione con un'analisi indipendente, le dà a progettisti che non hanno visto il riferimento e confronta i risultati con una baseline a soli aggettivi e con una imitazione, usando valutatori ciechi e soglie fissate in anticipo. Ne esce una ricetta riutilizzabile da allegare a un concept di brand.",
+      "evidence": "style-dna-lab (2 riferimenti, 4 brief per giro, 20 candidati per giro, 3 valutatori ciechi, soglie pre-registrate con hash, ricetta provata su un brand nuovo)",
+      "in": [
+        "file",
+        "testo"
+      ],
+      "out": [
+        "file"
+      ],
+      "limits": "Non validato in senso pieno: un solo riferimento per giro, autore ignoto, valutatori modello, pochi brief; il giudizio di gusto resta umano. La prima versione copiava la disposizione del riferimento."
+    },
+    {
+      "id": "x_loghi_masse_piene_da_codice",
+      "cluster": "APP",
+      "name": "Logo vettoriale a masse piene bicromatico da codice (elemento ripetuto + lettering da font in contorni)",
+      "status": "dimostrata",
+      "desc": "Costruisce in SVG un simbolo come un solo elemento ripetuto con una regola (rotazione con torsione o progressione di scala) con interstizi controllati, lettering convertito in contorni da un font, e le versioni principale, icona, icona tonda, orizzontale, monocolore e negativo, verificate a 110, 54 e 48 px.",
+      "evidence": "style-dna-lab/vision/tools/fillib.py; loghi per una label musicale, una scuola, un panificio, un timbro sportivo",
+      "in": [
+        "testo"
+      ],
+      "out": [
+        "file"
+      ],
+      "limits": "A 48 px gli interstizi sono al limite; l'ispessimento del lettering e' un buffer, non un peso disegnato; favicon a 32 px sfocata se la scala non e' a pixel interi."
     }
   ],
-  "basis": "df4a51b02992c585"
+  "basis": "4e6631dcc68fc550"
 }
