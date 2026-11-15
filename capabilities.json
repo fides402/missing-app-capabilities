@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-15.1738",
-  "generated": "2026-11-15T17:38:24",
+  "version": "2026-11-15.1751",
+  "generated": "2026-11-15T17:51:24",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2169,7 +2169,23 @@
         "audio"
       ],
       "limits": "La versione 'sulla griglia' è generata automaticamente e non è verificata all'ascolto; stem da AI con residuo; i 'perché' sono ipotesi."
+    },
+    {
+      "id": "x_invphoto",
+      "cluster": "AI",
+      "status": "probabile",
+      "name": "Foto di riferimento in prompt fisico per ChatGPT",
+      "in": [
+        "file"
+      ],
+      "out": [
+        "testo",
+        "ui"
+      ],
+      "evidence": "invphoto (misure da una sola immagine, MCP con pannelli diagnostici, laboratorio Mitsuba)",
+      "limits": "Una foto non determina in modo univoco luce, materiali e camera: direzione luce e morbidezza ombre sono stime 2D con confidenza dichiarata; il prompt non e' mai stato provato con ChatGPT. Laboratorio Mitsuba 3 su scene sintetiche (recupero luce senza gradiente).",
+      "desc": "Una fotografia professionale viene misurata (direzione e morbidezza della luce, tono, colore, ottica, grana) e trasformata in un prompt fisico per ChatGPT che porta un'altra foto alle stesse condizioni; scena Mitsuba 3 esportabile."
     }
   ],
-  "basis": "cc2d656f5fa9636d"
+  "basis": "41a4c00385f3163b"
 }
