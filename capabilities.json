@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-15.1751",
-  "generated": "2026-11-15T17:51:24",
+  "version": "2026-11-15.2157",
+  "generated": "2026-11-15T21:57:01",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2185,7 +2185,22 @@
       "evidence": "invphoto (misure da una sola immagine, MCP con pannelli diagnostici, laboratorio Mitsuba)",
       "limits": "Una foto non determina in modo univoco luce, materiali e camera: direzione luce e morbidezza ombre sono stime 2D con confidenza dichiarata; il prompt non e' mai stato provato con ChatGPT. Laboratorio Mitsuba 3 su scene sintetiche (recupero luce senza gradiente).",
       "desc": "Una fotografia professionale viene misurata (direzione e morbidezza della luce, tono, colore, ottica, grana) e trasformata in un prompt fisico per ChatGPT che porta un'altra foto alle stesse condizioni; scena Mitsuba 3 esportabile."
+    },
+    {
+      "id": "x_letterfeed",
+      "cluster": "APP",
+      "status": "dimostrata",
+      "in": [
+        "dati"
+      ],
+      "out": [
+        "ui"
+      ],
+      "desc": "APK che legge gli RSS pubblici di profili Letterboxd compatibili col gusto, pesa i film per compatibilita e li mostra per giorno, settimana e mese in copertine a poster colorati.",
+      "evidence": "letterfeed (APK, RSS pubblici Letterboxd, 16 profili, catalogo giorno/settimana/mese)",
+      "limits": "Solo ultime ~50 voci per profilo (RSS); profili con diario vuoto o privato non danno dati; aspetto sul telefono non verificato.",
+      "name": "Catalogo film da profili Letterboxd con copertine a poster"
     }
   ],
-  "basis": "41a4c00385f3163b"
+  "basis": "3f4cbd99ff1b4ef3"
 }
