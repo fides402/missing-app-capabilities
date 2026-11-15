@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-15.2157",
-  "generated": "2026-11-15T21:57:01",
+  "version": "2026-11-15.2353",
+  "generated": "2026-11-15T23:53:39",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2200,7 +2200,40 @@
       "evidence": "letterfeed (APK, RSS pubblici Letterboxd, 16 profili, catalogo giorno/settimana/mese)",
       "limits": "Solo ultime ~50 voci per profilo (RSS); profili con diario vuoto o privato non danno dati; aspetto sul telefono non verificato.",
       "name": "Catalogo film da profili Letterboxd con copertine a poster"
+    },
+    {
+      "id": "m_padchop_flow",
+      "cluster": "MUSICA",
+      "name": "Loop chop seamless con tracciamento battiti e tensione/rilascio",
+      "status": "probabile",
+      "desc": "Da un sample dal vivo (link o file) escono loop da 4 battute e beat interi di soli chop: battiti tracciati (il tempo deriva), chop naturali senza stretch alla stessa fase di battito, giunzioni scelte per continuita' spettrale e ritmica, selezione con OR-Tools, arco tensione/rilascio per frasi da 8 battute.",
+      "evidence": "skill padchop + hunger-chop-study (ricreazione Koala di un brano, ri-render con somiglianza 0.90) e solchop; i loop e il beat non sono stati ascoltati dall'utente",
+      "in": [
+        "audio"
+      ],
+      "out": [
+        "audio",
+        "file"
+      ],
+      "limits": "Tarato su un solo brano soul; coesione e tensione sono stime, non il groove percepito; il giudizio e' umano."
+    },
+    {
+      "id": "x_solchop",
+      "cluster": "APP",
+      "name": "SOLCHOP: app che da un link genera loop chop",
+      "status": "dimostrata",
+      "desc": "APK Android (Capacitor) che da un link YouTube o Spotify, via backend sul PC, scarica il WAV, genera 10 loop seamless, ne genera altri 10 senza riusare i chop, li fa ascoltare in loop e li salva da soli in Music/SOLCHOP sul telefono.",
+      "evidence": "solchop (APK installata, 30 WAV salvati sul telefono, backend FastAPI 8256, UI da copertina di riferimento)",
+      "in": [
+        "testo"
+      ],
+      "out": [
+        "ui",
+        "file",
+        "audio"
+      ],
+      "limits": "Serve il PC con il backend acceso (Tailscale fuori casa); Spotify solo tramite ricerca su YouTube; i loop non sono stati ascoltati."
     }
   ],
-  "basis": "3f4cbd99ff1b4ef3"
+  "basis": "c5b4aeac1dc8b9e3"
 }
