@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-15.0004",
-  "generated": "2026-11-15T00:04:47",
+  "version": "2026-11-15.1738",
+  "generated": "2026-11-15T17:38:08",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2153,7 +2153,23 @@
         "file"
       ],
       "limits": "A 48 px gli interstizi sono al limite; l'ispessimento del lettering e' un buffer, non un peso disegnato; favicon a 32 px sfocata se la scala non e' a pixel interi."
+    },
+    {
+      "id": "x_masterclass_beat",
+      "cluster": "METODO",
+      "name": "Masterclass interattiva su un beat",
+      "status": "dimostrata",
+      "desc": "Un brano diventa una pagina HTML autonoma: stem e singoli colpi da ascoltare, mixer a strati, laboratorio del groove con slider e quiz A/B, spiegando scelte di groove, suoni e arrangiamento.",
+      "evidence": "beatmasterclass (MVSEP + DrumSep, misura degli scarti in ms, identità dei campioni)",
+      "in": [
+        "audio"
+      ],
+      "out": [
+        "pagina_web",
+        "audio"
+      ],
+      "limits": "La versione 'sulla griglia' è generata automaticamente e non è verificata all'ascolto; stem da AI con residuo; i 'perché' sono ipotesi."
     }
   ],
-  "basis": "4e6631dcc68fc550"
+  "basis": "cc2d656f5fa9636d"
 }
