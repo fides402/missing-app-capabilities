@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-16.2204",
-  "generated": "2026-11-16T22:04:59",
+  "version": "2026-11-16.2205",
+  "generated": "2026-11-16T22:05:20",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2265,11 +2265,7 @@
         "dati",
         "testo"
       ],
-      "evidence": [
-        "ig-system/v2",
-        "ig-strategy",
-        "ig-forecast"
-      ],
+      "evidence": "ig-system/v2 (66 post letti, modelli validati leave-one-out), ig-strategy, ig-forecast",
       "limits": "Pochi post (38 reel in 4 mesi): ordina le idee ma non da' il numero esatto; like, commenti e follow per post non sono prevedibili; il web non espone condivisioni, retention e demografia per post."
     }
   ],
