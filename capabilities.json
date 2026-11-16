@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-16.0410",
-  "generated": "2026-11-16T04:10:58",
+  "version": "2026-11-16.2204",
+  "generated": "2026-11-16T22:04:59",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2250,7 +2250,28 @@
         "audio",
         "ui"
       ]
+    },
+    {
+      "id": "x_mappa_instagram_previsione_post",
+      "cluster": "METODO",
+      "name": "Mappa degli insight di un profilo Instagram e previsione di un post pianificato",
+      "status": "probabile",
+      "desc": "Legge dal sito web di Instagram (browser gia' loggato, pagina insight di ogni post) visualizzazioni, follower/non follower, salvataggi, follow e commenti di tutti i post di un periodo, li unisce all'analisi del contenuto (frame, audio, didascalia) e addestra modelli con validazione leave-one-out e test di permutazione: dice quali scelte (formato, hook, ambiente) muovono davvero views e salvataggi e quali metriche NON sono prevedibili. Un predittore da riga di comando stima views e salvataggi con banda di incertezza per un post descritto a parole; Optuna e pyribs propongono combinazioni diverse da provare, TimesFM da' il baseline di canale.",
+      "in": [
+        "pagina_web",
+        "file"
+      ],
+      "out": [
+        "dati",
+        "testo"
+      ],
+      "evidence": [
+        "ig-system/v2",
+        "ig-strategy",
+        "ig-forecast"
+      ],
+      "limits": "Pochi post (38 reel in 4 mesi): ordina le idee ma non da' il numero esatto; like, commenti e follow per post non sono prevedibili; il web non espone condivisioni, retention e demografia per post."
     }
   ],
-  "basis": "19362a9be3e380b2"
+  "basis": "e88af76c2bc05839"
 }
