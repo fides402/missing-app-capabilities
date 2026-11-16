@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-16.2205",
-  "generated": "2026-11-16T22:05:20",
+  "version": "2026-11-16.2250",
+  "generated": "2026-11-16T22:50:22",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2267,7 +2267,25 @@
       ],
       "evidence": "ig-system/v2 (66 post letti, modelli validati leave-one-out), ig-strategy, ig-forecast",
       "limits": "Pochi post (38 reel in 4 mesi): ordina le idee ma non da' il numero esatto; like, commenti e follow per post non sono prevedibili; il web non espone condivisioni, retention e demografia per post."
+    },
+    {
+      "id": "x_oracolo_strategia_post_musicale",
+      "cluster": "APP",
+      "name": "App desktop che da' la strategia di un post per un beat o un sample, in chat con un assistente che conosce la pagina",
+      "status": "probabile",
+      "desc": "Si carica un brano e si descrivono mood, stile, contesto, obiettivo e immagini di inquadrature. L'app analizza l'audio (tempo, tonalita', punti forti da cui far partire il clip) e un assistente collegato tramite MCP scrive una scheda a 10 sezioni: concept, hook, struttura a secondi, visual, caption, pubblicazione, previsione e test. Ha accesso ai dati veri della pagina (post, commenti, modelli di previsione), controlla che gli hook non ripetano quelli gia' pubblicati e guarda le immagini caricate. Una chat permette di raffinare: ogni risposta aggiorna solo la sezione toccata.",
+      "evidence": "postcoach (test end-to-end con un sample: tutti i tool usati e 10 sezioni scritte), ig-system/v2",
+      "limits": "Strategie mai provate con A/B reali; la previsione delle views e' un prior (ordina le idee, non da' il numero); finestra desktop provata solo nel browser, exe non compilato.",
+      "in": [
+        "audio",
+        "testo",
+        "file"
+      ],
+      "out": [
+        "testo",
+        "ui"
+      ]
     }
   ],
-  "basis": "e88af76c2bc05839"
+  "basis": "714c859a3e8694e6"
 }
