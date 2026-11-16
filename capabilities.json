@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-15.2353",
-  "generated": "2026-11-15T23:53:39",
+  "version": "2026-11-16.0410",
+  "generated": "2026-11-16T04:10:58",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2233,7 +2233,24 @@
         "audio"
       ],
       "limits": "Serve il PC con il backend acceso (Tailscale fuori casa); Spotify solo tramite ricerca su YouTube; i loop non sono stati ascoltati."
+    },
+    {
+      "id": "x_microfonaggio_virtuale_sala",
+      "cluster": "AUDIO",
+      "name": "Plugin VST3 che riprende una sorgente in una sala virtuale con microfoni posizionabili su una pianta",
+      "status": "probabile",
+      "desc": "Plugin effetto (JUCE, interfaccia WebView2) che simula la ripresa di una sorgente in una sala di cui si danno dimensioni e assorbimenti: riflessioni calcolate col metodo delle immagini, coda di riverbero, microfoni con pattern polari e setup ORTF/XY/Blumlein/AB/Mid-Side/Decca, catena d'epoca (camera d'eco, piastra, eco a nastro, nastro). Sorgente e microfono si trascinano su una pianta dall'alto generata con un generatore di immagini da foto di riferimento. Nato dall'analisi di un plugin commerciale analogo (struttura e parametri, senza copiarne asset).",
+      "evidence": "vss-umiliani (motore e interfaccia scritti, build in corso, misure e installazione da fare)",
+      "limits": "Mai ascoltato. Dimensioni della sala stimate perche' non documentate; posizioni degli strumenti ricostruite, non storiche.",
+      "in": [
+        "audio",
+        "dati"
+      ],
+      "out": [
+        "audio",
+        "ui"
+      ]
     }
   ],
-  "basis": "c5b4aeac1dc8b9e3"
+  "basis": "19362a9be3e380b2"
 }
