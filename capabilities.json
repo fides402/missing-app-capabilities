@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-17.1807",
-  "generated": "2026-11-17T18:07:34",
+  "version": "2026-11-17.2221",
+  "generated": "2026-11-17T22:21:10",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2285,7 +2285,41 @@
         "testo",
         "ui"
       ]
+    },
+    {
+      "id": "m_practice_mixer",
+      "cluster": "MUSICA",
+      "name": "Mixer di pratica a stem (tempo, tonalita', metronomo, accordi)",
+      "status": "probabile",
+      "desc": "Un brano (file, link YouTube/Spotify, anche solo una porzione scelta) diventa 2-6 stem da mixare, con velocita' e tonalita' indipendenti, metronomo e conteggio, loop, accordi, tonalita' e sezioni stimati, scaletta ed esportazione del mix.",
+      "evidence": "moises-android (backend MVSEP + librosa, motore SoundTouch in AudioWorklet)",
+      "in": [
+        "audio",
+        "pagina_web"
+      ],
+      "out": [
+        "audio",
+        "ui",
+        "dati"
+      ],
+      "limits": "App appena costruita, mai ascoltata a orecchio. Accordi (template su chroma), tonalita' e sezioni sono stime; i testi richiedono una chiave Whisper propria. Separazione su MVSEP (crediti)."
+    },
+    {
+      "id": "i_reverse_assets_car",
+      "cluster": "INFRA",
+      "name": "Estrazione di icone, colori e stringhe da un'app iOS (IPA)",
+      "status": "probabile",
+      "desc": "Da un IPA ricava le icone vettoriali, i token di colore, i font e le stringhe localizzate leggendo Assets.car e Localizable.strings, per rifare un'interfaccia fedele.",
+      "evidence": "moises-android (tools/car.py, extract.py)",
+      "in": [
+        "file"
+      ],
+      "out": [
+        "file",
+        "dati"
+      ],
+      "limits": "Le bitmap compresse in atlas non sono decodificate; solo vettoriali, colori e testi."
     }
   ],
-  "basis": "4bbc49f09290f744"
+  "basis": "e416c0ce1efec1bc"
 }
