@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-18.1458",
-  "generated": "2026-11-18T14:58:43",
+  "version": "2026-11-18.2141",
+  "generated": "2026-11-18T21:41:15",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2350,7 +2350,24 @@
         "audio"
       ],
       "limits": "Non verificato dal vivo; dipende dal limite di banda Mega e dalle ottimizzazioni batteria del telefono."
+    },
+    {
+      "id": "a_study_pack_verified_sources",
+      "cluster": "AI",
+      "name": "Materiale di studio da un testo: flashcard, quiz, esame con voto previsto e tutor, con fonti ritrovate nel testo",
+      "status": "ipotizzata",
+      "desc": "Da PDF/EPUB/testo ricava riassunto, flashcard a ripetizione, quiz, esame simulato corretto da AI e piano d'esame; ogni carta o domanda e' scartata se la frase-fonte non e' ritrovata nel testo, il piano e' calcolato dal codice e il tutor risponde solo con brani recuperati per parole chiave.",
+      "evidence": "knowsum (study.js, screens.js; riusa ai.js, extract.js, summarize.js di booksum); provato solo con provider simulati, mai con modelli veri",
+      "in": [
+        "file",
+        "testo"
+      ],
+      "out": [
+        "ui",
+        "dati"
+      ],
+      "limits": "Qualita' reale dei testi generati non verificata; niente OCR di foto o scansioni; retrieval per parole chiave, non semantico."
     }
   ],
-  "basis": "c94bb2429017a692"
+  "basis": "7d9fe4578cb2a500"
 }
