@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-17.2221",
-  "generated": "2026-11-17T22:21:10",
+  "version": "2026-11-18.1458",
+  "generated": "2026-11-18T14:58:43",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2319,7 +2319,38 @@
         "dati"
       ],
       "limits": "Le bitmap compresse in atlas non sono decodificate; solo vettoriali, colori e testi."
+    },
+    {
+      "id": "a_mega_folder_reader",
+      "cluster": "INFRA",
+      "name": "Lettura e streaming di una cartella pubblica Mega dentro un'app Android",
+      "status": "probabile",
+      "desc": "Da un link di cartella pubblica Mega decifra nomi e struttura sul telefono, costruisce un catalogo (categorie, corsi, lezioni) e riproduce i video decifrandoli al volo con un mini server locale (AES-CTR, Range), senza server esterno.",
+      "evidence": "learnn-mega (js/mega.js, StreamServer.java); decifratura e catalogo provati su una cartella reale, streaming sul telefono non ancora verificato",
+      "in": [
+        "pagina_web"
+      ],
+      "out": [
+        "dati",
+        "ui"
+      ],
+      "limits": "Mega limita la banda per IP; primo caricamento di cartelle molto grandi lento (decine di secondi)."
+    },
+    {
+      "id": "a_background_audio_handoff",
+      "cluster": "APP",
+      "name": "Audio in background e a schermo spento da un player web in WebView",
+      "status": "ipotizzata",
+      "desc": "Quando lo schermo si spegne la WebView congela il video: il servizio in primo piano passa l'audio a un MediaPlayer nativo con coda e notifica, e restituisce la posizione al ritorno in app.",
+      "evidence": "learnn-mega (PlaybackService.java, MainActivity.java); installato, non ancora provato a schermo spento",
+      "in": [
+        "ui"
+      ],
+      "out": [
+        "audio"
+      ],
+      "limits": "Non verificato dal vivo; dipende dal limite di banda Mega e dalle ottimizzazioni batteria del telefono."
     }
   ],
-  "basis": "e416c0ce1efec1bc"
+  "basis": "c94bb2429017a692"
 }
