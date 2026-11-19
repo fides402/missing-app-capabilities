@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-19.2248",
-  "generated": "2026-11-19T22:48:07",
+  "version": "2026-11-19.2321",
+  "generated": "2026-11-19T23:21:48",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2434,5 +2434,5 @@
       "limits": "Font di sistema senza emoji e senza alcuni simboli; i contenuti sono sintesi mie e vanno verificati sulle fonti."
     }
   ],
-  "basis": "f388a34d32aab7fb"
+  "basis": "95464b5c367d0451"
 }
