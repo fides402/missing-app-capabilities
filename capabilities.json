@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-18.2141",
-  "generated": "2026-11-18T21:41:15",
+  "version": "2026-11-19.2248",
+  "generated": "2026-11-19T22:48:07",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2367,7 +2367,72 @@
         "dati"
       ],
       "limits": "Qualita' reale dei testi generati non verificata; niente OCR di foto o scansioni; retrieval per parole chiave, non semantico."
+    },
+    {
+      "id": "x_producer_path_course_app",
+      "cluster": "APP",
+      "name": "App Android che trasforma una community in un percorso pratico",
+      "status": "probabile",
+      "desc": "APK Capacitor con livelli e lezioni in italiano, processi, passi spuntabili, mappa concettuale per lezione e globale, archivio dei riepiloghi, chat Groq su ogni paragrafo e chat globale che consiglia quali contenuti consumare, esportazione di lezioni in Markdown e PDF per caricarle in un LLM, tema chiaro/scuro.",
+      "evidence": "producer-path",
+      "in": [
+        "testo",
+        "dati"
+      ],
+      "out": [
+        "ui",
+        "file"
+      ],
+      "limits": "Verificata solo in anteprima desktop con risposte simulate; chat con chiave vera, PDF/condivisione e installazione sul telefono non ancora provate. I contenuti sono sintesi scritte a mano dai post, non un prodotto ufficiale."
+    },
+    {
+      "id": "i_community_archive_via_browser",
+      "cluster": "INFRA",
+      "name": "Archiviare una community a pagamento tramite il browser già loggato",
+      "status": "dimostrata",
+      "desc": "Lettura di classroom, post, commenti e allegati di una community web usando la sessione del browser dell'utente, con passaggio dei dati al PC tramite appunti quando download e richieste locali sono bloccati; poi download degli allegati e dei video con yt-dlp.",
+      "evidence": "skool-producer-union-plus (1.572 post, circa 12 mila commenti, 1.069 allegati)",
+      "in": [
+        "pagina_web"
+      ],
+      "out": [
+        "dati",
+        "file"
+      ],
+      "limits": "I commenti oltre la prima pagina di alcuni post lunghi non sono stati recuperati; il browser limita richieste a localhost e download automatici; serve una sessione già aperta."
+    },
+    {
+      "id": "m_text_first_video_triage",
+      "cluster": "METODO",
+      "name": "Prima il testo del video, il video solo se serve vederlo",
+      "status": "dimostrata",
+      "desc": "Si scaricano trascrizioni (API di trascrizione di Loom, sottotitoli nelle tracce HLS di Mux) senza i video; un classificatore sul testo (parole al minuto, richiami a schermo e grafici) decide quali video scaricare, gli altri restano solo testo.",
+      "evidence": "skool-producer-union-plus (circa 250 video, 55 selezionati)",
+      "in": [
+        "pagina_web"
+      ],
+      "out": [
+        "testo",
+        "file"
+      ],
+      "limits": "Criterio euristico non verificato su ogni video; Whisper locale su CPU serve solo per i video senza sottotitoli e con poca RAM va fatto a pezzi."
+    },
+    {
+      "id": "a_pdf_guides_from_text",
+      "cluster": "APP",
+      "name": "Guide PDF impaginate da testi e dati",
+      "status": "dimostrata",
+      "desc": "PDF con schemi, tabelle, checklist, immagini incorporate e sezione dei limiti, generati con reportlab da post e commenti salvati; anteprima a immagini per controllare l'impaginazione.",
+      "evidence": "skool-producer-union-plus (pipeline, strategia, guida pratica, archivio della bacheca)",
+      "in": [
+        "testo",
+        "dati"
+      ],
+      "out": [
+        "file"
+      ],
+      "limits": "Font di sistema senza emoji e senza alcuni simboli; i contenuti sono sintesi mie e vanno verificati sulle fonti."
     }
   ],
-  "basis": "7d9fe4578cb2a500"
+  "basis": "f388a34d32aab7fb"
 }
