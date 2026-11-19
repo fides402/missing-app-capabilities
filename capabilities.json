@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-19.2321",
-  "generated": "2026-11-19T23:21:48",
+  "version": "2026-11-20.0042",
+  "generated": "2026-11-20T00:42:28",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2432,7 +2432,24 @@
         "file"
       ],
       "limits": "Font di sistema senza emoji e senza alcuni simboli; i contenuti sono sintesi mie e vanno verificati sulle fonti."
+    },
+    {
+      "id": "a_store_link_page_live_catalog",
+      "cluster": "APP",
+      "name": "Pagina link con catalogo beat e kit dal vivo",
+      "status": "dimostrata",
+      "desc": "Pagina statica a tre sezioni (beat, kit, credits) con interfaccia ricavata misurando una pagina di riferimento; legge il catalogo di beat e sound kit dal negozio online, li mostra dal più recente con anteprima audio e rimanda alla pagina di acquisto del negozio.",
+      "evidence": "bml-kits-page",
+      "in": [
+        "pagina_web",
+        "dati"
+      ],
+      "out": [
+        "ui",
+        "pagina_web"
+      ],
+      "limits": "Usa l'interfaccia dati interna del negozio, non documentata: può cambiare senza preavviso. Nessun ordinamento per popolarità, i kit non hanno anteprima audio, i credits sono fissi. Provata solo in anteprima locale, non pubblicata."
     }
   ],
-  "basis": "95464b5c367d0451"
+  "basis": "d28c5e8ef274a118"
 }
