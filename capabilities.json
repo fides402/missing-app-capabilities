@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-20.0042",
-  "generated": "2026-11-20T00:42:28",
+  "version": "2026-11-20.1629",
+  "generated": "2026-11-20T16:29:21",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2451,5 +2451,5 @@
       "limits": "Usa l'interfaccia dati interna del negozio, non documentata: può cambiare senza preavviso. Nessun ordinamento per popolarità, i kit non hanno anteprima audio, i credits sono fissi. Provata solo in anteprima locale, non pubblicata."
     }
   ],
-  "basis": "d28c5e8ef274a118"
+  "basis": "aa372b8e37b2bf9c"
 }
