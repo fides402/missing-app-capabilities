@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-20.1823",
-  "generated": "2026-11-20T18:23:39",
+  "version": "2026-11-20.2006",
+  "generated": "2026-11-20T20:06:50",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2449,7 +2449,24 @@
         "pagina_web"
       ],
       "limits": "Usa l'interfaccia dati interna del negozio, non documentata: può cambiare senza preavviso. Nessun ordinamento per popolarità, i kit non hanno anteprima audio, i credits sono fissi. Provata solo in anteprima locale, non pubblicata."
+    },
+    {
+      "id": "a_ricerca_web_durata_pagine",
+      "cluster": "APP",
+      "name": "Ricerca web da un link e filtro per durata dei video trovati",
+      "status": "probabile",
+      "desc": "App Android: da un link di un video legge titolo e protagonisti, li cerca su un motore di ricerca tramite un browser interno (la verifica anti-robot si risolve a schermo), apre le pagine trovate, ne misura la durata dai metadati e riporta solo i link oltre una soglia, con copia in un tocco.",
+      "evidence": "fullfinder",
+      "in": [
+        "pagina_web",
+        "testo"
+      ],
+      "out": [
+        "ui",
+        "dati"
+      ],
+      "limits": "I selettori dei risultati del motore di ricerca non sono stati verificati su una pagina vera; le pagine con player caricato via script non espongono la durata. Mai provata sul telefono."
     }
   ],
-  "basis": "d747226fe64adec4"
+  "basis": "72922c8eb2e499ff"
 }
