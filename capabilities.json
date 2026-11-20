@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-20.2006",
-  "generated": "2026-11-20T20:06:50",
+  "version": "2026-11-20.2351",
+  "generated": "2026-11-20T23:51:06",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2466,7 +2466,26 @@
         "dati"
       ],
       "limits": "I selettori dei risultati del motore di ricerca non sono stati verificati su una pagina vera; le pagine con player caricato via script non espongono la durata. Mai provata sul telefono."
+    },
+    {
+      "id": "a_scoperta_video_interessi",
+      "cluster": "APP",
+      "name": "Scoperta di video da interessi dichiarati con mappa di collegamenti e manopole",
+      "status": "probabile",
+      "desc": "App Android: l'utente sceglie temi e intensità; un motore pianifica ricerche sull'API video ufficiale, ordina con quattro controlli (scoperta, piacere, crescita, profondità), spiega il perché di ogni proposta con fatti verificabili e impara dai feedback (preferenze cancellabili). Player incorporato ufficiale con gesti, ripetizione di un tratto e miniplayer. Senza chiavi gira in modalità demo.",
+      "in": [
+        "testo",
+        "ui"
+      ],
+      "out": [
+        "ui",
+        "dati"
+      ],
+      "evidence": [
+        "orbit"
+      ],
+      "limits": "Mai provata dal vivo sul telefono (riproduzione incorporata non verificata); niente audio in background, velocità max 2x; stime di piacere/crescita/profondità euristiche su titolo e durata."
     }
   ],
-  "basis": "72922c8eb2e499ff"
+  "basis": "513f12e8817c620b"
 }
