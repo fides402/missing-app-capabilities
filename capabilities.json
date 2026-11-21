@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-21.2137",
-  "generated": "2026-11-21T21:37:41",
+  "version": "2026-11-21.2142",
+  "generated": "2026-11-21T21:42:10",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2525,5 +2525,5 @@
       "limits": "Mai provata dal vivo sul telefono: la forma delle risposte e' scritta a memoria; le finestre settimana/mese si riempiono solo raccogliendo nel tempo; condivisioni e salvataggi di solito non sono esposti; viola i termini del servizio e puo' causare blocchi dell'account."
     }
   ],
-  "basis": "a9dbe1947d4384da"
+  "basis": "c04d59261b7093ed"
 }
