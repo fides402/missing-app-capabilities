@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-21.1315",
-  "generated": "2026-11-21T13:15:43",
+  "version": "2026-11-21.2137",
+  "generated": "2026-11-21T21:37:41",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2504,7 +2504,26 @@
         "sottoradar"
       ],
       "limits": "APK compilato ma mai provato sul telefono; punteggio basato solo su numeri, mai verificato da un giudizio umano; lo schema dei dati puo' cambiare senza preavviso; uso massiccio contro i termini del servizio."
+    },
+    {
+      "id": "a_hashtag_radar",
+      "cluster": "APP",
+      "status": "probabile",
+      "name": "Migliori post di un hashtag social per giorno, settimana e mese, ordinabili per metriche",
+      "desc": "App Android: dopo aver importato dall'utente un file di cookie della propria sessione, interroga gli endpoint web non documentati dell'hashtag (top e recenti con paginazione) dentro una WebView nascosta, archivia i post in locale e li classifica per finestra temporale e per like, commenti, views, condivisioni, salvataggi quando il dato esiste.",
+      "in": [
+        "testo",
+        "file"
+      ],
+      "out": [
+        "ui",
+        "dati"
+      ],
+      "evidence": [
+        "hashtagradar"
+      ],
+      "limits": "Mai provata dal vivo sul telefono: la forma delle risposte e' scritta a memoria; le finestre settimana/mese si riempiono solo raccogliendo nel tempo; condivisioni e salvataggi di solito non sono esposti; viola i termini del servizio e puo' causare blocchi dell'account."
     }
   ],
-  "basis": "9b615618ad4646fd"
+  "basis": "a9dbe1947d4384da"
 }
