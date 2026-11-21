@@ -1,6 +1,6 @@
 {
   "version": "2026-11-21.2142",
-  "generated": "2026-11-21T21:42:10",
+  "generated": "2026-11-21T21:42:57",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2523,7 +2523,62 @@
         "hashtagradar"
       ],
       "limits": "Mai provata dal vivo sul telefono: la forma delle risposte e' scritta a memoria; le finestre settimana/mese si riempiono solo raccogliendo nel tempo; condivisioni e salvataggi di solito non sono esposti; viola i termini del servizio e puo' causare blocchi dell'account."
+    },
+    {
+      "id": "a_audiolibri_torrent_streaming",
+      "cluster": "APP",
+      "status": "dimostrata",
+      "name": "Catalogo di audiolibri da una sorgente configurabile con ascolto in streaming da magnet o .torrent",
+      "desc": "App Android nativa: legge il catalogo da una sorgente indicata dall'utente (feed RSS, HTML con selettori, JSON, WordPress), con elenco categorie, ricerca e pagine; ricostruisce il magnet dall'info hash quando la pagina non lo da' e riproduce i capitoli mentre il torrent scarica (motore libtorrent), con ripresa, timer e download offline.",
+      "in": [
+        "testo",
+        "pagina_web"
+      ],
+      "out": [
+        "audio",
+        "ui"
+      ],
+      "evidence": [
+        "voxa"
+      ],
+      "limits": "Dimostrata su un solo catalogo: altre sorgenti richiedono il profilo dei selettori. Dipende dai peer disponibili; con batteria bassa il sistema puo' limitare la rete. Il login della sorgente si importa da un file cookie dell'utente."
+    },
+    {
+      "id": "i_libtorrent_android_ip",
+      "cluster": "INFRA",
+      "status": "dimostrata",
+      "name": "Torrent su Android recente: ascolto su indirizzo IP esplicito",
+      "desc": "Da Android 11 un'app non puo' elencare le interfacce di rete (netlink negato): libtorrent 1.2 con 0.0.0.0 non apre nessuna porta e il DHT resta a zero nodi, quindi nessun peer. Si legge l'IP della rete attiva con le API di Android, si passa come interfaccia di ascolto e si aggiorna al cambio di rete.",
+      "in": [
+        "dati"
+      ],
+      "out": [
+        "dati"
+      ],
+      "evidence": [
+        "voxa"
+      ],
+      "limits": "Solo IPv4. Verificato con un telefono Android 16; il motore va riavviato se cambia molto la rete."
+    },
+    {
+      "id": "ai_groq_scelta_da_elenco_reale",
+      "cluster": "AI",
+      "status": "probabile",
+      "name": "Consigli di lettura che scelgono solo tra i titoli realmente presenti nel catalogo",
+      "desc": "Due passi con le API di Groq: dato l'elenco reale delle categorie sceglie quelle pertinenti, poi dato l'elenco numerato dei titoli di quelle categorie ne sceglie i migliori con una frase di motivazione; i numeri non presenti nell'elenco vengono scartati, cosi' il modello non inventa libri. Variante per i consigli dalla cronologia: temi precisi ricavati dalle descrizioni dei libri piu' ascoltati, ricercati nell'intero catalogo.",
+      "in": [
+        "testo",
+        "dati"
+      ],
+      "out": [
+        "ui",
+        "dati"
+      ],
+      "evidence": [
+        "voxa"
+      ],
+      "limits": "Mai provata con una chiave vera: il formato JSON della risposta e' scritto a memoria. Il modello vede solo titoli e autori, non le trame; con pochi ascolti i consigli restano poco precisi. I testi dell'utente partono verso un servizio esterno."
     }
   ],
-  "basis": "c04d59261b7093ed"
+  "basis": "573a4698ddadc966"
 }
