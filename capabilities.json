@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-21.2142",
-  "generated": "2026-11-21T21:42:57",
+  "version": "2026-11-21.2330",
+  "generated": "2026-11-21T23:30:42",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2580,5 +2580,5 @@
       "limits": "Mai provata con una chiave vera: il formato JSON della risposta e' scritto a memoria. Il modello vede solo titoli e autori, non le trame; con pochi ascolti i consigli restano poco precisi. I testi dell'utente partono verso un servizio esterno."
     }
   ],
-  "basis": "573a4698ddadc966"
+  "basis": "609a0586d585d95c"
 }
