@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-20.2351",
-  "generated": "2026-11-20T23:51:06",
+  "version": "2026-11-21.1315",
+  "generated": "2026-11-21T13:15:43",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2485,7 +2485,26 @@
         "orbit"
       ],
       "limits": "Mai provata dal vivo sul telefono (riproduzione incorporata non verificata); niente audio in background, velocità max 2x; stime di piacere/crescita/profondità euristiche su titolo e durata."
+    },
+    {
+      "id": "a_store_app_poco_note",
+      "cluster": "APP",
+      "name": "Catalogo di app Android buone ma poco note, ordinate per affidabilita' statistica dei voti",
+      "status": "probabile",
+      "desc": "App Android: un crawler legge le pagine pubbliche del negozio di app (dati incorporati nell'HTML, scoperti per reverse engineering), calcola un punteggio (limite inferiore di Wilson sui voti positivi, oscurita' dei download, freschezza, penale per voti sospetti) e produce un catalogo incluso nell'app, con filtri e dettaglio; l'installazione apre la scheda sul negozio.",
+      "in": [
+        "testo",
+        "dati"
+      ],
+      "out": [
+        "ui",
+        "dati"
+      ],
+      "evidence": [
+        "sottoradar"
+      ],
+      "limits": "APK compilato ma mai provato sul telefono; punteggio basato solo su numeri, mai verificato da un giudizio umano; lo schema dei dati puo' cambiare senza preavviso; uso massiccio contro i termini del servizio."
     }
   ],
-  "basis": "513f12e8817c620b"
+  "basis": "9b615618ad4646fd"
 }
