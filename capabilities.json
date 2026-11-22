@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-22.1647",
-  "generated": "2026-11-22T16:47:06",
+  "version": "2026-11-22.1958",
+  "generated": "2026-11-22T19:58:31",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2595,10 +2595,32 @@
         "dati"
       ],
       "evidence": [
-        "bookfeed-gpt"
+        "bookfeed-gpt",
+        "rimario"
       ],
       "limits": "Mai verificato dal vivo; una sfida Turnstile non e' risolta; automatizzare il sito viola i suoi termini e puo' bloccare l'account."
+    },
+    {
+      "id": "x_rime_colorate_testo_a_tempo",
+      "cluster": "APP",
+      "status": "ipotizzata",
+      "name": "Schema delle rime a colori su un brano rap, con testo che scorre a tempo con la musica",
+      "desc": "Da un link Spotify o YouTube trova titolo e artista, scarica il testo con i tempi riga per riga da un servizio pubblico di testi sincronizzati, fa riconoscere a ChatGPT i suoni che rimano (anche interne e multisillabiche) a blocchi, verifica ogni evidenziazione sul testo e la colora; il brano parte nel player di YouTube e il teleprompter scorre al tempo reale della musica, con sync regolabile e isolamento di un singolo suono.",
+      "in": [
+        "pagina_web",
+        "testo"
+      ],
+      "out": [
+        "ui",
+        "dati"
+      ],
+      "evidence": [
+        "rimario",
+        "bookfeed-gpt",
+        "orbit"
+      ],
+      "limits": "Mai provata sul telefono ne' con una sessione ChatGPT vera; senza tempi pubblicati i tempi sono stimati e vanno allineati a mano; il video scelto puo' avere intro diverse dal testo."
     }
   ],
-  "basis": "c7fb593a00a78885"
+  "basis": "02966ec93ecd7a47"
 }
