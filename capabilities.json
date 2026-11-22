@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-22.1445",
-  "generated": "2026-11-22T14:45:51",
+  "version": "2026-11-22.1647",
+  "generated": "2026-11-22T16:47:06",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2579,7 +2579,26 @@
         "voxa"
       ],
       "limits": "Mai provata con una chiave vera: il formato JSON della risposta e' scritto a memoria. Il modello vede solo titoli e autori, non le trame; con pochi ascolti i consigli restano poco precisi. I testi dell'utente partono verso un servizio esterno."
+    },
+    {
+      "id": "infra_chatgpt_sessione_webview",
+      "cluster": "INFRA",
+      "status": "ipotizzata",
+      "name": "Chiamare ChatGPT dall'app Android con la sessione dell'utente, senza chiave API",
+      "desc": "I cookie di chatgpt.com importati da un file di testo vanno nel gestore cookie della WebView; uno script eseguito in una WebView nascosta sul dominio ottiene il token di sessione, supera la prova di lavoro richiesta e legge la risposta in streaming. Ricostruito dai file JS pubblici del sito, non ancora provato con una sessione vera.",
+      "in": [
+        "testo",
+        "file"
+      ],
+      "out": [
+        "testo",
+        "dati"
+      ],
+      "evidence": [
+        "bookfeed-gpt"
+      ],
+      "limits": "Mai verificato dal vivo; una sfida Turnstile non e' risolta; automatizzare il sito viola i suoi termini e puo' bloccare l'account."
     }
   ],
-  "basis": "e96adb121ad42d0b"
+  "basis": "c7fb593a00a78885"
 }
