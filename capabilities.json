@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-22.1348",
-  "generated": "2026-11-22T13:48:19",
+  "version": "2026-11-22.1445",
+  "generated": "2026-11-22T14:45:51",
   "capabilities": [
     {
       "id": "a_mir",
@@ -1381,7 +1381,7 @@
       "cluster": "INFRA",
       "name": "Client Android di un servizio web ricavato dalle sue API (reverse engineering)",
       "status": "dimostrata",
-      "desc": "Dato un sito senza API ufficiale, ne mappa le chiamate dal codice del front-end (REA), poi costruisce un'app Android che le usa con cookie persistenti, flusso SSE e conversione audio nativa, aggiungendo ingressi che il sito non ha (link, condivisione da altre app, upload).",
+      "desc": "Dato un sito senza API ufficiale, ne mappa le chiamate dal codice del front-end (REA), poi costruisce un'app Android che le usa con cookie persistenti, flusso SSE e conversione audio nativa, aggiungendo ingressi che il sito non ha (link, condivisione da altre app, upload). Anche: ricerca e canali di YouTube via API interna (InnerTube, RSS) con filtri di data, provata sul telefono vero.",
       "in": [
         "pagina_web"
       ],
@@ -1390,7 +1390,8 @@
         "dati"
       ],
       "evidence": [
-        "digdeeper-app"
+        "digdeeper-app",
+        "orbit"
       ],
       "limits": [
         "Dipende dal servizio: quote, login e cambi di API sono suoi",
@@ -2472,7 +2473,7 @@
       "cluster": "APP",
       "name": "Scoperta di video da interessi dichiarati con mappa di collegamenti e manopole",
       "status": "probabile",
-      "desc": "App Android: l'utente sceglie temi e intensità; un motore pianifica ricerche sull'API video ufficiale, ordina con quattro controlli (scoperta, piacere, crescita, profondità), spiega il perché di ogni proposta con fatti verificabili e impara dai feedback (preferenze cancellabili). Player incorporato ufficiale con gesti, ripetizione di un tratto e miniplayer. Senza chiavi gira in modalità demo.",
+      "desc": "App Android: l'utente sceglie temi e intensita'; un motore pianifica ricerche sul sistema interno del sito video (senza chiave ne' quota; la chiave ufficiale serve solo ad arricchire con data esatta e like), filtra per pertinenza e recenza, ordina con quattro controlli, spiega il perche' di ogni proposta con fatti verificabili e impara dai feedback. Player proprio con gesti, ripresa da dove eri, cronologia, iscrizioni locali ai canali, riproduzione a schermo spento.",
       "in": [
         "testo",
         "ui"
@@ -2484,7 +2485,7 @@
       "evidence": [
         "orbit"
       ],
-      "limits": "Mai provata dal vivo sul telefono (riproduzione incorporata non verificata); niente audio in background, velocità max 2x; stime di piacere/crescita/profondità euristiche su titolo e durata."
+      "limits": "Non ufficiale: dipende dal formato del sito (puo' cambiare); audio a schermo spento e gesti non verificati a lungo sul telefono; stime di piacere/crescita/profondita' euristiche."
     },
     {
       "id": "a_store_app_poco_note",
@@ -2580,5 +2581,5 @@
       "limits": "Mai provata con una chiave vera: il formato JSON della risposta e' scritto a memoria. Il modello vede solo titoli e autori, non le trame; con pochi ascolti i consigli restano poco precisi. I testi dell'utente partono verso un servizio esterno."
     }
   ],
-  "basis": "c140e46ab257edc6"
+  "basis": "e96adb121ad42d0b"
 }
