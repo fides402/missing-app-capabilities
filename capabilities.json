@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-23.2250",
-  "generated": "2026-11-23T22:50:28",
+  "version": "2026-11-23.2344",
+  "generated": "2026-11-23T23:44:44",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2644,7 +2644,24 @@
         "omi-extension-final"
       ],
       "limits": "Installata sul telefono ma mai provata con una sessione ChatGPT importata; riepiloghi e chat non verificati dal vivo; niente sincronizzazione tra dispositivi, marketplace, chiamate o riconoscimento di chi parla."
+    },
+    {
+      "id": "x_voce_piper_android",
+      "cluster": "AUDIO",
+      "status": "dimostrata",
+      "name": "Voce femminile che legge i testi ad alta voce sul telefono, in locale, senza servizi esterni",
+      "desc": "Modello di sintesi vocale Piper (italiano e inglese) eseguito dentro un'app Android con una libreria di inferenza ONNX: il testo viene spezzato in frasi, la frase successiva si prepara mentre la precedente suona; velocita' regolabile, risposta vocale automatica, solo con le cuffie o solo dopo una domanda a voce.",
+      "in": [
+        "testo"
+      ],
+      "out": [
+        "audio"
+      ],
+      "evidence": [
+        "omi-gpt"
+      ],
+      "limits": "Serve una versione della libreria che includa ancora il fonemizzatore espeak (dalla 2.0 e' stato tolto); modelli da ~60 MB ciascuno dentro l'app; avviata e misurata nei tempi sul telefono ma non ascoltata dall'utente."
     }
   ],
-  "basis": "22daa5e153d2cde6"
+  "basis": "b481b95b4efa31c7"
 }
