@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-22.1958",
-  "generated": "2026-11-22T19:58:31",
+  "version": "2026-11-23.1507",
+  "generated": "2026-11-23T15:07:22",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2596,9 +2596,11 @@
       ],
       "evidence": [
         "bookfeed-gpt",
-        "rimario"
+        "rimario",
+        "booksum",
+        "diggaplayer"
       ],
-      "limits": "Mai verificato dal vivo; una sfida Turnstile non e' risolta; automatizzare il sito viola i suoi termini e puo' bloccare l'account."
+      "limits": "Mai verificato dal vivo (anche in diggaplayer, dove 3 dischi proposti vanno nella libreria Spotify, senza ripetizioni); una sfida Turnstile non e' risolta; automatizzare il sito viola i suoi termini e puo' bloccare l'account. In booksum e' il solo provider dei riassunti (provider nativo nel servizio in background, 2 richieste insieme); i cookie si importano anche da JSON di estensione."
     },
     {
       "id": "x_rime_colorate_testo_a_tempo",
@@ -2622,5 +2624,5 @@
       "limits": "Mai provata sul telefono ne' con una sessione ChatGPT vera; senza tempi pubblicati i tempi sono stimati e vanno allineati a mano; il video scelto puo' avere intro diverse dal testo."
     }
   ],
-  "basis": "02966ec93ecd7a47"
+  "basis": "59cdd8b791be8dfc"
 }
