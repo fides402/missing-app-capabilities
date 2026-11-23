@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-23.1507",
-  "generated": "2026-11-23T15:07:31",
+  "version": "2026-11-23.2250",
+  "generated": "2026-11-23T22:50:28",
   "capabilities": [
     {
       "id": "a_mir",
@@ -83,15 +83,15 @@
       "cluster": "AUDIO",
       "name": "Pendant Omi come microfono",
       "status": "dimostrata",
-      "desc": "Voce catturata via Bluetooth, decodificata e trascritta con Whisper; anche come microfono per ChatGPT.",
-      "evidence": "omi-extension-final, omi-companion",
+      "desc": "Voce catturata via Bluetooth dal pendant, frame Opus ricomposti e decodificati in locale, trascritta da Whisper o dalla dettatura di ChatGPT; anche come microfono per ChatGPT. In omi-gpt il pendant si collega dal telefono e l'audio decodificato arriva all'app.",
+      "evidence": "omi-extension-final, omi-companion, omi-gpt",
       "in": [
         "voce"
       ],
       "out": [
         "testo"
       ],
-      "limits": "Il codec e l'UUID del pulsante vanno letti dal dispositivo reale."
+      "limits": "Il codec e l'UUID del pulsante vanno letti dal dispositivo reale; qualita' della trascrizione dal pendant non ancora ascoltata."
     },
     {
       "id": "m_chop",
@@ -2583,24 +2583,26 @@
     {
       "id": "infra_chatgpt_sessione_webview",
       "cluster": "INFRA",
-      "status": "ipotizzata",
+      "status": "dimostrata",
       "name": "Chiamare ChatGPT dall'app Android con la sessione dell'utente, senza chiave API",
-      "desc": "I cookie di chatgpt.com importati da un file di testo vanno nel gestore cookie della WebView; uno script eseguito in una WebView nascosta sul dominio ottiene il token di sessione, supera la prova di lavoro richiesta e legge la risposta in streaming. Ricostruito dai file JS pubblici del sito, non ancora provato con una sessione vera.",
+      "desc": "I cookie di chatgpt.com importati da un file di testo vanno nel gestore cookie della WebView; uno script eseguito in una WebView nascosta sul dominio ottiene il token di sessione, supera la prova di lavoro richiesta e legge la risposta in streaming. Verificato il 23/11/2026 su una sessione vera nel browser (sessione, controllo anti-bot con prova di lavoro, risposta in streaming); la dettatura vocale di ChatGPT restituisce il testo di un file audio.",
       "in": [
+        "file",
         "testo",
-        "file"
+        "voce"
       ],
       "out": [
-        "testo",
-        "dati"
+        "dati",
+        "testo"
       ],
       "evidence": [
         "bookfeed-gpt",
         "rimario",
         "booksum",
-        "diggaplayer"
+        "diggaplayer",
+        "omi-gpt"
       ],
-      "limits": "Mai verificato dal vivo (anche in diggaplayer, dove 3 dischi proposti vanno nella libreria Spotify, senza ripetizioni); una sfida Turnstile non e' risolta; automatizzare il sito viola i suoi termini e puo' bloccare l'account. In booksum e' il solo provider dei riassunti (provider nativo nel servizio in background, 2 richieste insieme); i cookie si importano anche da JSON di estensione."
+      "limits": "Provato nel browser con la sessione dell'utente, non ancora dentro l'app Android (import cookie, TLS della WebView); la verifica anti-bot Turnstile non e' implementata; la dettatura lascia un file sul server di ChatGPT per 30 giorni; automatizzare chatgpt.com con cookie viola i termini di servizio e puo' far bloccare l'account."
     },
     {
       "id": "x_rime_colorate_testo_a_tempo",
@@ -2622,7 +2624,27 @@
         "orbit"
       ],
       "limits": "Mai provata sul telefono ne' con una sessione ChatGPT vera; senza tempi pubblicati i tempi sono stimati e vanno allineati a mano; il video scelto puo' avere intro diverse dal testo."
+    },
+    {
+      "id": "x_omi_conversazioni_chatgpt",
+      "cluster": "APP",
+      "status": "ipotizzata",
+      "name": "Compagno vocale che trascrive le conversazioni e le trasforma in riepiloghi, attivita' e ricordi, con ChatGPT come motore",
+      "desc": "App Android con interfaccia misurata sul sorgente aperto di un'app di pendant: registra dal microfono del telefono o dal pendant, spezza l'audio in pezzi da 20 secondi, li fa trascrivere da ChatGPT e a fine conversazione chiede titolo, emoji, riepilogo, attivita' e ricordi in formato strutturato; una chat risponde usando ricordi, conversazioni rilevanti e attivita' aperte, con ricerca web quando serve.",
+      "in": [
+        "voce"
+      ],
+      "out": [
+        "testo",
+        "ui",
+        "dati"
+      ],
+      "evidence": [
+        "omi-gpt",
+        "omi-extension-final"
+      ],
+      "limits": "Installata sul telefono ma mai provata con una sessione ChatGPT importata; riepiloghi e chat non verificati dal vivo; niente sincronizzazione tra dispositivi, marketplace, chiamate o riconoscimento di chi parla."
     }
   ],
-  "basis": "59cdd8b791be8dfc"
+  "basis": "22daa5e153d2cde6"
 }
