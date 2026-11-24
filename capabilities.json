@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-24.2144",
-  "generated": "2026-11-24T21:44:32",
+  "version": "2026-11-25.0014",
+  "generated": "2026-11-25T00:14:59",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2692,7 +2692,23 @@
         "ui"
       ],
       "limits": "Tutto locale, nessuna AI; gesti e animazioni provati solo con eventi sintetici, mai sul telefono; font a licenza personale."
+    },
+    {
+      "id": "a_ingredienti_sistemi_stagno",
+      "cluster": "APP",
+      "name": "Ingredienti accessibili, obiettivi in costellazione e sistemi che lavorano da soli",
+      "status": "probabile",
+      "desc": "App Android in cui dichiari cosa hai a portata di mano adesso (gocce trascinabili in uno stagno: su = accessibile, giù = non ora), scomponi obiettivi e problemi in una costellazione di sotto-obiettivi colorati per accessibilità, e ottieni sistemi (innesco, cosa gira mentre fai altro, effetto, setup, autonomia) costruiti solo con gli ingredienti dichiarati; le emozioni sono trattate come ingredienti. Cinque direzioni grafiche commutabili dal vivo.",
+      "evidence": "loto (APK Capacitor, WebGL, fisica 2D, motore chatgpt.com via cookie come omi-gpt, prompt JSON)",
+      "in": [
+        "testo"
+      ],
+      "out": [
+        "ui",
+        "testo"
+      ],
+      "limits": "Scomposizione e sistemi dipendono da una sessione ChatGPT importata e mai provata in questa app; UI vista solo in anteprima browser con risposte finte, non collaudata a lungo sul telefono."
     }
   ],
-  "basis": "7cd751d5eac148d6"
+  "basis": "ec1c77229df7c032"
 }
