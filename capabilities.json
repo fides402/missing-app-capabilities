@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-24.1711",
-  "generated": "2026-11-24T17:11:02",
+  "version": "2026-11-24.2144",
+  "generated": "2026-11-24T21:44:32",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2676,7 +2676,23 @@
         "ui"
       ],
       "limits": "Compilata e avviata sul telefono, ma player e gesti mai provati dal vivo; download non implementato; nessuna sorgente di streaming inclusa oltre a trailer e film Blender."
+    },
+    {
+      "id": "a_moodboard_ventaglio_mappa",
+      "cluster": "APP",
+      "name": "Moodboard a progetti con immagini a ventaglio, mappa e griglia e nota di progetto",
+      "status": "probabile",
+      "desc": "App Android in cui ogni progetto raccoglie immagini e appunti: le stesse card si dispongono a ventaglio, su una mappa libera (pan, pinch, trascinamento) o in griglia con animazioni a molla; palette e colore dominante estratti dalle immagini colorano lo sfondo; una nota di progetto resta aperta sotto mentre le immagini restano visibili sopra.",
+      "evidence": "folio (APK Capacitor, IndexedDB locale, molle, estrazione colore, nota di progetto)",
+      "in": [
+        "file",
+        "testo"
+      ],
+      "out": [
+        "ui"
+      ],
+      "limits": "Tutto locale, nessuna AI; gesti e animazioni provati solo con eventi sintetici, mai sul telefono; font a licenza personale."
     }
   ],
-  "basis": "b5982a80861ff8d2"
+  "basis": "7cd751d5eac148d6"
 }
