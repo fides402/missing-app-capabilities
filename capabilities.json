@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-23.2344",
-  "generated": "2026-11-23T23:44:44",
+  "version": "2026-11-24.1711",
+  "generated": "2026-11-24T17:11:02",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2661,7 +2661,22 @@
         "omi-gpt"
       ],
       "limits": "Serve una versione della libreria che includa ancora il fonemizzatore espeak (dalla 2.0 e' stato tolto); modelli da ~60 MB ciascuno dentro l'app; avviata e misurata nei tempi sul telefono ma non ascoltata dall'utente."
+    },
+    {
+      "id": "a_player_stile_netflix",
+      "cluster": "APP",
+      "name": "Catalogo e player video in stile Netflix con gesti, skip intro, velocita', episodi e ripresa",
+      "status": "probabile",
+      "desc": "App Android con catalogo da TMDB (hero, righe, Top 10, continua a guardare, dettaglio con episodi) e player orizzontale a schermo intero: doppio tap +-10 s, luminosita'/volume a scorrimento, blocco, velocita', audio e sottotitoli, prossimo episodio. Riproduce trailer, film open source o link HLS/MP4 incollati dall'utente per contenuti che ha il diritto di guardare.",
+      "evidence": "netflix-plus",
+      "in": [
+        "dati"
+      ],
+      "out": [
+        "ui"
+      ],
+      "limits": "Compilata e avviata sul telefono, ma player e gesti mai provati dal vivo; download non implementato; nessuna sorgente di streaming inclusa oltre a trailer e film Blender."
     }
   ],
-  "basis": "b481b95b4efa31c7"
+  "basis": "b5982a80861ff8d2"
 }
