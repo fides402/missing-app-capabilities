@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-25.1546",
-  "generated": "2026-11-25T15:46:48",
+  "version": "2026-11-25.2207",
+  "generated": "2026-11-25T22:07:00",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2752,7 +2752,28 @@
       ],
       "limits": "Gli agenti aggiungono a volte frasi proprie: serve una passata di controllo; trascrizioni rumorose lasciano buchi.",
       "source": "auto"
+    },
+    {
+      "id": "x_ricette_da_ingredienti_foto_web",
+      "cluster": "APP",
+      "name": "Ingredienti scritti a mano -> ricette italiane con foto dalla ricerca web e chat sulla ricetta",
+      "status": "probabile",
+      "desc": "APK Capacitor: l'utente scrive gli ingredienti, ChatGPT (sessione via cookie) propone ricette in JSON anche con ingredienti da comprare; le foto di piatti e ingredienti vengono cercate sul web da ChatGPT e verificate nell'app (URL diretto, poi og:image della pagina); preparazione a passi spuntabili e chat legata alla ricetta.",
+      "in": [
+        "testo"
+      ],
+      "out": [
+        "ui",
+        "testo",
+        "dati"
+      ],
+      "evidence": [
+        "fornello",
+        "loto",
+        "omi-gpt"
+      ],
+      "limits": "Collaudato nel browser con risposte finte; mai provato con una sessione ChatGPT vera ne' sul telefono. Le foto dipendono da cosa ChatGPT trova."
     }
   ],
-  "basis": "70ae0bc6ce5e5294"
+  "basis": "8f6f4b191530edae"
 }
