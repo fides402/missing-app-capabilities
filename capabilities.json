@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-25.0014",
-  "generated": "2026-11-25T00:14:59",
+  "version": "2026-11-25.1546",
+  "generated": "2026-11-25T15:46:48",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2708,7 +2708,51 @@
         "testo"
       ],
       "limits": "Scomposizione e sistemi dipendono da una sessione ChatGPT importata e mai provata in questa app; UI vista solo in anteprima browser con risposte finte, non collaudata a lungo sul telefono."
+    },
+    {
+      "id": "a_libro_coach_rotta",
+      "cluster": "APP",
+      "name": "Libro di consigli -> coach con mossa quotidiana, obiettivi e chat ancorati a principi e tattiche",
+      "status": "probabile",
+      "desc": "App Android che trasforma un libro di consigli (principi a monte + tattiche) in un copilota: profilo della situazione, una mossa al giorno scelta dal libro, obiettivi scomposti in passi, chat con recupero locale dal libro e motore ChatGPT con sessione dell'utente. Funziona anche senza AI con punteggio locale.",
+      "in": [
+        "testo",
+        "ui"
+      ],
+      "out": [
+        "ui",
+        "testo"
+      ],
+      "evidence": [
+        "rotta",
+        "ebook-pu",
+        "loto",
+        "omi-gpt"
+      ],
+      "limits": "Mai provata sul telefono; prompt provati solo con risposte finte; distillazione del libro automatica e non riletta voce per voce.",
+      "source": "auto"
+    },
+    {
+      "id": "m_trascrizioni_a_libro",
+      "cluster": "METODO",
+      "name": "Centinaia di trascrizioni -> libro EPUB in italiano per temi, con agenti in parallelo",
+      "status": "dimostrata",
+      "desc": "Pipeline: trascrizioni raggruppate in lotti, un agente per lotto estrae consigli con tag di tema, un agente per tema scrive il capitolo, script che costruisce un EPUB 3 valido con indice e copertina. 235 trascrizioni -> 19 capitoli.",
+      "in": [
+        "testo",
+        "file"
+      ],
+      "out": [
+        "file",
+        "testo"
+      ],
+      "evidence": [
+        "ebook-pu",
+        "skool-producer-union-plus"
+      ],
+      "limits": "Gli agenti aggiungono a volte frasi proprie: serve una passata di controllo; trascrizioni rumorose lasciano buchi.",
+      "source": "auto"
     }
   ],
-  "basis": "ec1c77229df7c032"
+  "basis": "70ae0bc6ce5e5294"
 }
