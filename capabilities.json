@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-25.2207",
-  "generated": "2026-11-25T22:07:00",
+  "version": "2026-11-25.2333",
+  "generated": "2026-11-25T23:33:06",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2773,7 +2773,29 @@
         "omi-gpt"
       ],
       "limits": "Collaudato nel browser con risposte finte; mai provato con una sessione ChatGPT vera ne' sul telefono. Le foto dipendono da cosa ChatGPT trova."
+    },
+    {
+      "id": "x_libro_guida_15min_lezioni_visive",
+      "cluster": "APP",
+      "name": "Libro EPUB/PDF -> guida da ~15 minuti con lezioni a schemi colorati e chat sul libro",
+      "status": "ipotizzata",
+      "desc": "APK Capacitor: legge EPUB/PDF in locale (capitoli), ChatGPT (sessione via cookie) disegna la mappa del libro e scrive 5-7 lezioni in JSON (idea, esempio dal libro, sfumatura, schemi di 10 tipi, quiz) che l'app rende in HTML/SVG; tempo di lettura misurato sul testo; chat con recupero locale BM25 dei passaggi e rimandi a capitoli e lezioni.",
+      "in": [
+        "file",
+        "testo"
+      ],
+      "out": [
+        "ui",
+        "testo",
+        "dati"
+      ],
+      "evidence": [
+        "quindici",
+        "bookfeed-gpt",
+        "rotta"
+      ],
+      "limits": "Mai provata sul telefono ne' con sessione ChatGPT vera; parser mai provato su file reali; PDF scansionati senza OCR non funzionano."
     }
   ],
-  "basis": "8f6f4b191530edae"
+  "basis": "05430ac193aa17c5"
 }
