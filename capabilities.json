@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-25.2333",
-  "generated": "2026-11-25T23:33:06",
+  "version": "2026-11-26.1418",
+  "generated": "2026-11-26T14:18:08",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2795,7 +2795,45 @@
         "rotta"
       ],
       "limits": "Mai provata sul telefono ne' con sessione ChatGPT vera; parser mai provato su file reali; PDF scansionati senza OCR non funzionano."
+    },
+    {
+      "id": "x_composizione_performance_descritta_midi",
+      "cluster": "MUSICA",
+      "name": "Richiesta a parole -> performance descritta di ogni musicista -> MIDI espressivo non quantizzato",
+      "status": "ipotizzata",
+      "desc": "App desktop: ChatGPT (sessione dell'utente) progetta formazione e forma, ogni musicista descrive battuta per battuta cosa ascolta, suona e rilancia, con una prova d'insieme; solo dopo le descrizioni diventano MIDI con CC, pitch bend e ritardi in millisecondi per nota.",
+      "in": [
+        "testo"
+      ],
+      "out": [
+        "midi",
+        "testo",
+        "ui"
+      ],
+      "evidence": [
+        "rallenti"
+      ],
+      "limits": "Pipeline provata solo con risposte scritte in anticipo, mai con una sessione ChatGPT vera; qualita' musicale non ascoltata; mappatura General MIDI senza keyswitch."
+    },
+    {
+      "id": "i_trascinamento_file_app_desktop_daw",
+      "cluster": "INFRA",
+      "name": "Trascinare un file generato da un'app desktop direttamente dentro la DAW",
+      "status": "dimostrata",
+      "desc": "Da un'interfaccia web in finestra nativa Windows parte un trascinamento di file vero verso Ableton Live o il file manager.",
+      "in": [
+        "file",
+        "midi"
+      ],
+      "out": [
+        "file",
+        "ui"
+      ],
+      "evidence": [
+        "rallenti"
+      ],
+      "limits": "Provato su Windows con un MIDI multitraccia in Live 12 (tracce e tempo importati); i CC nelle clip non controllati a video."
     }
   ],
-  "basis": "05430ac193aa17c5"
+  "basis": "0627c0adc7d5817d"
 }
