@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-26.1441",
-  "generated": "2026-11-26T14:41:25",
+  "version": "2026-11-26.1642",
+  "generated": "2026-11-26T16:42:54",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2833,7 +2833,29 @@
         "rallenti"
       ],
       "limits": "Provato su Windows con un MIDI multitraccia in Live 12 (tracce e tempo importati); i CC nelle clip non controllati a video."
+    },
+    {
+      "id": "x_reference_nuova_orchestrazione",
+      "cluster": "MUSICA",
+      "name": "Brano di riferimento + strumenti scritti -> scheda compositiva -> nuova composizione in altra direzione e orchestrazione",
+      "status": "ipotizzata",
+      "desc": "La reference viene separata e trascritta, un LLM sceglie gli stem dagli strumenti dichiarati e ricava la grammatica; l'utente indica via prompt direzione, organico e vicinanza e ottiene performance descritte e MIDI, con fraseggi opzionali pensati per il campionamento verificati sulla partitura.",
+      "in": [
+        "audio",
+        "midi",
+        "testo"
+      ],
+      "out": [
+        "midi",
+        "testo",
+        "ui"
+      ],
+      "evidence": [
+        "rallenti",
+        "acr"
+      ],
+      "limits": "Provato con risposte dimostrative e analisi gia' in cache; mai con scheda scritta da un LLM vero ne' con una nuova separazione lanciata dall'app; soglie dei fraseggi non validate."
     }
   ],
-  "basis": "24227dcc6e786625"
+  "basis": "e9b2f18a02331ab6"
 }
