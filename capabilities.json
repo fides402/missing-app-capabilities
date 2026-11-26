@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-26.1418",
-  "generated": "2026-11-26T14:18:08",
+  "version": "2026-11-26.1441",
+  "generated": "2026-11-26T14:41:25",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2800,7 +2800,7 @@
       "id": "x_composizione_performance_descritta_midi",
       "cluster": "MUSICA",
       "name": "Richiesta a parole -> performance descritta di ogni musicista -> MIDI espressivo non quantizzato",
-      "status": "ipotizzata",
+      "status": "probabile",
       "desc": "App desktop: ChatGPT (sessione dell'utente) progetta formazione e forma, ogni musicista descrive battuta per battuta cosa ascolta, suona e rilancia, con una prova d'insieme; solo dopo le descrizioni diventano MIDI con CC, pitch bend e ritardi in millisecondi per nota.",
       "in": [
         "testo"
@@ -2813,7 +2813,7 @@
       "evidence": [
         "rallenti"
       ],
-      "limits": "Pipeline provata solo con risposte scritte in anticipo, mai con una sessione ChatGPT vera; qualita' musicale non ascoltata; mappatura General MIDI senza keyswitch."
+      "limits": "Un solo brano vero completato (8 musicisti, 8 battute, MIDI di tutti); qualita' musicale non ancora giudicata; mappatura General MIDI senza keyswitch."
     },
     {
       "id": "i_trascinamento_file_app_desktop_daw",
@@ -2835,5 +2835,5 @@
       "limits": "Provato su Windows con un MIDI multitraccia in Live 12 (tracce e tempo importati); i CC nelle clip non controllati a video."
     }
   ],
-  "basis": "0627c0adc7d5817d"
+  "basis": "24227dcc6e786625"
 }
