@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-26.1642",
-  "generated": "2026-11-26T16:42:54",
+  "version": "2026-11-26.1741",
+  "generated": "2026-11-26T17:41:04",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2855,7 +2855,27 @@
         "acr"
       ],
       "limits": "Provato con risposte dimostrative e analisi gia' in cache; mai con scheda scritta da un LLM vero ne' con una nuova separazione lanciata dall'app; soglie dei fraseggi non validate."
+    },
+    {
+      "id": "x_selezione_artisti_da_follower",
+      "cluster": "APP",
+      "name": "Da un profilo social a una lista di artisti con link musicali, in background",
+      "status": "ipotizzata",
+      "desc": "App Android: dai follower di un profilo seleziona chi non è già seguito e risulta artista dai link musicali nel profilo (anche dentro pagine di link), con ricerca in background a ritmo limitato, scelta manuale ed esportazione dei link.",
+      "in": [
+        "testo",
+        "file"
+      ],
+      "out": [
+        "dati",
+        "testo",
+        "ui"
+      ],
+      "evidence": [
+        "solco"
+      ],
+      "limits": "Avviata sul telefono senza sessione; mai provata con risposte vere del servizio. L'accesso automatico viola i termini della piattaforma e può portare a blocchi; la classificazione degli artisti non è validata."
     }
   ],
-  "basis": "e9b2f18a02331ab6"
+  "basis": "405bc10de17cc627"
 }
