@@ -1,6 +1,6 @@
 {
   "version": "2026-11-26.1741",
-  "generated": "2026-11-26T17:41:04",
+  "generated": "2026-11-26T17:41:14",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2854,7 +2854,7 @@
         "rallenti",
         "acr"
       ],
-      "limits": "Provato con risposte dimostrative e analisi gia' in cache; mai con scheda scritta da un LLM vero ne' con una nuova separazione lanciata dall'app; soglie dei fraseggi non validate."
+      "limits": "Separazione in stem lanciata dall'app e conclusa su un brano vero (coda del servizio lunga); trascrizioni e scheda scritta da un LLM vero non ancora completate; soglie dei fraseggi non validate."
     },
     {
       "id": "x_selezione_artisti_da_follower",
@@ -2875,6 +2875,25 @@
         "solco"
       ],
       "limits": "Avviata sul telefono senza sessione; mai provata con risposte vere del servizio. L'accesso automatico viola i termini della piattaforma e può portare a blocchi; la classificazione degli artisti non è validata."
+    },
+    {
+      "id": "x_caccia_artisti_tra_follower",
+      "cluster": "APP",
+      "name": "Dai follower di un account social agli artisti con link di streaming, da ascoltare e selezionare",
+      "status": "ipotizzata",
+      "desc": "APK: scorre in background, con freno sulle richieste, i follower non seguiti di un account usando la sessione dell'utente, riconosce chi e' un artista dai link di streaming in biografia (anche nelle pagine raccoglitore), mostra una lista con lettori incorporati e scelta di chi e' in target, esporta i link.",
+      "in": [
+        "dati"
+      ],
+      "out": [
+        "ui",
+        "dati",
+        "pagina_web"
+      ],
+      "evidence": [
+        "solco"
+      ],
+      "limits": "Mai provata con risposte vere del social; lettori incorporati e lavoro a schermo spento non verificati; l'automazione viola i termini del servizio."
     }
   ],
   "basis": "405bc10de17cc627"
