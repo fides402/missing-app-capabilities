@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-27.0140",
-  "generated": "2026-11-27T01:40:56",
+  "version": "2026-11-28.0021",
+  "generated": "2026-11-28T00:21:31",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2915,7 +2915,43 @@
         "teorema (14 test del motore e percorso completo nel browser con risposte finte; APK compilato il 27/11/2026)"
       ],
       "limits": "Mai eseguita con un modello vero ne' sul telefono; caricamento degli allegati su ChatGPT non provato; nessuna prova che batta un singolo prompt."
+    },
+    {
+      "id": "x_ricerca_video_vagliata_chat",
+      "cluster": "AI",
+      "name": "Richiesta a parole -> video YouTube vagliati per fonte e data -> risposta con citazioni al minuto e chat",
+      "status": "ipotizzata",
+      "desc": "APK: da una richiesta libera ChatGPT pianifica le ricerche, YouTube Data API raccoglie i video, ogni fonte riceve voti di coerenza, credibilita', autorita' e attualita', legge i transcript dei migliori e risponde citando fonte e minuto; chat sulle fonti e nuove ricerche in ogni momento.",
+      "evidence": [
+        "vaglio"
+      ],
+      "in": [
+        "testo"
+      ],
+      "out": [
+        "testo",
+        "ui"
+      ],
+      "limits": "Percorso provato solo con dati finti nel browser; mai eseguito sul telefono ne' con chiave YouTube o sessione ChatGPT vere. Qualita' di voti e risposte non giudicata. Automatizzare chatgpt.com viola i termini del servizio."
+    },
+    {
+      "id": "infra_transcript_youtube",
+      "cluster": "INFRA",
+      "name": "Transcript con i tempi di un video YouTube senza chiave API",
+      "status": "probabile",
+      "desc": "Richiesta interna di un sito di trascrizioni ricavata con reverse engineering, con riserva sui sottotitoli presi dal player di YouTube.",
+      "evidence": [
+        "vaglio"
+      ],
+      "in": [
+        "testo"
+      ],
+      "out": [
+        "testo",
+        "dati"
+      ],
+      "limits": "Provate separatamente dal computer su pochi video, non dall'app sul telefono. Servono i sottotitoli; interfacce non ufficiali che possono cambiare o bloccare."
     }
   ],
-  "basis": "11f32bf63fd96215"
+  "basis": "b1e2f6d069a77fe9"
 }
