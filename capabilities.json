@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-26.1741",
-  "generated": "2026-11-26T17:41:14",
+  "version": "2026-11-27.0140",
+  "generated": "2026-11-27T01:40:56",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2894,7 +2894,28 @@
         "solco"
       ],
       "limits": "Mai provata con risposte vere del social; lettori incorporati e lavoro a schermo spento non verificati; l'automazione viola i termini del servizio."
+    },
+    {
+      "id": "x_problem_solving_orchestrato",
+      "cluster": "METODO",
+      "name": "Problema libero -> indagine, diagnosi, alternative criticate e test minimo, con agenti coordinati da regole fisse",
+      "status": "ipotizzata",
+      "desc": "APK: dal racconto di un problema (con allegati) un orchestratore deterministico attiva agenti specializzati con contratti JSON, fa domande solo se cambiano la direzione, accetta come fatto solo cio' che e' citato nelle parole dell'utente o nei file, scarta alternative con lo stesso meccanismo, riapre la diagnosi se cade un'assunzione fondamentale e richiama la memoria di altri problemi solo se pertinente o richiesta.",
+      "in": [
+        "testo",
+        "file"
+      ],
+      "out": [
+        "testo",
+        "dati",
+        "file",
+        "ui"
+      ],
+      "evidence": [
+        "teorema (14 test del motore e percorso completo nel browser con risposte finte; APK compilato il 27/11/2026)"
+      ],
+      "limits": "Mai eseguita con un modello vero ne' sul telefono; caricamento degli allegati su ChatGPT non provato; nessuna prova che batta un singolo prompt."
     }
   ],
-  "basis": "405bc10de17cc627"
+  "basis": "11f32bf63fd96215"
 }
