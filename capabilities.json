@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-28.0021",
-  "generated": "2026-11-28T00:21:31",
+  "version": "2026-11-28.0228",
+  "generated": "2026-11-28T02:28:27",
   "capabilities": [
     {
       "id": "a_mir",
@@ -2951,7 +2951,46 @@
         "dati"
       ],
       "limits": "Provate separatamente dal computer su pochi video, non dall'app sul telefono. Servono i sottotitoli; interfacce non ufficiali che possono cambiare o bloccare."
+    },
+    {
+      "id": "x_norma_due_modelli_serie",
+      "cluster": "METODO",
+      "name": "Norma di una serie con due modelli di previsione messi alla prova contro una media semplice",
+      "status": "dimostrata",
+      "desc": "Su ogni serie (metriche dei post per formato) due modelli di serie temporali eseguiti in locale su CPU (TimesFM 3 e Timestral 28M) e il loro insieme vengono confrontati all'indietro, un passo alla volta, con i quantili degli ultimi valori: la banda mostrata e' quella di chi ha sbagliato meno. Un piccolo servizio in rete locale protetto da codice ricalcola quando arrivano risultati nuovi.",
+      "in": [
+        "dati",
+        "file"
+      ],
+      "out": [
+        "dati"
+      ],
+      "evidence": [
+        "prova",
+        "ig-system/v2"
+      ],
+      "limits": "Su serie di 25-40 punti la media semplice spesso vince; descrive il passato, non valuta un contenuto nuovo; i pesi locali di TimesFM sono solo per uso non commerciale; circa un minuto a ricalcolo e memoria libera sufficiente."
+    },
+    {
+      "id": "x_prova_idea_post_versioni",
+      "cluster": "APP",
+      "name": "Idea di reel o carosello -> valutazione motivata che si aggiorna in chat fino a superare soglie e un lettore ostile",
+      "status": "ipotizzata",
+      "desc": "App Android: l'idea raccontata a parole riceve voti sui passi persona, interesse, dubbio, prova e passo, letture di comunicazione, semiotica e interazione, reazioni simulate e attenzione prevista; ogni messaggio crea una versione. Il punteggio e i tetti li calcola il codice (un voto alto senza citazione dalle parole dell'utente viene abbassato) e serve superare una seconda lettura ostile separata. Dopo la pubblicazione i numeri si confrontano con la norma e si apre una ripetizione che cambia una sola cosa.",
+      "in": [
+        "testo",
+        "dati"
+      ],
+      "out": [
+        "ui",
+        "testo"
+      ],
+      "evidence": [
+        "prova",
+        "omi-gpt"
+      ],
+      "limits": "APK compilato, provato solo in anteprima con risposte finte; mai con una sessione ChatGPT vera ne' sul telefono; soglie non validate; reazioni e attenzione sono ipotesi; automatizzare chatgpt.com viola i termini del servizio."
     }
   ],
-  "basis": "b1e2f6d069a77fe9"
+  "basis": "abee0466cc03548d"
 }
